@@ -1,0 +1,10 @@
+extend page
+
+block title
+  title Vladimir Starkov
+
+block content
+  h1 Vladimir Starkov
+  ul
+    each article in list
+      li: a(href=article.url)= article.title

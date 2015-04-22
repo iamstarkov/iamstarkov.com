@@ -1,0 +1,32 @@
+{
+  "name": "iamstarkov.com",
+  "version": "0.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iamstarkov/iamstarkov.github.io"
+  },
+  "author": "Vladimir Starkov <iamstarkov@gmail.com> (http://iamstarkov.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iamstarkov/iamstarkov.github.io/issues"
+  },
+  "homepage": "https://github.com/iamstarkov/iamstarkov.github.io",
+  "dependencies": {
+    "buildbranch": "0.0.3",
+    "commonmark": "^0.18.1",
+    "del": "^1.1.1",
+    "express": "^4.12.3",
+    "gulp": "^3.8.11",
+    "gulp-data": "^1.2.0",
+    "gulp-debug": "^2.0.1",
+    "gulp-jade": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-util": "^3.0.4",
+    "gulp-watch": "^4.2.4",
+    "jade": "^1.9.2",
+    "ramda": "^0.13.0",
+    "through2": "^0.6.5"
+  }
+}
