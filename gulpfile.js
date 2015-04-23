@@ -3,7 +3,6 @@
 var through = require('through2');
 var gulp = require('gulp');
 var watch = require('gulp-watch');
-var del = require('del');
 var rename = require('gulp-rename');
 var data = require('gulp-data');
 var jade = require('gulp-jade');
@@ -32,7 +31,7 @@ gulp.task('gather-articles-index', function() {
     }));
 });
 
-gulp.task('build-articles-list', ['gather-articles-index', 'clean'], function() {
+gulp.task('build-articles-list', ['gather-articles-index'], function() {
   return gulp.src('layouts/list.jade')
     .pipe(data(function() { return { list: articles }; }))
     .pipe(jade({ pretty: true }))
@@ -40,7 +39,7 @@ gulp.task('build-articles-list', ['gather-articles-index', 'clean'], function() 
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('build-articles', ['gather-articles-index', 'clean'], function() {
+gulp.task('build-articles', ['gather-articles-index'], function() {
   return articles.forEach(function(article) {
     gulp.src('layouts/article.jade')
       .pipe(data(function() { return article; }))
@@ -57,16 +56,13 @@ gulp.task('watch', ['express', 'build'], function() {
   watch('**/*{jade,md,json,js}', function() { gulp.start('build'); });
 })
 
-gulp.task('build', ['build-articles-list', 'build-articles']);
-
-gulp.task('clean', function(done) { del('dist', done); });
-
+gulp.task('build', ['build-articles-list', 'build-articles', 'cname']);
 
 gulp.task('cname', function () {
     return gulp.src('CNAME').pipe(gulp.dest('dist'));
 });
 
-gulp.task('gh', ['build', 'cname'], function(done) {
+gulp.task('gh', ['build'], function(done) {
     buildBranch({ folder: 'dist' }, done);
 });
 

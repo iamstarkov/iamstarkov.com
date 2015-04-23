@@ -16,7 +16,6 @@
   "dependencies": {
     "buildbranch": "0.0.3",
     "commonmark": "^0.18.1",
-    "del": "^1.1.1",
     "express": "^4.12.3",
     "gulp": "^3.8.11",
     "gulp-data": "^1.2.0",
