@@ -8,8 +8,7 @@ var data = require('gulp-data');
 var jade = require('gulp-jade');
 var debug = require('gulp-debug');
 var log = require('gulp-util').log;
-var buildBranch = require('buildbranch');
-
+var buildbranch = require('buildbranch');
 
 var basename = require('./basename');
 var md = require('./md');
@@ -63,7 +62,7 @@ gulp.task('cname', function () {
 });
 
 gulp.task('gh', ['build'], function(done) {
-    buildBranch({ folder: 'dist' }, done);
+    buildbranch({ branch: 'master', folder: 'dist' }, done);
 });
 
 gulp.task('express', function() {
