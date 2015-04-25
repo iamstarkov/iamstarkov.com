@@ -17,8 +17,7 @@ fields`][pkg]. Awesome tools come with great responsibility. [Learn them!][docs]
 ## init variables
 
 Set it up! These init variables will be used everytime you run `npm init`
-and thus will save your time. Config variables are stored
-in [`.npmrc files`][npmrc].
+and thus will save your time. Variables will be saved in [`.npmrc files`][npmrc].
 
 `npm set` is an shorthand alias for cli command [`npm config set`][config].
 As an example, this is how setting up looks like:
