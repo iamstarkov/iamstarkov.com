@@ -16,7 +16,7 @@ fields`][pkg]. Awesome tools come with great responsibility. [Learn them!][docs]
 
 ## init variables
 
-Set it up! These init variables will be used everytime you run npm init
+Set it up! These init variables will be used everytime you run `npm init`
 and thus will save your time. Config variables are stored
 in [`.npmrc files`][npmrc].
 
