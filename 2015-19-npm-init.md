@@ -2,7 +2,7 @@
 
 _21 april 2015_
 
-npm has a great command `npm init` which allows you to create package.json
+npm has a great command `npm init` which allows you to create `package.json`
 in a second!
 
 ## npm init
