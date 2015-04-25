@@ -29,12 +29,12 @@ npm set init-author-url http://iamstarkov.com/
 npm set init-license MIT
 npm set init-version 0.0.0
 ```
+
 I prefer to use `0.0.0` init version; it lets me test the code in CI server
 before bumping the first major version.
 
 [npmrc]: https://docs.npmjs.com/files/npmrc
 [config]: https://docs.npmjs.com/cli/config
-
 
 ## GitHub shortcut expansion (user/repo)
 
