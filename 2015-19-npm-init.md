@@ -51,7 +51,7 @@ and homepage fields in this way:
 "bugs": {
   "url": "https://github.com/user/repo/issues"
 },
-"homepage": "https://github.com/user/repo"
+"homepage": "https://github.com/user/repo#readme"
 ```
 
 _Use npm wisely, develop faster,_  
