@@ -24,6 +24,7 @@ gulp.task('gather-articles-index', function() {
       articles.push({
         url: basename(file),
         title: md.getTitle(content),
+        publishedAt: md.getPublishedAt(content),
         content: md.markdown(content),
       });
       cb(null, file);

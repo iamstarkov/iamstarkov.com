@@ -21,6 +21,14 @@ function isH1Node(event) {
   return event.entering && event.node.type === 'Header' && event.node.level === 1;
 }
 
+function isDate(event) {
+  return event.entering && event.node.literal && event.node.literal.match(/\d{1,2} \w* \d{4}/gim);
+}
+
+function getDateNode(content) {
+  return getAstNode(content, isDate);
+}
+
 function getTitleNode(content) {
   return getAstNode(content, isH1Node);
 }
@@ -48,5 +56,6 @@ module.exports = {
   markdown: markdown,
   astNode2text: astNode2text,
   getTitleNode: getTitleNode,
-  getTitle: ramda.compose(astNode2text, getTitleNode)
+  getTitle: ramda.compose(astNode2text, getTitleNode),
+  getPublishedAt: ramda.compose(astNode2text, getDateNode)
 };
