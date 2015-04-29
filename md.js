@@ -1,4 +1,5 @@
-var ramda = require('ramda');
+var compose = require('ramda').compose;
+var moment = require('moment');
 
 function md2AST(content) {
   var commonmark = require('commonmark');
@@ -22,7 +23,7 @@ function isH1Node(event) {
 }
 
 function isDate(event) {
-  return event.entering && event.node.literal && event.node.literal.match(/\d{1,2} \w* \d{4}/gim);
+  return event.entering && event.node.literal && moment(new Date(event.node.literal)).isValid();
 }
 
 function getDateNode(content) {
@@ -52,10 +53,15 @@ function markdown(content) {
   return writer.render(md2AST(content));
 }
 
+function text2unix(text) {
+  return moment(new Date(text)).unix();
+}
+
 module.exports = {
   markdown: markdown,
   astNode2text: astNode2text,
   getTitleNode: getTitleNode,
-  getTitle: ramda.compose(astNode2text, getTitleNode),
-  getPublishedAt: ramda.compose(astNode2text, getDateNode)
+  getTitle: compose(astNode2text, getTitleNode),
+  getPublishedAt: compose(astNode2text, getDateNode),
+  getPublishedAtInUnix: compose(text2unix, astNode2text, getDateNode)
 };
