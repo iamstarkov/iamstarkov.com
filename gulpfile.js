@@ -25,8 +25,10 @@ gulp.task('gather-articles-index', function() {
         url: basename(file),
         title: md.getTitle(content),
         publishedAt: md.getPublishedAt(content),
+        publishedAtInUnix: md.getPublishedAtInUnix(content),
         content: md.markdown(content),
       });
+      articles.sort(function(a, b) { return a.publishedAtInUnix < b.publishedAtInUnix; });
       cb(null, file);
     }));
 });
