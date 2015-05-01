@@ -9,6 +9,7 @@ var jade = require('gulp-jade');
 var debug = require('gulp-debug');
 var log = require('gulp-util').log;
 var buildbranch = require('buildbranch');
+var rss = require('rss');
 
 var basename = require('./basename');
 var md = require('./md');
@@ -27,6 +28,10 @@ gulp.task('gather-articles-index', function() {
         publishedAt: md.getPublishedAt(content),
         publishedAtInUnix: md.getPublishedAtInUnix(content),
         content: md.markdown(content),
+
+        // rss
+        date: md.getPublishedAt(content),
+        description: md.markdown(content),
       });
       articles.sort(function(a, b) { return a.publishedAtInUnix < b.publishedAtInUnix; });
       cb(null, file);
@@ -52,13 +57,33 @@ gulp.task('build-articles', ['gather-articles-index'], function() {
   });
 })
 
+gulp.task('build-atom-list', ['gather-articles-index'], function(done) {
+  var output = require('fs-extra').outputFile;
+
+  var feed = new rss({
+    title: 'Vladimir Starkov',
+    description: 'Technical blog about frontend from Vladimir Starkov',
+    feed_url: 'http://iamstarkov/rss.xml',
+    site_url: 'http://iamstarkov/',
+    managingEditor: 'iamstarkov@gmail.com (Vladimir Starkov)',
+    webMaster: 'iamstarkov@gmail.com (Vladimir Starkov)',
+    copyright: 'MIT',
+    language: 'en-us',
+    categories: ['frontend', 'css', 'typography']
+  });
+
+  articles.forEach(feed.item.bind(feed));
+
+  output('dist/rss.xml', feed.xml({ indent: true }), done);
+});
+
 gulp.task('default', ['watch']);
 
 gulp.task('watch', ['express', 'build'], function() {
   watch('**/*{jade,md,json,js}', function() { gulp.start('build'); });
 })
 
-gulp.task('build', ['build-articles-list', 'build-articles', 'cname']);
+gulp.task('build', ['build-articles-list', 'build-articles', 'build-atom-list', 'cname']);
 
 gulp.task('cname', function () {
     return gulp.src('CNAME').pipe(gulp.dest('dist'));

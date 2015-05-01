@@ -17,6 +17,7 @@
     "buildbranch": "0.0.3",
     "commonmark": "^0.18.1",
     "express": "^4.12.3",
+    "fs-extra": "^0.18.2",
     "gulp": "^3.8.11",
     "gulp-data": "^1.2.0",
     "gulp-debug": "^2.0.1",
@@ -27,6 +28,7 @@
     "jade": "^1.9.2",
     "moment": "^2.10.2",
     "ramda": "^0.13.0",
+    "rss": "^1.1.1",
     "through2": "^0.6.5"
   }
 }
