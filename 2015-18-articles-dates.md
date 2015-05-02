@@ -2,7 +2,7 @@
 
 _30 april 2015_
 
-![ReactJS; 0 days without new javascript framework](http://pbs.twimg.com/media/CBigK8NWIAELu5g.jpg:large)
+![ReactJS; 0 days without new javascript framework](https://pbs.twimg.com/media/CBigK8NWIAELu5g.jpg:large)
 
 Everytime I read article without publish date I feel myself uncomfortable.
 Modern frontend world is very fast changing thing; new javascript frameworks
@@ -17,4 +17,4 @@ Have respect to your readers and show publish date. Probably the best place
 is a start of the article.
 
 _Write article, include date,  
-your Captain Obvious and [Vladimir Starkov](http://iamstarkov.com/)_
+your Captain Obvious and [Vladimir Starkov](https://iamstarkov.com/)_

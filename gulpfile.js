@@ -63,8 +63,8 @@ gulp.task('build-atom-list', ['gather-articles-index'], function(done) {
   var feed = new rss({
     title: 'Vladimir Starkov',
     description: 'Technical blog about frontend from Vladimir Starkov',
-    feed_url: 'http://iamstarkov/rss.xml',
-    site_url: 'http://iamstarkov/',
+    feed_url: 'https://iamstarkov/rss.xml',
+    site_url: 'https://iamstarkov/',
     managingEditor: 'iamstarkov@gmail.com (Vladimir Starkov)',
     webMaster: 'iamstarkov@gmail.com (Vladimir Starkov)',
     copyright: 'MIT',

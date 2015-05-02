@@ -25,7 +25,7 @@ As an example, this is how setting up looks like:
 ```
 npm set init-author-email iamstarkov@gmail.com
 npm set init-author-name Vladimir Starkov
-npm set init-author-url http://iamstarkov.com/
+npm set init-author-url https://iamstarkov.com/
 npm set init-license MIT
 npm set init-version 0.0.0
 ```
@@ -55,4 +55,4 @@ and homepage fields in this way:
 ```
 
 _Use npm wisely, develop faster,_  
-_your npm-inited [Vladimir Starkov](http://iamstarkov.com/)_
+_your npm-inited [Vladimir Starkov](https://iamstarkov.com/)_
