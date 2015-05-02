@@ -10,6 +10,7 @@ var debug = require('gulp-debug');
 var log = require('gulp-util').log;
 var buildbranch = require('buildbranch');
 var rss = require('rss');
+var del = require('del');
 
 var basename = require('./basename');
 var md = require('./md');
@@ -81,7 +82,11 @@ gulp.task('default', ['watch']);
 
 gulp.task('watch', ['express', 'build'], function() {
   watch('**/*{jade,md,json,js}', function() { gulp.start('build'); });
-})
+});
+
+gulp.task('clean', function(done) {
+  del('dist', done)
+});
 
 gulp.task('build', ['build-articles-list', 'build-articles', 'build-atom-list', 'cname']);
 
