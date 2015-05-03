@@ -28,7 +28,7 @@ gulp.task('gather-articles-index', function() {
         title: md.getTitle(content),
         publishedAt: md.getPublishedAt(content),
         publishedAtInUnix: md.getPublishedAtInUnix(content),
-        content: md.markdown(content),
+        content: md.html(content),
 
         // rss
         date: md.getPublishedAt(content),

@@ -5,12 +5,12 @@ var commonmark = require('commonmark');
 var writer = new commonmark.HtmlRenderer();
 var reader = new commonmark.Parser();
 
-function md2AST(content) { return reader.parse(content); }
-function markdown(content) { return writer.render(md2AST(content)); }
-function markdownFromAst(ast) { return writer.render(ast); }
+function ast(content) { return reader.parse(content); }
+function html(content) { return htmlFromAst(ast(content)); }
+function htmlFromAst(ast) { return writer.render(ast); }
 
 function getAstNode(content, match) {
-  var walker = md2AST(content).walker();
+  var walker = ast(content).walker();
   var event, node;
   while (event = walker.next()) {
     node = event.node;
@@ -37,7 +37,7 @@ function getTitleNode(content) {
 }
 
 function getDescNode(content, match) {
-  var walker = md2AST(content).walker();
+  var walker = ast(content).walker();
   var event, node;
   var index = 0;
   while (event = walker.next()) {
@@ -53,7 +53,7 @@ function getDescNode(content, match) {
 }
 
 
-function astNode2text(astNode) {
+function text(astNode) {
   var walker = astNode.walker();
   var acc = '';
   var event, node;
@@ -73,11 +73,11 @@ function text2unix(text) {
 }
 
 module.exports = {
-  markdown: markdown,
-  astNode2text: astNode2text,
+  html: html,
+  text: text,
   getTitleNode: getTitleNode,
-  getDesc: compose(markdownFromAst, getDescNode),
-  getTitle: compose(astNode2text, getTitleNode),
-  getPublishedAt: compose(astNode2text, getDateNode),
-  getPublishedAtInUnix: compose(text2unix, astNode2text, getDateNode)
+  getDesc: compose(htmlFromAst, getDescNode),
+  getTitle: compose(text, getTitleNode),
+  getPublishedAt: compose(text, getDateNode),
+  getPublishedAtInUnix: compose(text2unix, text, getDateNode)
 };
