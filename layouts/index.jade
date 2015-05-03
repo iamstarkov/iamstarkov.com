@@ -3,12 +3,15 @@ extend page
 block title
   title Vladimir Starkov
 
+block meta
+  meta(property="description" content=site.description)
+
 block content
   h1 Vladimir Starkov
   
   ul
     each article in list
       li
-        time= article.humanDate + " " 
+        time= article.date + " " 
         a(href=article.url)= article.title
         

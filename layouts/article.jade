@@ -3,5 +3,8 @@ extend page
 block title
   title #{title}
 
+block meta
+  meta(property="description" content=descriptionText)
+
 block content
   | !{content}
