@@ -34,6 +34,23 @@ function getTitleNode(content) {
   return getAstNode(content, isH1Node);
 }
 
+function getDescNode(content, match) {
+  var walker = md2AST(content).walker();
+  var event, node;
+  var index = 0;
+  while (event = walker.next()) {
+    node = event.node;
+    if (node.type === 'Paragraph') {
+      index++;
+    }
+
+    if (node.type === 'Paragraph' && index === 3) {
+      return node;
+    }
+  }
+}
+
+
 function astNode2text(astNode) {
   var walker = astNode.walker();
   var acc = '';
@@ -61,6 +78,7 @@ module.exports = {
   markdown: markdown,
   astNode2text: astNode2text,
   getTitleNode: getTitleNode,
+  getDesc: compose(astNode2text, getDescNode),
   getTitle: compose(astNode2text, getTitleNode),
   getPublishedAt: compose(astNode2text, getDateNode),
   getPublishedAtInUnix: compose(text2unix, astNode2text, getDateNode)

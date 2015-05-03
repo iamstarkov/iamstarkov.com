@@ -32,7 +32,7 @@ gulp.task('gather-articles-index', function() {
 
         // rss
         date: md.getPublishedAt(content),
-        description: md.markdown(content),
+        description: md.getDesc(content),
       });
       articles.sort(function(a, b) { return a.publishedAtInUnix < b.publishedAtInUnix; });
       cb(null, file);
