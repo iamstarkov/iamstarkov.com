@@ -1,7 +1,7 @@
 {
   "name": "iamstarkov.com",
   "version": "1.1.0",
-  "description": "Technical blog about frontend from Vladimir Starkov",
+  "description": "Frontend blog from Vladimir Starkov",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
@@ -15,7 +15,7 @@
   "homepage": "https://github.com/iamstarkov/iamstarkov.github.io",
   "site": {
     "title": "Vladimir Starkov",
-    "description": "Technical blog about frontend from Vladimir Starkov",
+    "description": "Frontend blog from Vladimir Starkov",
     "feed_url": "https://iamstarkov/rss.xml",
     "site_url": "https://iamstarkov/",
     "managingEditor": "iamstarkov@gmail.com (Vladimir Starkov)",
