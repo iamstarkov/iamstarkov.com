@@ -1,11 +1,13 @@
 var compose = require('ramda').compose;
 var moment = require('moment');
 
-function md2AST(content) {
-  var commonmark = require('commonmark');
-  var reader = new commonmark.Parser();
-  return reader.parse(content);
-}
+var commonmark = require('commonmark');
+var writer = new commonmark.HtmlRenderer();
+var reader = new commonmark.Parser();
+
+function md2AST(content) { return reader.parse(content); }
+function markdown(content) { return writer.render(md2AST(content)); }
+function markdownFromAst(ast) { return writer.render(ast); }
 
 function getAstNode(content, match) {
   var walker = md2AST(content).walker();
@@ -64,11 +66,7 @@ function astNode2text(astNode) {
   return acc;
 }
 
-function markdown(content) {
-  var commonmark = require('commonmark');
-  var writer = new commonmark.HtmlRenderer();
-  return writer.render(md2AST(content));
-}
+
 
 function text2unix(text) {
   return moment(new Date(text)).unix();
@@ -78,7 +76,7 @@ module.exports = {
   markdown: markdown,
   astNode2text: astNode2text,
   getTitleNode: getTitleNode,
-  getDesc: compose(astNode2text, getDescNode),
+  getDesc: compose(markdownFromAst, getDescNode),
   getTitle: compose(astNode2text, getTitleNode),
   getPublishedAt: compose(astNode2text, getDateNode),
   getPublishedAtInUnix: compose(text2unix, astNode2text, getDateNode)
