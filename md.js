@@ -28,13 +28,8 @@ function isDate(event) {
   return event.entering && event.node.literal && moment(new Date(event.node.literal)).isValid();
 }
 
-function getDateNode(content) {
-  return getAstNode(content, isDate);
-}
-
-function getTitleNode(content) {
-  return getAstNode(content, isH1Node);
-}
+function getDateNode(content) { return getAstNode(content, isDate); }
+function getTitleNode(content) { return getAstNode(content, isH1Node); }
 
 function getDescNode(content, match) {
   var walker = ast(content).walker();
@@ -68,16 +63,15 @@ function text(astNode) {
 
 
 
-function text2unix(text) {
-  return moment(new Date(text)).unix();
-}
+function unix(text) { return moment(new Date(text)).unix(); }
 
 module.exports = {
   html: html,
   text: text,
   getTitleNode: getTitleNode,
   getDesc: compose(htmlFromAst, getDescNode),
+  getDescText: compose(text, getDescNode),
   getTitle: compose(text, getTitleNode),
-  getPublishedAt: compose(text, getDateNode),
-  getPublishedAtInUnix: compose(text2unix, text, getDateNode)
+  getDate: compose(unix, text, getDateNode),
+  getHumanDate: compose(text, getDateNode)
 };

@@ -26,15 +26,15 @@ gulp.task('gather-articles-index', function() {
       articles.push({
         url: basename(file),
         title: md.getTitle(content),
-        publishedAt: md.getPublishedAt(content),
-        publishedAtInUnix: md.getPublishedAtInUnix(content),
+        date: md.getDate(content),
+        humanDate: md.getHumanDate(content),
         content: md.html(content),
 
         // rss
-        date: md.getPublishedAt(content),
         description: md.getDesc(content),
+        descriptionText: md.getDescText(content),
       });
-      articles.sort(function(a, b) { return a.publishedAtInUnix < b.publishedAtInUnix; });
+      articles.sort(function(a, b) { return a.date < b.date; });
       cb(null, file);
     }));
 });
