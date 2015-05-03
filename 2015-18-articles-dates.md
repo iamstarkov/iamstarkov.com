@@ -2,7 +2,7 @@
 
 _30 april 2015_
 
-![ReactJS; 0 days without new javascript framework](https://pbs.twimg.com/media/CBigK8NWIAELu5g.jpg:large)
+![New JS frameworks every day!](https://pbs.twimg.com/media/CBigK8NWIAELu5g.jpg:large)
 
 Everytime I read article without publish date I feel myself uncomfortable.
 Modern frontend world is very fast changing thing; new javascript frameworks
