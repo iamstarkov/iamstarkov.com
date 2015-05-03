@@ -13,6 +13,10 @@ var rss = require('rss');
 var del = require('del');
 var output = require('fs-extra').outputFile;
 var express = require('express');
+var assign = require('object-assign');
+
+var moment = require('moment');
+var unix = function(text) { return moment(new Date(text)).unix(); }
 
 var basename = require('./basename');
 var md = require('./md');
@@ -27,20 +31,17 @@ gulp.task('gather-articles-index', function() {
     .pipe(through.obj(function(file, enc, cb) {
       var content = file.contents.toString();
       articles.push({
-        // common info
         site: site,
-
         url: basename(file),
         title: md.getTitle(content),
-        date: md.getHumanDate(content),
-        unixDate: md.getDate(content),
+        desc: md.getDescText(content),
+        date: md.getDate(content),
         content: md.html(content),
-
-        // rss
-        description: md.getDesc(content),
-        descriptionText: md.getDescText(content),
+        rss: {
+          description: md.getDesc(content)
+        }
       });
-      articles.sort(function(a, b) { return a.unixDate < b.unixDate; });
+      articles.sort(function(a, b) { return unix(a.date) < unix(b.date); });
       cb(null, file);
     }));
 });
@@ -69,7 +70,9 @@ gulp.task('build-articles', ['gather-articles-index'], function() {
 
 gulp.task('build-atom-list', ['gather-articles-index'], function(done) {
   var feed = new rss(site);
-  articles.forEach(feed.item.bind(feed));
+  articles.forEach(function(article) {
+    feed.item(assign(article, article.rss));
+  });
   output('dist/rss.xml', feed.xml({ indent: true }), done);
 });
 

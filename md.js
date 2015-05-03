@@ -63,8 +63,6 @@ function text(astNode) {
 
 
 
-function unix(text) { return moment(new Date(text)).unix(); }
-
 module.exports = {
   html: html,
   text: text,
@@ -72,6 +70,6 @@ module.exports = {
   getDesc: compose(htmlFromAst, getDescNode),
   getDescText: compose(text, getDescNode),
   getTitle: compose(text, getTitleNode),
-  getDate: compose(unix, text, getDateNode),
+  getDate: compose(text, getDateNode),
   getHumanDate: compose(text, getDateNode)
 };

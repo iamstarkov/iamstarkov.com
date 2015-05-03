@@ -22,7 +22,11 @@
     "webMaster": "iamstarkov@gmail.com (Vladimir Starkov)",
     "copyright": "MIT",
     "language": "en-us",
-    "categories": ["frontend", "css", "typography"]
+    "categories": [
+      "frontend",
+      "css",
+      "typography"
+    ]
   },
   "dependencies": {
     "buildbranch": "0.0.3",
@@ -39,6 +43,7 @@
     "gulp-watch": "^4.2.4",
     "jade": "^1.9.2",
     "moment": "^2.10.2",
+    "object-assign": "^2.0.0",
     "ramda": "^0.13.0",
     "rss": "^1.1.1",
     "through2": "^0.6.5"
