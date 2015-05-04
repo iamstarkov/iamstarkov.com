@@ -4,17 +4,19 @@ _4 may 2015_
 
 ![Squatters @ Squatters everywhere](http://i.imgur.com/q8LcWMw.jpg)
 
-I used to have "@matmuchrapna" username, but from
-today you will find me as "@iamstarkov". I successfully renamed myself
-on internet and want to share my experience. I’m assuming that you want
+I used to have "@matmuchrapna" username, but now you will find me
+as [@iamstarkov][iamstarkov]. I successfully renamed myself
+on internet and want to share my experience. I’m assuming that you want to have
 the same username on domain, mail, social media and messengers. If you
 have trademark, skip entire article.
+
+[iamstarkov]: https://twitter.com/iamstarkov
 
 ## Top level domain '.com'
 
 You can get domain *username.com* if it’s available or squatted. In case
 of squatting you better to have extra money. If *username.com* is
-available, then check username on social media, because it can be
+available, then check this username on social media, because it can be
 squatted there too.
 
 ## Mail (gmail in my case)
@@ -33,18 +35,16 @@ previous account to new one.
 
 ### GitHub
 
-You can get username *only if it is available or it is activeless user*.
+You can get username *only if it is available or it’s owned by activeless user*.
 GitHub support is awesome. GitHub will not redirect users from your
 previous account to new one, but will do it for repositories. All of the
-readme’s badges will be broken.
+README’s badges will be broken.
 
 ### npm
 
-npm is great, I got replyes from Isaac Shueltz—npm’s founder. They helped me
-with moving all the repos from prev account to new one, and with deletition
-of previous account, obviously.
-
-@todo dunno, lol
+npm support is great too, e.g. I got answers from Isaac Shueltz—npm’s founder.
+npm helped me with moving all the packages from prev account to new one.
+Obviously npm deleted previous account.
 
 ### Stackoverflow
 
@@ -73,7 +73,7 @@ is to register new username.
 ## Summary
 
 Define list of social nets and list of username to check. Choose one,
-which is available everywhere. Renaming Gmail requiring extra work.
+which is available everywhere. Renaming Gmail requires extra work.
 
 _Choose new name carefully,  
 Your renamed [Vladimir Starkov](https://iamstarkov.com)_
