@@ -32,6 +32,7 @@
     "buildbranch": "0.0.3",
     "commonmark": "^0.18.1",
     "del": "^1.1.1",
+    "each-done": "^1.0.0",
     "express": "^4.12.3",
     "fs-extra": "^0.18.2",
     "gulp": "^3.8.11",
@@ -46,6 +47,7 @@
     "object-assign": "^2.0.0",
     "ramda": "^0.13.0",
     "rss": "^1.1.1",
+    "run-sequence": "^1.1.0",
     "through2": "^0.6.5"
   }
 }

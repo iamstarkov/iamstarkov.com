@@ -14,6 +14,8 @@ var del = require('del');
 var output = require('fs-extra').outputFile;
 var express = require('express');
 var assign = require('object-assign');
+var sequence = require('run-sequence');
+var each = require('each-done');
 
 var moment = require('moment');
 var unix = function(text) { return moment(new Date(text)).unix(); }
@@ -23,52 +25,60 @@ var md = require('./md');
 var site = require('./package.json').site;
 
 var articles = [];
+var articleHarvesting = through.obj(function(file, enc, cb) {
+  var content = file.contents.toString();
+  articles.push({
+    site: site,
+    url: basename(file),
+    title: md.getTitle(content),
+    desc: md.getDescText(content),
+    date: md.getDate(content),
+    content: md.html(content),
+    rss: { description: md.getDesc(content) }
+  });
+  articles.sort(function(a, b) { return unix(a.date) < unix(b.date); });
+  cb(null, file);
+});
 
 gulp.task('gather-articles-index', function() {
   articles = [];
-  return gulp.src('*.md')
+  return gulp.src(['*.md'])
     .pipe(rename(function(path) { path.basename = path.basename.substr('8'); }))
-    .pipe(through.obj(function(file, enc, cb) {
-      var content = file.contents.toString();
-      articles.push({
-        site: site,
-        url: basename(file),
-        title: md.getTitle(content),
-        desc: md.getDescText(content),
-        date: md.getDate(content),
-        content: md.html(content),
-        rss: {
-          description: md.getDesc(content)
-        }
-      });
-      articles.sort(function(a, b) { return unix(a.date) < unix(b.date); });
-      cb(null, file);
-    }));
+    .pipe(articleHarvesting);
 });
 
-gulp.task('build-articles-list', ['gather-articles-index'], function() {
+gulp.task('prod-gather-articles-index', function() {
+  articles = [];
+  return gulp.src(['*.md', '!*draft*.md'])
+    .pipe(rename(function(path) { path.basename = path.basename.substr('8'); }))
+    .pipe(articleHarvesting);
+});
+
+gulp.task('build-articles-list', function() {
   return gulp.src('layouts/index.jade')
-    .pipe(data(function() { return {
-      site: site,
-      list: articles
-    }; }))
+    .pipe(data(function() {
+      return {
+        site: site,
+        list: articles
+      };
+    }))
     .pipe(jade({ pretty: true }))
     .pipe(rename({ basename: 'index' }))
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('build-articles', ['gather-articles-index'], function() {
-  return articles.forEach(function(article) {
-    gulp.src('layouts/article.jade')
+gulp.task('build-articles', function(done) {
+  each(articles, function(article) {
+    return gulp.src('layouts/article.jade')
       .pipe(data(function() { return article; }))
       .pipe(jade({ pretty: true }))
       .pipe(rename({ dirname: article.url }))
       .pipe(rename({ basename: 'index' }))
       .pipe(gulp.dest('dist'));
-  });
-})
+  }, done);
+});
 
-gulp.task('build-atom-list', ['gather-articles-index'], function(done) {
+gulp.task('build-rss', function(done) {
   var feed = new rss(site);
   articles.forEach(function(article) {
     feed.item(assign(article, article.rss));
@@ -82,18 +92,29 @@ gulp.task('watch', ['express', 'build'], function() {
   watch('**/*{jade,md,json,js}', function() { gulp.start('build'); });
 });
 
-gulp.task('clean', function(done) {
-  del('dist', done)
+gulp.task('clean', function(done) { del('dist', done); });
+
+gulp.task('build', function(done) {
+  sequence('gather-articles-index',
+          ['build-articles-list', 'build-articles', 'build-rss'],
+          'cname',
+          done);
 });
 
-gulp.task('build', ['build-articles-list', 'build-articles', 'build-atom-list', 'cname']);
-
-gulp.task('cname', function () {
-    return gulp.src('CNAME').pipe(gulp.dest('dist'));
+gulp.task('build-prod', function(done) {
+  sequence('clean',
+          'prod-gather-articles-index',
+          ['build-articles-list', 'build-articles', 'build-rss'],
+          'cname',
+          done);
 });
 
-gulp.task('gh', ['build'], function(done) {
-    buildbranch({ branch: 'master', folder: 'dist' }, done);
+gulp.task('cname', function() {
+  return gulp.src('CNAME').pipe(gulp.dest('dist'));
+});
+
+gulp.task('gh', ['build-prod'], function(done) {
+  buildbranch({ branch: 'master', folder: 'dist' }, done);
 });
 
 gulp.task('express', function() {
