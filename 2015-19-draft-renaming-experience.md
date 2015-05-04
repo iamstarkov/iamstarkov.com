@@ -2,8 +2,7 @@
 
 _4 may 2015_
 
-@todo should be a mem Squatters @ Squatters everewhere
-![Squatters @ Squatters everywhere]()
+![Squatters @ Squatters everywhere](http://i.imgur.com/q8LcWMw.jpg)
 
 I used to have "@matmuchrapna" username, but from
 today you will find me as "@iamstarkov". I successfully renamed myself
@@ -16,8 +15,7 @@ have trademark, skip entire article.
 You can get domain *username.com* if it’s available or squatted. In case
 of squatting you better to have extra money. If *username.com* is
 available, then check username on social media, because it can be
-squatted there too. There are several sites can help you:
-namemesh.com
+squatted there too.
 
 ## Mail (gmail in my case)
 
@@ -77,5 +75,5 @@ is to register new username.
 Define list of social nets and list of username to check. Choose one,
 which is available everywhere. Renaming Gmail requiring extra work.
 
-_Choose new name carefullly,  
+_Choose new name carefully,  
 Your renamed [Vladimir Starkov](https://iamstarkov.com)_
