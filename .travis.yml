@@ -5,6 +5,3 @@ before_script:
   - git config user.name "Vladimir Starkov"
   - git config user.email "iamstarkov@gmail.com"
 script: gulp gh
-env:
-  global:
-  - GH_REF: github.com/iamstarkov/iamstarkov.github.io.git
