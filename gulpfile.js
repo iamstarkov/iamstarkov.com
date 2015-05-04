@@ -40,34 +40,31 @@ var articleHarvesting = through.obj(function(file, enc, cb) {
   cb(null, file);
 });
 
-gulp.task('gather-articles-index', function() {
+gulp.task('articles-registry', function() {
   articles = [];
   return gulp.src(['*.md'])
     .pipe(rename(function(path) { path.basename = path.basename.substr('8'); }))
     .pipe(articleHarvesting);
 });
 
-gulp.task('prod-gather-articles-index', function() {
+gulp.task('articles-registry-prod', function() {
   articles = [];
   return gulp.src(['*.md', '!*draft*.md'])
     .pipe(rename(function(path) { path.basename = path.basename.substr('8'); }))
     .pipe(articleHarvesting);
 });
 
-gulp.task('build-articles-list', function() {
+gulp.task('index-page', function() {
   return gulp.src('layouts/index.jade')
     .pipe(data(function() {
-      return {
-        site: site,
-        list: articles
-      };
+      return { site: site, list: articles };
     }))
     .pipe(jade({ pretty: true }))
     .pipe(rename({ basename: 'index' }))
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('build-articles', function(done) {
+gulp.task('articles-pages', function(done) {
   each(articles, function(article) {
     return gulp.src('layouts/article.jade')
       .pipe(data(function() { return article; }))
@@ -78,7 +75,7 @@ gulp.task('build-articles', function(done) {
   }, done);
 });
 
-gulp.task('build-rss', function(done) {
+gulp.task('rss', function(done) {
   var feed = new rss(site);
   articles.forEach(function(article) {
     feed.item(assign(article, article.rss));
@@ -95,16 +92,16 @@ gulp.task('watch', ['express', 'build'], function() {
 gulp.task('clean', function(done) { del('dist', done); });
 
 gulp.task('build', function(done) {
-  sequence('gather-articles-index',
-          ['build-articles-list', 'build-articles', 'build-rss'],
+  sequence('articles-registry',
+          ['index-page', 'articles-pages', 'rss'],
           'cname',
           done);
 });
 
 gulp.task('build-prod', function(done) {
   sequence('clean',
-          'prod-gather-articles-index',
-          ['build-articles-list', 'build-articles', 'build-rss'],
+          'articles-registry-prod',
+          ['index-page', 'build-articles', 'rss'],
           'cname',
           done);
 });
