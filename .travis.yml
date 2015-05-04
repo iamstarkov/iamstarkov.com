@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - 'iojs'
+before_script:
+  - git config user.name "Vladimir Starkov"
+  - git config user.email "iamstarkov@gmail.com"
 script: gulp gh
 env:
   global:
