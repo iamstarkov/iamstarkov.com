@@ -103,7 +103,7 @@ gulp.task('build', function(done) {
 gulp.task('build-prod', function(done) {
   sequence('clean',
           'articles-registry-prod',
-          ['index-page', 'build-articles', 'rss'],
+          ['index-page', 'articles-pages', 'rss'],
           'cname',
           done);
 });
