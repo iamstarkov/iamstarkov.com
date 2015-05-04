@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - 'iojs'
+script: gulp gh
+env:
+  global:
+  - GH_REF: github.com/iamstarkov/iamstarkov.github.io.git
