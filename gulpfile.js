@@ -25,33 +25,35 @@ var md = require('./md');
 var site = require('./package.json').site;
 
 var articles = [];
-var articleHarvesting = through.obj(function(file, enc, cb) {
-  var content = file.contents.toString();
-  articles.push({
-    site: site,
-    url: basename(file),
-    title: md.getTitle(content),
-    desc: md.getDescText(content),
-    date: md.getDate(content),
-    content: md.html(content),
-    rss: { description: md.getDesc(content) }
+var articleHarvesting = function() {
+  return through.obj(function(file, enc, cb) {
+    var content = file.contents.toString();
+    articles.push({
+      site: site,
+      url: basename(file),
+      title: md.getTitle(content),
+      desc: md.getDescText(content),
+      date: md.getDate(content),
+      content: md.html(content),
+      rss: { description: md.getDesc(content) }
+    });
+    articles.sort(function(a, b) { return unix(a.date) < unix(b.date); });
+    cb(null, file);
   });
-  articles.sort(function(a, b) { return unix(a.date) < unix(b.date); });
-  cb(null, file);
-});
+};
 
 gulp.task('articles-registry', function() {
   articles = [];
   return gulp.src(['*.md'])
     .pipe(rename(function(path) { path.basename = path.basename.substr('8'); }))
-    .pipe(articleHarvesting);
+    .pipe(articleHarvesting());
 });
 
 gulp.task('articles-registry-prod', function() {
   articles = [];
   return gulp.src(['*.md', '!*draft*.md'])
     .pipe(rename(function(path) { path.basename = path.basename.substr('8'); }))
-    .pipe(articleHarvesting);
+    .pipe(articleHarvesting());
 });
 
 gulp.task('index-page', function() {
