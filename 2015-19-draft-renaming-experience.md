@@ -3,8 +3,9 @@
 _4 may 2015_
 
 @todo should be a mem Squatters @ Squatters everewhere
+![Squatters @ Squatters everywhere]()
 
-I used to have "@matmuchrapna" username (i know, it’s crap), but from
+I used to have "@matmuchrapna" username, but from
 today you will find me as "@iamstarkov". I successfully renamed myself
 on internet and want to share my experience. I’m assuming that you want
 the same username on domain, mail, social media and messengers. If you
@@ -15,7 +16,8 @@ have trademark, skip entire article.
 You can get domain *username.com* if it’s available or squatted. In case
 of squatting you better to have extra money. If *username.com* is
 available, then check username on social media, because it can be
-squatted there too.
+squatted there too. There are several sites can help you:
+namemesh.com
 
 ## Mail (gmail in my case)
 
@@ -40,6 +42,10 @@ readme’s badges will be broken.
 
 ### npm
 
+npm is great, I got replyes from Isaac Shueltz—npm’s founder. They helped me
+with moving all the repos from prev account to new one, and with deletition
+of previous account, obviously.
+
 @todo dunno, lol
 
 ### Stackoverflow
@@ -48,7 +54,7 @@ You don’t need to change anything here.
 
 ### LinkedIn
 
-LinkedIn is great on renaming, easy and without side-effects.
+LinkedIn is great on renaming, easy and without any side-effects.
 
 ### Gravatar
 
@@ -70,3 +76,6 @@ is to register new username.
 
 Define list of social nets and list of username to check. Choose one,
 which is available everywhere. Renaming Gmail requiring extra work.
+
+_Choose new name carefullly,  
+Your renamed [Vladimir Starkov](https://iamstarkov.com)_
