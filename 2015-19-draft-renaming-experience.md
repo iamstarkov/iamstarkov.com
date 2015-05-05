@@ -43,8 +43,8 @@ README’s badges will be broken.
 ### npm
 
 npm support is great too, e.g. I got answers from Isaac Shueltz—npm’s founder.
-npm helped me with moving all the packages from prev account to new one.
-Obviously npm deleted previous account.
+npm helped me with moving all the packages from prev account to the new one.
+Obviously npm deleted my previous account.
 
 ### Stackoverflow
 
