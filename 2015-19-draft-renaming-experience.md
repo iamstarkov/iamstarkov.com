@@ -56,7 +56,7 @@ LinkedIn is great on renaming, easy and without any side-effects.
 
 ### Gravatar
 
-Don’t forget about avatar for new email.
+Don’t forget about avatar for the new email.
 
 ## Messengers
 
