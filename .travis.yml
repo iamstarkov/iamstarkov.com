@@ -1,5 +1,8 @@
 sudo: false
 language: node_js
+branches:
+  only:
+    - premaster
 node_js:
   - 'iojs'
 before_script:
