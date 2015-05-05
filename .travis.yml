@@ -3,6 +3,8 @@ language: node_js
 node_js:
   - 'iojs'
 before_script:
+  - git config --global user.email "iamstarkov@gmail.com"
+  - git config --global user.name "Vladimir Starkov"
   - git remote rm origin
   - git remote add origin https://iamstarkov:${GH_TOKEN}@github.com/iamstarkov/iamstarkov.github.io.git
 script: gulp gh
