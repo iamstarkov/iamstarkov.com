@@ -72,7 +72,7 @@ is to register new username.
 
 ## Summary
 
-Define list of social nets and list of username to check. Choose one,
+Define list of social networks and list of usernames to check. Choose one,
 which is available everywhere. Renaming Gmail requires extra work.
 
 _Choose new name carefully,  
