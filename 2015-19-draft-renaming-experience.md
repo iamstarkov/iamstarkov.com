@@ -2,7 +2,7 @@
 
 _5 may 2015_
 
-![Squatters @ Squatters everywhere](http://i.imgur.com/q8LcWMw.jpg)
+![Squatters @ Squatters everywhere](https://i.imgur.com/q8LcWMw.jpg)
 
 I used to have "@matmuchrapna" username, but now you will find me
 as [@iamstarkov][iamstarkov]. I successfully renamed myself
