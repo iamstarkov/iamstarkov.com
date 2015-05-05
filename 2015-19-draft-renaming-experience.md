@@ -15,7 +15,7 @@ have trademark, skip entire article.
 ## Top level domain '.com'
 
 You can get domain *username.com* if it’s available or squatted. In case
-of squatting you better to have extra money. If *username.com* is
+of squatting you’d better to have extra money. If *username.com* is
 available, then check this username on social media, because it can be
 squatted there too.
 
