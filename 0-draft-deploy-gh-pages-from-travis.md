@@ -1,14 +1,21 @@
 # How to deploy to GitHub pages from Travis CI?
 
-_7 may 2015_
+_10 may 2015_
 
-Imagine that you have opensource project, which site is hosting on github pages and you have "edit on github" button on this site. It’s great, because if you are lucky, you will get few pull-requests every week. And you need your laptop everytime, you want to deploy changes, and, you kno, it’s a bit annoying.
+Imagine that you have open-source project, which site is hosting on github pages and you have "edit on github" button on this site. It’s great, because if you are lucky, you will get few pull-requests every week. On the other side you will need laptop every time, you want to deploy changes, and, you know, it’s a bit annoying.
 
-First of all, you should have cloned repository. Travis CI already did this for you. But there are some pitfalls. First of all Travis are cloning by `git` protocol and this protocol only for cloning. Second problem is that Travis CI have no permissions to push in your repos. Let’s fix it.
+In this article will show how travis can help you with deploying your project’s site. I’ll not teach you how to build your site or how to use travis, I’m assuming, that you already have build step and deploy steps, which are working properly on your machine, and you know Travis CI basics.
 
-@todo travis image
 
-## Fixing all the errors!
+First of all, you will discover that Travis has no support for [github pages deployment][deploy-list]. Okay. But we have deploy step, which are working fine, let’s try it. Unfortunately it will not work this way. For understanding this, why this happening, we need some travis intro.
+
+Travis will you repository, before test, build and deploy. And there are some pitfalls in the way Travis clone projects. First of all doing it by `git` protocol and this protocol only for cloning (not pushing). Second problem is that Travis CI have no permissions to push anything to your repos. Let’s fix it.
+
+![Travis CI](http://i.imgur.com/U1K3xkv.png)
+
+[deploy-list]: http://docs.travis-ci.com/user/deployment/
+
+## Deploying
 
 You already have cloned repo, and the way to clone it one more time (with proper protocol) is very ugly solution. Truth is near. @TODO link to X-files. There is much better solution — you can change protocol in the remotes list. Repo’s Url by which it  was cloned, usually are stored into `origin` remote.
 
