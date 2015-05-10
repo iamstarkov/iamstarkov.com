@@ -2,7 +2,7 @@
 
 _10 may 2015_
 
-![commonmark-helpers passing all the tests!](http://i.imgur.com/CM0V0d4.png)
+![commonmark-helpers passing all the tests!](https://i.imgur.com/CM0V0d4.png)
 
 When I was creating this blog, I faced issue with extracting data from
 raw markdown also I wanted to try [commonmark][commonmark], because
