@@ -2,29 +2,29 @@ var md = require('commonmark-helpers');
 var moment = require('moment');
 
 function isDate(event) {
-  if (!md.isEntering(event) || !md.literal(event)) {
+  if (!event.entering || !md.literal(event)) {
     return;
   }
   return moment(new Date(md.literal(event))).isValid();
 }
 
 function containOnlyImage(event) {
-  var img = md.match(md.node(event), isImage);
+  var img = md.match(event.node, isImage);
   if (img) {
-    return md.text(img) === md.text(md.node(event));
+    return md.text(img) === md.text(event.node);
   }
 }
 
 function isDesc() {
   var dateFound;
   return function(event) {
-    if (!md.isEntering(event)) { return; }
+    if (!event.entering) { return; }
     if (isDate(event)) { dateFound = true; }
     return dateFound && !containOnlyImage(event) && !isDate(event) && md.isParagraph(event);
   };
 }
 
-function isImage(event) { return md.isEntering(event) && md.isImage(event); }
+function isImage(event) { return event.entering && md.isImage(event); }
 
 module.exports = function(content) {
   return {
