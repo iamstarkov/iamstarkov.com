@@ -4,6 +4,9 @@ _10 may 2015_
 
 ![commonmark-helpers passing all the tests!](https://i.imgur.com/CM0V0d4.png)
 
+Basically, with commonmark-helpers you can find desire elements in markdown document
+and process them in html or plaintext format.
+
 When I was creating this blog, I faced issue with extracting data from
 raw markdown also I wanted to try [commonmark][commonmark], because
 I believe It will be standard for markdown in the future. Hopefully,
