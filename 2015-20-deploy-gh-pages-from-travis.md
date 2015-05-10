@@ -105,7 +105,7 @@ because there is no travis config there. Go to settings and _turn on
 "Build only if .travis.yml is present" option_ or you can also copy travis
 config to build folder, but I don’t like it.
 
-![travis options](http://i.imgur.com/KCTdobz.png)
+![travis options](https://i.imgur.com/KCTdobz.png)
 
 You will face this problem only if your "deploy" branch differs from `gh-pages`,
 e.g. you want to build site for your github user (repo _user.github.io_),
