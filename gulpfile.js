@@ -46,6 +46,8 @@ function isDesc() {
   };
 }
 
+function isImage(event) { return md.isEntering(event) && md.isImage(event); }
+
 var articleHarvesting = function() {
   return through.obj(function(file, enc, cb) {
     var content = file.contents.toString();
@@ -53,6 +55,7 @@ var articleHarvesting = function() {
       site: site,
       url: getBasename(file),
       title: md.text(md.match(content, md.isHeader)),
+      image: (md.match(content, isImage) || { destination: null }).destination,
       desc: md.text(md.match(content, isDesc())),
       date: md.text(md.match(content, isDate)),
       content: md.html(content),

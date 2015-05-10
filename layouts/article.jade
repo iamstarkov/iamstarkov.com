@@ -7,7 +7,8 @@ block meta
   meta(property="description" content=desc)
     
   meta(name="og:url"         content=url)
-  //- meta(name="og:image"       content="http://getbem.com/img/bem_black.png")
+  if (image)
+    meta(name="og:image"     content=image)
   meta(name="og:title"       content=title)
   meta(name="og:description" content=desc)
 
