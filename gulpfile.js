@@ -16,21 +16,26 @@ var express = require('express');
 var assign = require('object-assign');
 var sequence = require('run-sequence');
 var each = require('each-done');
+var path = require('path');
 
 var moment = require('moment');
 var unix = function(text) { return moment(new Date(text)).unix(); }
 
-var basename = require('./basename');
 var md = require('./md');
 var site = require('./package.json').site;
 
 var articles = [];
+
+var getBasename = function(file) {
+  return path.basename(file.relative, path.extname(file.relative));
+};
+
 var articleHarvesting = function() {
   return through.obj(function(file, enc, cb) {
     var content = file.contents.toString();
     articles.push({
       site: site,
-      url: basename(file),
+      url: getBasename(file),
       title: md.getTitle(content),
       desc: md.getDescText(content),
       date: md.getDate(content),
