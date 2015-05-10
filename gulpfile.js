@@ -20,53 +20,27 @@ var path = require('path');
 
 var moment = require('moment');
 var unix = function(text) { return moment(new Date(text)).unix(); }
-
-var md = require('commonmark-helpers');
 var site = require('./package.json').site;
-
-var articles = [];
 
 var getBasename = function(file) {
   return path.basename(file.relative, path.extname(file.relative));
 };
 
-function isDate(event) {
-  if (!md.isEntering(event) || !md.literal(event)) {
-    return;
-  }
-  return moment(new Date(md.literal(event))).isValid();
-}
+var articleData = require('./article-data');
 
-function containOnlyImage(event) {
-  var img = md.match(md.node(event), isImage);
-  if (img) {
-    return md.text(img) === md.text(md.node(event));
-  }
-}
-
-function isDesc() {
-  var dateFound;
-  return function(event) {
-    if (!md.isEntering(event)) { return; }
-    if (isDate(event)) { dateFound = true; }
-    return dateFound && !containOnlyImage(event) && !isDate(event) && md.isParagraph(event);
-  };
-}
-
-function isImage(event) { return md.isEntering(event) && md.isImage(event); }
-
+var articles = [];
 var articleHarvesting = function() {
   return through.obj(function(file, enc, cb) {
-    var content = file.contents.toString();
+    var article = articleData(file.contents.toString());
     articles.push({
       site: site,
       url: getBasename(file),
-      title: md.text(md.match(content, md.isHeader)),
-      image: (md.match(content, isImage) || { destination: null }).destination,
-      desc: md.text(md.match(content, isDesc())),
-      date: md.text(md.match(content, isDate)),
-      content: md.html(content),
-      rss: { description: md.html(md.match(content, isDesc())) }
+      title: article.title,
+      image: article.image,
+      desc: article.desc,
+      date: article.date,
+      content: article.content,
+      rss: { description: article.descHtml }
     });
     articles.sort(function(a, b) { return unix(a.date) < unix(b.date); });
     cb(null, file);
