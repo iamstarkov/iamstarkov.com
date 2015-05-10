@@ -1,4 +1,4 @@
-# Deploy to GitHub pages from Travis CI
+# Deploy to GitHub pages from Travis CI
 
 _10 may 2015_
 
