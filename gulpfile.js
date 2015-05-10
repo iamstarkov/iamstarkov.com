@@ -114,19 +114,17 @@ gulp.task('watch', ['express', 'build'], function() {
 
 gulp.task('clean', function(done) { del('dist', done); });
 
+
+gulp.task('build-common', function(done) {
+  sequence(['index-page', 'articles-pages', 'rss'], 'cname', done);
+});
+
 gulp.task('build', function(done) {
-  sequence('articles-registry',
-          ['index-page', 'articles-pages', 'rss'],
-          'cname',
-          done);
+  sequence('articles-registry', 'build-common', done);
 });
 
 gulp.task('build-prod', function(done) {
-  sequence('clean',
-          'articles-registry-prod',
-          ['index-page', 'articles-pages', 'rss'],
-          'cname',
-          done);
+  sequence('clean', 'articles-registry-prod', 'build-common', done);
 });
 
 gulp.task('cname', function() {
