@@ -76,4 +76,4 @@ Define list of social networks and list of usernames to check. Choose one,
 which is available everywhere. Renaming Gmail requires extra work.
 
 _Choose new name carefully,  
-Your renamed [Vladimir Starkov](https://iamstarkov.com)_
+your renamed [Vladimir Starkov](https://iamstarkov.com)_
