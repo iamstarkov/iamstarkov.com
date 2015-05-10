@@ -25,9 +25,10 @@ block content
     = " • "
     a(href="https://twitter.com/iamstarkov") Follow me on Twitter
   
-  ul
+  ul.list
     each article in list
-      li
-        time= article.date + " " 
+      li.list__item
         a(href=article.url)= article.title
+        time= article.date + " " 
+        p.list__item-desc !{article.desc}
         

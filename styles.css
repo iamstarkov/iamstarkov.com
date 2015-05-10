@@ -11,7 +11,6 @@ article {
     font-size: 1.4em;
     font-family: "Hoefler Text", "Times New Roman", Times, serif;
     color: #222;
-    /* min-width: 20em; */
     max-width: 30em;
     margin: 3em auto 7em;
 }
@@ -38,6 +37,7 @@ code {
 pre {
   background: #fafafa;
   box-shadow: 0 0 0.7em 0.7em #fafafa;
+  overflow-y: auto;
 }
 
 a {
@@ -76,4 +76,26 @@ a::before {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
   font-weight: normal;
+}
+
+
+.list, .list__item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list__item + .list__item {
+  margin-top: 1em;
+}
+
+.list time {
+  font-style: italic;
+  font-size: 0.7em;
+  white-space: nowrap;
+}
+
+.list__item-desc {
+  margin: 0;
+  font-size: 0.7em;
 }
