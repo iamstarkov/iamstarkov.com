@@ -37,12 +37,19 @@ function isDate(event) {
   return moment(new Date(md.literal(event))).isValid();
 }
 
+function containOnlyImage(event) {
+  var img = md.match(md.node(event), isImage);
+  if (img) {
+    return md.text(img) === md.text(md.node(event));
+  }
+}
+
 function isDesc() {
   var dateFound;
   return function(event) {
     if (!md.isEntering(event)) { return; }
     if (isDate(event)) { dateFound = true; }
-    return dateFound && !isDate(event) && md.isParagraph(event);
+    return dateFound && !containOnlyImage(event) && !isDate(event) && md.isParagraph(event);
   };
 }
 
