@@ -23,12 +23,13 @@ block content
     = " or "
     a(href="https://google.com/?q=site:iamstarkov.com+smth") search "smth"
     = " • "
-    a(href="https://twitter.com/iamstarkov") Follow me on Twitter
+    a(href="https://twitter.com/iamstarkov") Follow me on Twitter
   
-  ul.list
-    each article in list
-      li.list__item
-        a(href=article.url)= article.title
-        time= article.date + " " 
-        p.list__item-desc !{article.desc}
-        
+  article
+    ul.list
+      each article in list
+        li.list__item
+          a(href=article.url)= article.title
+          time= article.date + " " 
+          p.list__item-desc !{article.desc}
+          

@@ -35,7 +35,8 @@ var articleHarvesting = function() {
     var article = articleData(file.contents.toString());
     articles.push({
       site: site,
-      url: getBasename(file),
+      filename: file.relative,
+      url: getBasename(file).substr('8'),
       title: article.title,
       image: article.image,
       desc: article.desc,
@@ -51,7 +52,6 @@ var articleHarvesting = function() {
 gulp.task('articles-registry', function() {
   articles = [];
   return gulp.src(['*.md'])
-    .pipe(rename(function(path) { path.basename = path.basename.substr('8'); }))
     .pipe(replace('https://iamstarkov.com', 'http://localhost:4000'))
     .pipe(articleHarvesting());
 });
@@ -59,7 +59,6 @@ gulp.task('articles-registry', function() {
 gulp.task('articles-registry-prod', function() {
   articles = [];
   return gulp.src(['*.md', '!*draft*.md'])
-    .pipe(rename(function(path) { path.basename = path.basename.substr('8'); }))
     .pipe(articleHarvesting());
 });
 

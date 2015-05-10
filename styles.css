@@ -7,7 +7,7 @@ html, body {
   -moz-font-feature-settings: “liga” on;
 }
 
-article {
+.wrap {
     font-size: 1.4em;
     font-family: "Hoefler Text", "Times New Roman", Times, serif;
     color: #222;
@@ -16,10 +16,10 @@ article {
 }
 
 @media (max-device-width: 480px) {
-  article { font-size: 0.8em; }
+  .wrap { font-size: 0.8em; }
 
   @media (orientation: landscape) {
-    article { font-size: 0.6em; }
+    .wrap { font-size: 0.6em; }
   }
 }
 
@@ -40,7 +40,7 @@ pre {
   overflow-y: auto;
 }
 
-a {
+article a {
   position: relative;
   text-decoration: none;
   box-shadow: 0 -0.4em 0 #FFF08C inset;
@@ -48,19 +48,18 @@ a {
   transition: all 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
 }
 
-a:hover {
+article a:hover {
   box-shadow: 0px -1em 0px #FFF08C inset;
 }
 
-
-a {
+article a {
   text-decoration: none;
   position: relative;
   color: inherit;
   z-index: 1;
 }
 
-a::before {
+article  a::before {
   content: "";
   display: block;
   position: absolute;
@@ -98,4 +97,14 @@ h1, h2, h3, h4, h5, h6 {
 .list__item-desc {
   margin: 0;
   font-size: 0.7em;
+}
+
+.edit-link {
+  float: right;
+  margin-left: 2em;
+
+  font-size: 0.7em;
+  line-height: 2.2;
+  white-space: nowrap;
+  color: #222;
 }

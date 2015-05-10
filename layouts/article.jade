@@ -1,5 +1,6 @@
 extend page
 
+
 block title
   title #{title}
 
@@ -13,4 +14,8 @@ block meta
   meta(name="og:description" content=desc)
 
 block content
-  | !{content}
+  - var github = "https://github.com/iamstarkov/iamstarkov.github.io/edit/premaster/"
+  a(href=github + filename).edit-link edit on github
+  
+  article
+    | !{content}
