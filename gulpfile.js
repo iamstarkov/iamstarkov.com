@@ -21,7 +21,7 @@ var path = require('path');
 var moment = require('moment');
 var unix = function(text) { return moment(new Date(text)).unix(); }
 
-var md = require('./md');
+var md = require('commonmark-helpers');
 var site = require('./package.json').site;
 
 var articles = [];
@@ -30,17 +30,33 @@ var getBasename = function(file) {
   return path.basename(file.relative, path.extname(file.relative));
 };
 
+function isDate(event) {
+  if (!md.isEntering(event) || !md.literal(event)) {
+    return;
+  }
+  return moment(new Date(md.literal(event))).isValid();
+}
+
+function isDesc() {
+  var dateFound;
+  return function(event) {
+    if (!md.isEntering(event)) { return; }
+    if (isDate(event)) { dateFound = true; }
+    return dateFound && !isDate(event) && md.isParagraph(event);
+  };
+}
+
 var articleHarvesting = function() {
   return through.obj(function(file, enc, cb) {
     var content = file.contents.toString();
     articles.push({
       site: site,
       url: getBasename(file),
-      title: md.getTitle(content),
-      desc: md.getDescText(content),
-      date: md.getDate(content),
+      title: md.text(md.match(content, md.isHeader)),
+      desc: md.text(md.match(content, isDesc())),
+      date: md.text(md.match(content, isDate)),
       content: md.html(content),
-      rss: { description: md.getDesc(content) }
+      rss: { description: md.html(md.match(content, isDesc())) }
     });
     articles.sort(function(a, b) { return unix(a.date) < unix(b.date); });
     cb(null, file);
