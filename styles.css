@@ -1,0 +1,79 @@
+html, body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  letter-spacing: 0.01rem;
+  text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: “liga” on;
+}
+
+article {
+    font-size: 1.4em;
+    font-family: "Hoefler Text", "Times New Roman", Times, serif;
+    color: #222;
+    /* min-width: 20em; */
+    max-width: 30em;
+    margin: 3em auto 7em;
+}
+
+@media (max-device-width: 480px) {
+  article { font-size: 0.8em; }
+
+  @media (orientation: landscape) {
+    article { font-size: 0.6em; }
+  }
+}
+
+
+article img {
+  max-width: 100%;
+}
+
+code {
+  font-size: 0.9em;
+  background: #fafafa;
+  box-shadow: 0 0 0.2em 0.2em #fafafa;
+}
+
+pre {
+  background: #fafafa;
+  box-shadow: 0 0 0.7em 0.7em #fafafa;
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+  box-shadow: 0 -0.4em 0 #FFF08C inset;
+  color: inherit;
+  transition: all 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+
+a:hover {
+  box-shadow: 0px -1em 0px #FFF08C inset;
+}
+
+
+a {
+  text-decoration: none;
+  position: relative;
+  color: inherit;
+  z-index: 1;
+}
+
+a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  margin: -0.4em;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+  font-weight: normal;
+}

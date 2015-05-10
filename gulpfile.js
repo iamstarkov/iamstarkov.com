@@ -7,6 +7,7 @@ var rename = require('gulp-rename');
 var data = require('gulp-data');
 var jade = require('gulp-jade');
 var debug = require('gulp-debug');
+var replace = require('gulp-replace');
 var log = require('gulp-util').log;
 var buildbranch = require('buildbranch');
 var rss = require('rss');
@@ -51,6 +52,7 @@ gulp.task('articles-registry', function() {
   articles = [];
   return gulp.src(['*.md'])
     .pipe(rename(function(path) { path.basename = path.basename.substr('8'); }))
+    .pipe(replace('https://iamstarkov.com', 'http://localhost:4000'))
     .pipe(articleHarvesting());
 });
 
@@ -93,14 +95,14 @@ gulp.task('rss', function(done) {
 gulp.task('default', ['watch']);
 
 gulp.task('watch', ['express', 'build'], function() {
-  watch('**/*{jade,md,json,js}', function() { gulp.start('build'); });
+  watch(['**/*{jade,md,json,js}', '*.css'], function() { gulp.start('build'); });
 });
 
 gulp.task('clean', function(done) { del('dist', done); });
 
 
 gulp.task('build-common', function(done) {
-  sequence(['index-page', 'articles-pages', 'rss'], 'cname', done);
+  sequence(['index-page', 'articles-pages', 'rss'], 'css', 'cname', done);
 });
 
 gulp.task('build', function(done) {
@@ -109,6 +111,10 @@ gulp.task('build', function(done) {
 
 gulp.task('build-prod', function(done) {
   sequence('clean', 'articles-registry-prod', 'build-common', done);
+});
+
+gulp.task('css', function() {
+  return gulp.src('styles.css').pipe(gulp.dest('dist'));
 });
 
 gulp.task('cname', function() {
