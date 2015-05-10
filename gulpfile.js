@@ -40,7 +40,7 @@ var articleHarvesting = function() {
       desc: article.desc,
       date: article.date,
       content: article.content,
-      rss: { description: article.descHtml }
+      rss: { description: article.descRSS }
     });
     articles.sort(function(a, b) { return unix(a.date) < unix(b.date); });
     cb(null, file);
