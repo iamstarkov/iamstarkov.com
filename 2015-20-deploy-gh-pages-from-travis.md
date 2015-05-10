@@ -146,5 +146,5 @@ env:
 
 Relax and take a beer—travis will be deploying for you!
 
-_Create stuff, not deploy,  
+_Spend time on creating stuff, not deploying,  
 your [Vladimir Starkov](https://iamstarkov.com)_
