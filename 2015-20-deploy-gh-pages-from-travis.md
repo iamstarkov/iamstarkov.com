@@ -25,7 +25,7 @@ Second problem is that Travis CI have no permissions to push anything to your
 repos. Let’s fix it. Also, travis cannot commit anything because
 of non-configured git environment, but it’s a minor problem.
 
-![Travis CI](http://i.imgur.com/U1K3xkv.png)
+![Travis CI](https://i.imgur.com/U1K3xkv.png)
 
 [deploy-list]: http://docs.travis-ci.com/user/deployment/
 
