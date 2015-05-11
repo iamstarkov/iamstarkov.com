@@ -2,23 +2,24 @@
 
 11 may 2015
 
-**Disable "gmail" tabs:**  
-![Imgur](http://i.imgur.com/dZtGwwd.png)
+I discovered that gmail is not very friendly by default. Gmail mark message as "read" only after 3 seconds, you cannot use it from keyboard and it have no preview for emails. But slow and abandoned gmail chat is turned on. Good try, gmail!
 
-**Enable keyboard shortcuts:**  
-![Imgur](http://i.imgur.com/kd2bnLd.png)
+These 6 steps made you gmail a bit better:
 
-**Enable "Preview pane" and "undo send" labs:**  
-![Imgur](http://i.imgur.com/HfSggsf.png)
+* Disable "gmail" tabs:  
+  ![gmail tabs](https://i.imgur.com/dZtGwwd.png)
+* Enable keyboard shortcuts:  
+  ![gmail hotkeys](https://i.imgur.com/kd2bnLd.png)
+* Enable "Preview pane" and "undo send" labs:  
+  ![gmail labs](https://i.imgur.com/HfSggsf.png)
+* Active preview pane:  
+  ![preview pane](https://i.imgur.com/ysChF56.png)
+* Enable instant reading:  
+  ![Imgur](https://i.imgur.com/pufGXVP.png)
+* Nobody use gmail chat. Disable chat:  
+  ![Imgur](https://i.imgur.com/LOckWgh.png)
 
-**Active preview pane:**  
-![Imgur](http://i.imgur.com/ysChF56.png)
+Great, I’ve got friendly and efficient gmail in one minute.
 
-**Enable instant reading:**
-![Imgur](http://i.imgur.com/pufGXVP.png)
-
-**Add you signature:**
-![Imgur](http://i.imgur.com/0KhXUST.png)
-
-**Disable chat (nobody using it):**
-![Imgur](http://i.imgur.com/LOckWgh.png)
+_Use hotkeys, even in gmail,  
+your [Vladimir Starkov](https://iamstarkov.com/)_
