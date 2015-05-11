@@ -2,7 +2,10 @@
 
 11 may 2015
 
-I discovered that gmail is not very friendly by default. Gmail mark message as "read" only after 3 seconds, you cannot use it from keyboard and it have no preview for emails. But slow and abandoned gmail chat is turned on. Good try, gmail!
+I discovered that gmail is not very friendly by default. Gmail mark message as
+"read" only after 3 seconds, you cannot use it from keyboard and it have
+no preview for emails. But slow and abandoned gmail chat is turned on.
+Good try, gmail!
 
 These 6 steps made you gmail a bit better:
 
