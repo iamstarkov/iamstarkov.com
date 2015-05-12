@@ -40,11 +40,14 @@ pre {
   overflow-y: auto;
 }
 
+a {
+  color: inherit;
+}
+
 article a {
   position: relative;
   text-decoration: none;
   box-shadow: 0 -0.4em 0 #FFF08C inset;
-  color: inherit;
   transition: all 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
 }
 
@@ -106,6 +109,5 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.7em;
   line-height: 2.2;
   white-space: nowrap;
-  color: #222;
   margin-top: 3px;
 }
