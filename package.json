@@ -16,8 +16,8 @@
   "site": {
     "title": "Vladimir Starkov",
     "description": "Frontend blog from Vladimir Starkov",
-    "feed_url": "https://iamstarkov/rss.xml",
-    "site_url": "https://iamstarkov/",
+    "feed_url": "https://iamstarkov.com/rss.xml",
+    "site_url": "https://iamstarkov.com/",
     "managingEditor": "iamstarkov@gmail.com (Vladimir Starkov)",
     "webMaster": "iamstarkov@gmail.com (Vladimir Starkov)",
     "copyright": "MIT",
