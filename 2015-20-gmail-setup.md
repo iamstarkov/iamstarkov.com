@@ -9,7 +9,7 @@ Good try, gmail!
 
 My gmail look like this and have hotkeys:
 
-![usual gmail](http://i.imgur.com/BHAPtGJ.png)
+![usual gmail](https://i.imgur.com/BHAPtGJ.png)
 
 These 6 steps made you gmail a bit better:
 
