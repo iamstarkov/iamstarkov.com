@@ -1,6 +1,6 @@
 # Gmail setup
 
-11 may 2015
+12 may 2015
 
 I discovered that gmail is not very friendly by default. Gmail mark message as
 "read" only after 3 seconds, you cannot use it from keyboard and it have
