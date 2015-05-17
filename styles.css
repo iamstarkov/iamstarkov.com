@@ -125,3 +125,14 @@ blockquote p a:last-of-type {
 blockquote p a:last-of-type::before {
   content: '—'
 }
+
+.article-footer {
+  width: 50%;
+  margin: 5em auto 0;
+  font-size: 0.6em;
+  text-align: center;
+}
+
+@media (max-device-width: 480px) {
+  .article-footer { width: 70%; }
+}

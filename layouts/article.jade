@@ -19,3 +19,10 @@ block content
   
   article
     | !{content}
+
+  footer.article-footer
+    | ★ ★ ★ <br/>
+    | If you found "#{title}" useful, please share it to your 
+    a(href="https://twitter.com/intent/tweet?url=https://iamstarkov.com/#{url}&text=#{title}&via=iamstarkov") followers in Twitter
+    |  or 
+    a(href="https://www.facebook.com/sharer.php?u=http://vstarkov.com/#{url}&t=#{title}") friends in Facebook
