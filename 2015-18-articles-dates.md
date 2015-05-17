@@ -2,7 +2,7 @@
 
 _30 april 2015_
 
-![New JS frameworks every day!](https://pbs.twimg.com/media/CBigK8NWIAELu5g.jpg:large)
+![New JS frameworks every day!](https://i.imgur.com/JrXX7wT.jpg)
 
 Everytime I read article without publish date I feel myself uncomfortable.
 Modern frontend world is very fast changing thing; new javascript frameworks
