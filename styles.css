@@ -133,6 +133,7 @@ blockquote p a:last-of-type::before {
   text-align: center;
 }
 
+
 @media (max-device-width: 480px) {
   .article-footer { width: 70%; }
 }
