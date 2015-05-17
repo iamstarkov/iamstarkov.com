@@ -62,7 +62,7 @@ article a {
   z-index: 1;
 }
 
-article  a::before {
+article a::after {
   content: "";
   display: block;
   position: absolute;
@@ -110,4 +110,18 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 2.2;
   white-space: nowrap;
   margin-top: 3px;
+}
+
+blockquote {
+  margin: 0px;
+  padding-left: 1em;
+  box-shadow: 8px 0px 10px -11px #FFF08C inset;
+}
+
+blockquote p a:last-of-type {
+  font-style: italic;
+  font-size: 0.8em;
+}
+blockquote p a:last-of-type::before {
+  content: '—'
 }
