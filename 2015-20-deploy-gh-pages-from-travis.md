@@ -68,7 +68,7 @@ from [GitHub access token][tokens] page.
 > Personal access tokens function like ordinary OAuth access tokens.
 They can be used instead of a password for Git over HTTPS, or can be
 used to authenticate to the API over Basic Authentication.  
-— [from the tokens page][tokens]
+[from the tokens page][tokens]
 
 Ok, you have your credential, but storing them in plaintext is bad idea,
 and you need more secure way to use it.
