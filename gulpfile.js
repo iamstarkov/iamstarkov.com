@@ -44,7 +44,7 @@ var articleHarvesting = function() {
       content: article.content,
       rss: { description: article.descRSS }
     });
-    articles.sort(function(a, b) { return unix(a.date) < unix(b.date); });
+    articles.sort(function(a, b) { return unix(b.date) - unix(a.date); });
     cb(null, file);
   });
 };
