@@ -36,13 +36,16 @@ var articleHarvesting = function() {
     articles.push({
       site: site,
       filename: file.relative,
-      url: getBasename(file).substr('8'),
+      url: getBasename(file).substr('8') + '/',
       title: article.title,
       image: article.image,
       desc: article.desc,
       date: article.date,
       content: article.content,
-      rss: { description: article.descRSS }
+      rss: {
+        url: site.site_url + getBasename(file).substr('8') + '/',
+        description: article.descRSS
+      }
     });
     articles.sort(function(a, b) { return unix(b.date) - unix(a.date); });
     cb(null, file);
