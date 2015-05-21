@@ -89,7 +89,7 @@ gulp.task('articles-pages', function(done) {
 gulp.task('rss', function(done) {
   var feed = new rss(site);
   articles.forEach(function(article) {
-    feed.item(assign(article, article.rss));
+    feed.item(assign({}, article, article.rss));
   });
   output('dist/rss.xml', feed.xml({ indent: true }), done);
 });
