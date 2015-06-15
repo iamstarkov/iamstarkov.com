@@ -29,6 +29,7 @@
     ]
   },
   "dependencies": {
+    "babel": "^5.5.8",
     "buildbranch": "0.0.3",
     "commonmark": "^0.18.1",
     "commonmark-helpers": "^0.1.0",
