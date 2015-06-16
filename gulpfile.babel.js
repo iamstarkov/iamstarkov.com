@@ -99,7 +99,7 @@ gulp.task('cname', () => {
   return gulp.src('CNAME').pipe(gulp.dest('dist'));
 });
 
-gulp.task('gh', ['build-prod'], (done) => {
+gulp.task('gh', ['build'], (done) => {
   buildbranch({ branch: 'master', folder: 'dist' }, done);
 });
 
