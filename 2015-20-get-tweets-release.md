@@ -1,10 +1,10 @@
-# Just published [get-tweets][tweets] package
+# Just published get-tweets package
 
 _16 may 2015_
 
 Get all tweets for target username.
 
-![get-tweets](https://i.imgur.com/gWwMiHC.png)
+[![get-tweets](https://i.imgur.com/gWwMiHC.png)][tweets]
 
 We have awesome [twitter][twtr] package already. But I need way to grab all
 tweets from target username and need it to be tested too. I feel like it need
