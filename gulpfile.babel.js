@@ -21,87 +21,76 @@ import extract from 'article-data';
 import moment from 'moment';
 import { site } from './package.json';
 
-var env = process.env.NODE_ENV;
+const env = process.env.NODE_ENV;
+const getBasename = (file) => path.basename(file.relative, path.extname(file.relative));
 
-var getBasename = (file) => path.basename(file.relative, path.extname(file.relative));
+let articlesList = [];
 
-let articles = [];
+const addToList = (file, article) => {
+  articlesList.push(assign({}, {
+    site: site,
+    filename: file.relative,
+    url: getBasename(file).substr('8') + '/',
+  }, extract(article)));
+  articlesList.sort((a, b) => b.sortableDate - a.sortableDate );
+};
+
+const buildArticle = (article) =>
+  gulp.src('layouts/article.jade')
+    .pipe(data(() => article))
+    .pipe(jade({ pretty: true }))
+    .pipe(rename({ dirname: article.url }))
+    .pipe(rename({ basename: 'index' }))
+    .pipe(gulp.dest('dist'));
+
+const getRSS = (site, list) => {
+  var feed = new rss(site);
+  list.forEach((article) => { feed.item({
+    url: site.site_url + article.url,
+    title: article.titleText,
+    description: article.descHtml,
+    date: article.date
+  })});
+  return feed.xml({ indent: true });
+}
 
 gulp.task('articles-registry', () => {
-  articles = [];
+  articlesList = [];
   return gulp.src(env === 'dev' ? ['2015-*.md'] : [ '2015-*.md', '!*draft*.md' ])
     .pipe(replace('https://iamstarkov.com/', '/'))
     .pipe((() => through.obj((file, enc, cb) => {
-      const article = file.contents.toString();
-      articles.push(assign({}, {
-        site: site,
-        filename: file.relative,
-        url: getBasename(file).substr('8') + '/',
-      }, extract(article)));
-      articles.sort((a, b) => b.sortableDate - a.sortableDate );
+      addToList(file, file.contents.toString());
       cb(null, file);
     }))());
 });
 
 gulp.task('index-page', () =>
   gulp.src('layouts/index.jade')
-    .pipe(data(() => {
-      return { site: site, list: articles };
-    }))
-    .pipe(jade({ pretty: true }))
+    .pipe(data(() => { return { site: site, list: articlesList }; }))
+    .pipe(jade({ pretty: env === 'dev' }))
     .pipe(rename({ basename: 'index' }))
     .pipe(gulp.dest('dist'))
 );
 
-gulp.task('articles-pages', (done) => {
-  each(articles, function(article) {
-    return gulp.src('layouts/article.jade')
-      .pipe(data(() => article))
-      .pipe(jade({ pretty: true }))
-      .pipe(rename({ dirname: article.url }))
-      .pipe(rename({ basename: 'index' }))
-      .pipe(gulp.dest('dist'));
-  }, done);
-});
-
-gulp.task('rss', (done) => {
-  var feed = new rss(site);
-  articles.forEach((article) => {
-    feed.item({
-      url: site.site_url + article.url,
-      title: article.titleText,
-      description: article.descHtml,
-      date: article.date
-    });
-  });
-  output('dist/rss.xml', feed.xml({ indent: true }), done);
-});
-
-gulp.task('default', ['watch']);
+gulp.task('each-article', (done) => { each(articlesList, buildArticle, done); });
+gulp.task('rss', (done) => { output('dist/rss.xml', getRSS(site, articlesList), done); });
 
 gulp.task('watch', ['express', 'build'], () => {
-  watch(['**/*{jade,md,json,js}', '*.css'], () => { gulp.start('build'); });
+  watch(['**/*{jade,md,json}', '*.css'], () => { gulp.start('build'); });
+});
+
+gulp.task('build', (done) => {
+  sequence('articles-registry', ['index-page', 'each-article', 'rss'], 'css', 'cname', done);
 });
 
 gulp.task('clean', (done) => { del('dist', done); });
-
-gulp.task('build', (done) => {
-  sequence('articles-registry', ['index-page', 'articles-pages', 'rss'], 'css', 'cname', done);
-});
-
-gulp.task('css', () => {
-  return gulp.src('styles.css').pipe(gulp.dest('dist'));
-});
-
-gulp.task('cname', () => {
-  return gulp.src('CNAME').pipe(gulp.dest('dist'));
-});
-
-gulp.task('gh', ['build'], (done) => {
-  buildbranch({ branch: 'master', folder: 'dist' }, done);
-});
+gulp.task('css',   () => gulp.src('styles.css').pipe(gulp.dest('dist')) );
+gulp.task('cname', () => gulp.src('CNAME').pipe(gulp.dest('dist')) );
+gulp.task('gh', ['build'], (done) => { buildbranch({ branch: 'master', folder: 'dist' }, done); });
 
 gulp.task('express', () => {
   express().use(express.static('dist')).listen(4000);
   log('Server is running on http://localhost:4000');
 });
+
+gulp.task('default', ['watch']);
