@@ -21,13 +21,13 @@ import extract from 'article-data';
 import moment from 'moment';
 import { site } from './package.json';
 
-var getBasename = function(file) {
-  return path.basename(file.relative, path.extname(file.relative));
-};
+var env = process.env.NODE_ENV;
 
-var articles = [];
-var articleHarvesting = function() {
-  return through.obj(function(file, enc, cb) {
+var getBasename = (file) => path.basename(file.relative, path.extname(file.relative));
+
+let articles = [];
+var articleHarvesting = () =>
+  through.obj((file, enc, cb) => {
     const article = file.contents.toString();
     articles.push(assign({}, {
       site: site,
@@ -37,32 +37,25 @@ var articleHarvesting = function() {
     articles.sort((a, b) => b.sortableDate - a.sortableDate );
     cb(null, file);
   });
-};
 
-gulp.task('articles-registry', function() {
+gulp.task('articles-registry', () => {
   articles = [];
-  return gulp.src('2015-*.md')
+  return gulp.src(env === 'dev' ? ['2015-*.md'] : [ '2015-*.md', '!*draft*.md' ])
     .pipe(replace('https://iamstarkov.com', 'http://localhost:4000'))
     .pipe(articleHarvesting());
 });
 
-gulp.task('articles-registry-prod', function() {
-  articles = [];
-  return gulp.src(['*.md', '!*draft*.md'])
-    .pipe(articleHarvesting());
-});
-
-gulp.task('index-page', function() {
-  return gulp.src('layouts/index.jade')
-    .pipe(data(function() {
+gulp.task('index-page', () =>
+  gulp.src('layouts/index.jade')
+    .pipe(data(() => {
       return { site: site, list: articles };
     }))
     .pipe(jade({ pretty: true }))
     .pipe(rename({ basename: 'index' }))
-    .pipe(gulp.dest('dist'));
-});
+    .pipe(gulp.dest('dist'))
+);
 
-gulp.task('articles-pages', function(done) {
+gulp.task('articles-pages', (done) => {
   each(articles, function(article) {
     return gulp.src('layouts/article.jade')
       .pipe(data(() => article))
@@ -73,10 +66,9 @@ gulp.task('articles-pages', function(done) {
   }, done);
 });
 
-gulp.task('rss', function(done) {
+gulp.task('rss', (done) => {
   var feed = new rss(site);
-  articles.forEach(function(article) {
-    console.log(article.titleText);
+  articles.forEach((article) => {
     feed.item({
       url: site.site_url + article.url,
       title: article.titleText,
@@ -89,41 +81,29 @@ gulp.task('rss', function(done) {
 
 gulp.task('default', ['watch']);
 
-gulp.task('watch', ['express', 'build'], function() {
-  watch(['**/*{jade,md,json,js}', '*.css'], function() { gulp.start('build'); });
+gulp.task('watch', ['express', 'build'], () => {
+  watch(['**/*{jade,md,json,js}', '*.css'], () => { gulp.start('build'); });
 });
 
-gulp.task('clean', function(done) { del('dist', done); });
+gulp.task('clean', (done) => { del('dist', done); });
 
-
-gulp.task('build-common', function(done) {
-  sequence(['index-page', 'articles-pages', 'rss'], 'css', 'cname', done);
+gulp.task('build', (done) => {
+  sequence('articles-registry', ['index-page', 'articles-pages', 'rss'], 'css', 'cname', done);
 });
 
-gulp.task('build', function(done) {
-  sequence('articles-registry', 'build-common', done);
-});
-
-gulp.task('build-prod', function(done) {
-  sequence('clean', 'articles-registry-prod', 'build-common', done);
-});
-
-gulp.task('css', function() {
+gulp.task('css', () => {
   return gulp.src('styles.css').pipe(gulp.dest('dist'));
 });
 
-gulp.task('cname', function() {
+gulp.task('cname', () => {
   return gulp.src('CNAME').pipe(gulp.dest('dist'));
 });
 
-gulp.task('gh', ['build-prod'], function(done) {
+gulp.task('gh', ['build-prod'], (done) => {
   buildbranch({ branch: 'master', folder: 'dist' }, done);
 });
 
-gulp.task('express', function() {
-  var app = express();
-  app.use(express.static('dist'));
-  app.listen(4000);
-
+gulp.task('express', () => {
+  express().use(express.static('dist')).listen(4000);
   log('Server is running on http://localhost:4000');
 });
