@@ -9,6 +9,9 @@
   },
   "author": "Vladimir Starkov <iamstarkov@gmail.com> (https://iamstarkov.com/)",
   "license": "MIT",
+  "scripts": {
+    "deploy": "NODE_ENV=prod gulp gh"
+  },
   "bugs": {
     "url": "https://github.com/iamstarkov/iamstarkov.github.io/issues"
   },
@@ -29,6 +32,7 @@
     ]
   },
   "dependencies": {
+    "article-data": "^0.1.0",
     "babel": "^5.5.8",
     "buildbranch": "0.0.3",
     "commonmark": "^0.18.1",

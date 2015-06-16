@@ -10,7 +10,7 @@ before_script:
   - git config --global user.name "Vladimir Starkov"
   - git remote rm origin
   - git remote add origin https://iamstarkov:${GH_TOKEN}@github.com/iamstarkov/iamstarkov.github.io.git
-script: gulp gh
+script: npm run deploy
 env:
   global:
     secure: XsShw1Nnk3byvt8q5ceB/qFoqTYTBeXJiyag6hbtxEXaugTZTO7TCj2PRs5uhjUfj82AKeA3agexboTGwbAVsDI1OmxsZWKKTIlrKByZm6M5kWZYO7PNgd6QF2e7+mifnClDD8G0xAZyJcHKW4SD3cv/SzQStc91RLwILFgaWlo=
