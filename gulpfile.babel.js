@@ -41,7 +41,7 @@ var articleHarvesting = () =>
 gulp.task('articles-registry', () => {
   articles = [];
   return gulp.src(env === 'dev' ? ['2015-*.md'] : [ '2015-*.md', '!*draft*.md' ])
-    .pipe(replace('https://iamstarkov.com', '/'))
+    .pipe(replace('https://iamstarkov.com/', '/'))
     .pipe(articleHarvesting());
 });
 
