@@ -26,23 +26,21 @@ var env = process.env.NODE_ENV;
 var getBasename = (file) => path.basename(file.relative, path.extname(file.relative));
 
 let articles = [];
-var articleHarvesting = () =>
-  through.obj((file, enc, cb) => {
-    const article = file.contents.toString();
-    articles.push(assign({}, {
-      site: site,
-      filename: file.relative,
-      url: getBasename(file).substr('8') + '/',
-    }, extract(article)));
-    articles.sort((a, b) => b.sortableDate - a.sortableDate );
-    cb(null, file);
-  });
 
 gulp.task('articles-registry', () => {
   articles = [];
   return gulp.src(env === 'dev' ? ['2015-*.md'] : [ '2015-*.md', '!*draft*.md' ])
     .pipe(replace('https://iamstarkov.com/', '/'))
-    .pipe(articleHarvesting());
+    .pipe((() => through.obj((file, enc, cb) => {
+      const article = file.contents.toString();
+      articles.push(assign({}, {
+        site: site,
+        filename: file.relative,
+        url: getBasename(file).substr('8') + '/',
+      }, extract(article)));
+      articles.sort((a, b) => b.sortableDate - a.sortableDate );
+      cb(null, file);
+    }))());
 });
 
 gulp.task('index-page', () =>
