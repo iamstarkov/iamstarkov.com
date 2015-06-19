@@ -21,7 +21,7 @@ import extract from 'article-data';
 import moment from 'moment';
 import { site } from './package.json';
 
-const env = process.env.NODE_ENV;
+const env = process.env.NODE_ENV || 'dev';
 const getBasename = (file) => path.basename(file.relative, path.extname(file.relative));
 
 let articlesList = [];
