@@ -2,8 +2,7 @@
 
 _19 june 2015_
 
-package.json can have [`scripts` fields](scripts), which are basically an object, which
-looks like this:
+package.json can have [`scripts` fields](scripts), which are basically an object similar to this one:
 
       "scripts": {
         "name": "command-to-run",
@@ -11,7 +10,7 @@ looks like this:
         "name2": "command-to-run2"
       }
 
-npm does a really simple job: when you run `npm run smth`, npm searches "smth" in "scripts" object and run appropriate `command-to-run`.
+npm does a really simple job: when you run `npm run smth`, npm searches "smth" in "scripts" object and runs appropriate `command-to-run`.
 
 ## shortcuts: start and test
 
@@ -20,7 +19,13 @@ npm does a really simple job: when you run `npm run smth`, npm searches "smth" i
 
 These commands are common and widely accepted way to start and test nodejs applications or packages.
 
+## pre and post scripts
+
+npm also can run some scripts right before or after others:
+* `pretest` will be executeted everytime before `test`
+* `postpublish` will be executeted everytime before `test`
+
 [scripts]: https://docs.npmjs.com/misc/scripts
 
-_Do your wanna talk about npm scripts?  
+_Do u wanna talk about npm scripts?  
 Your npm-scripted [Vladimir Starkov](https://iamstarkov.com)_
