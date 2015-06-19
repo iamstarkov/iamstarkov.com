@@ -10,6 +10,7 @@
   "author": "Vladimir Starkov <iamstarkov@gmail.com> (https://iamstarkov.com/)",
   "license": "MIT",
   "scripts": {
+    "start": "gulp",
     "deploy": "NODE_ENV=prod gulp gh"
   },
   "bugs": {
