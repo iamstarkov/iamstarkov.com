@@ -24,3 +24,5 @@ for simple, clear, actionable issues". Probably, you are doing github wrong.
 Finally, where is roadmap?
 
 All of these makes me sad
+
+why dingus is encapsulated into commonmark?
