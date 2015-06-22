@@ -1,4 +1,4 @@
-# npm scripts 101
+# npm scripts basics
 
 _19 june 2015_
 
