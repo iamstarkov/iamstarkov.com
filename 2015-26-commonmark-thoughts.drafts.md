@@ -1,5 +1,7 @@
 # Thoughts about commonmark
 
+_22 june 2015_
+
 where is any support from github or stackoverflow?
 
 I used to think that commonmark appeared to be standard specification for markdown documents,
