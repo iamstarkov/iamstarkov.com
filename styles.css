@@ -95,6 +95,7 @@ h1, h2, h3, h4, h5, h6 {
   font-style: italic;
   font-size: 0.7em;
   white-space: nowrap;
+  margin-left: 0.5em;
 }
 
 .list__item-desc {
