@@ -24,3 +24,6 @@ The Erlang way is to invent new variable whose name hasn’t been used
 before (say `X1`) and to write `X1 = X + 1`.
 >
 > — Joe Armstrong, ["Programming Erlang"](http://www.amazon.com/dp/B00N4FF2L0/)
+
+_In state we trust,  
+Your mutable [Vladimir Starkov](https://iamstarkov.com/)_
