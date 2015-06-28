@@ -1,4 +1,4 @@
-# Why immutabillity matters
+# Why immutability matters
 
 _28 june 2016_
 
