@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "article-data": "^0.1.0",
+    "autoprefixer-core": "^5.2.1",
     "babel": "^5.5.8",
     "buildbranch": "0.0.3",
     "commonmark": "^0.18.1",
@@ -46,6 +47,7 @@
     "gulp-data": "^1.2.0",
     "gulp-debug": "^2.0.1",
     "gulp-jade": "^1.0.0",
+    "gulp-postcss": "^5.1.9",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.3",
     "gulp-util": "^3.0.4",

@@ -17,6 +17,8 @@ import sequence from 'run-sequence';
 import each from 'each-done';
 import path from 'path';
 import extract from 'article-data';
+import postcss from 'gulp-postcss';
+import autoprefixer from 'autoprefixer-core';
 
 import moment from 'moment';
 import { site } from './package.json';
@@ -83,8 +85,15 @@ gulp.task('build', (done) => {
   sequence('articles-registry', ['index-page', 'each-article', 'rss'], 'css', 'cname', done);
 });
 
+gulp.task('css', () =>
+  gulp.src('styles.css')
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(gulp.dest('dist'))
+);
+
 gulp.task('clean', (done) => { del('dist', done); });
-gulp.task('css',   () => gulp.src('styles.css').pipe(gulp.dest('dist')) );
 gulp.task('cname', () => gulp.src('CNAME').pipe(gulp.dest('dist')) );
 gulp.task('gh', ['build'], (done) => { buildbranch({ branch: 'master', folder: 'dist' }, done); });
 
