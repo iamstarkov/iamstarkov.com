@@ -59,5 +59,8 @@
     "rss": "^1.1.1",
     "run-sequence": "^1.1.0",
     "through2": "^0.6.5"
+  },
+  "devDependencies": {
+    "postcss-css-variables": "^0.3.9"
   }
 }

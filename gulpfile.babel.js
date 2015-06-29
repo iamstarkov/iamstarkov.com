@@ -19,6 +19,7 @@ import path from 'path';
 import extract from 'article-data';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer-core';
+import cssvariables from 'postcss-css-variables';
 
 import moment from 'moment';
 import { site } from './package.json';
@@ -88,7 +89,8 @@ gulp.task('build', (done) => {
 gulp.task('css', () =>
   gulp.src('styles.css')
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      cssvariables()
     ]))
     .pipe(gulp.dest('dist'))
 );
