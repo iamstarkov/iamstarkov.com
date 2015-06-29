@@ -59,5 +59,14 @@
     "rss": "^1.1.1",
     "run-sequence": "^1.1.0",
     "through2": "^0.6.5"
+  },
+  "devDependencies": {
+    "antwar-default-theme": "git://github.com/antwarjs/default-theme",
+    "antwar-highlight-plugin": "^0.1.1",
+    "antwar-prevnext-plugin": "^0.2.1",
+    "antwar-rss-plugin": "^0.1.0",
+    "highlight.js": "^8.6.0",
+    "marked": "^0.3.3",
+    "remove-markdown": "0.0.5"
   }
 }
