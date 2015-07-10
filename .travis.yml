@@ -2,15 +2,15 @@ sudo: false
 language: node_js
 branches:
   only:
-    - premaster
+  - premaster
 node_js:
-  - 'iojs'
+- iojs
 before_script:
-  - git config --global user.email "iamstarkov+tachikombie@gmail.com"
-  - git config --global user.name "Tachikoma Zombie"
-  - git remote rm origin
-  - git remote add origin https://iamstarkov:${GH_TOKEN}@github.com/iamstarkov/iamstarkov.github.io.git
+- git config --global user.email "iamstarkov+tachikombie@gmail.com"
+- git config --global user.name "Tachikoma Zombie"
+- git remote rm origin
+- git remote add origin https://iamstarkov:${GH_TOKEN}@github.com/iamstarkov/iamstarkov.github.io.git
 script: npm run deploy
 env:
   global:
-    secure: XsShw1Nnk3byvt8q5ceB/qFoqTYTBeXJiyag6hbtxEXaugTZTO7TCj2PRs5uhjUfj82AKeA3agexboTGwbAVsDI1OmxsZWKKTIlrKByZm6M5kWZYO7PNgd6QF2e7+mifnClDD8G0xAZyJcHKW4SD3cv/SzQStc91RLwILFgaWlo=
+    secure: I0c6wR4xBR98CsBXXsEsuxi95UvgCr5L2y0p9mJI6bWNqIbnfIAISVavdPeYV1XVk+T2iGgNK+530EzhReeQjNMq+6fkHkXu++Nv7XMgQ8PSm80gNKBO+ZAlMGn2gjXyoNUAxHp3e7JKuTtNLVXfriyf4Y56wqQihifjH88JE1Y=
