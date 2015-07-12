@@ -61,7 +61,7 @@ Publishing process:
 
 Run:
 
-    npm i -D istanbul babel mocha istanbul coveralls
+    npm i -D babel mocha istanbul coveralls
 
 Paste in pkg:
 
