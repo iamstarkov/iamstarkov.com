@@ -22,8 +22,8 @@ These commands are common and widely accepted way to start and test nodejs appli
 ## pre and post scripts
 
 npm also can run some scripts right before or after others:
-* `pretest` will be executeted everytime before `test`
-* `postpublish` will be executeted everytime after `publish`
+* `pretest` will be executed everytime before `test`
+* `postpublish` will be executed everytime after `publish`
 
 [scripts]: https://docs.npmjs.com/misc/scripts
 
