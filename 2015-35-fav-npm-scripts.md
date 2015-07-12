@@ -59,6 +59,24 @@ Publishing process:
 
 ## Summary
 
+Run:
+
+    npm i -D istanbul babel mocha istanbul coveralls
+
+Paste in pkg:
+
+    "main": "index.es5.js",
+    "scripts": {
+      "test": "mocha --require babel/register",
+      "tdd": "npm test -- --watch",
+      "coverage": "istanbul cover _mocha -- --require babel/register",
+      "precoveralls": "npm run coverage",
+      "coveralls": "coveralls < coverage/lcov.info",
+      "transpile": "babel index.js > index.es5.js",
+      "prepublish": "npm run transpile",
+      "postpublish": "rm *.es5.js && git push --follow-tags"
+    },
+
 I’m using these 8 scripts in almost every my projects for last few months. You can do it too.
 
 _Just automate it,  
