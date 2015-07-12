@@ -1,8 +1,8 @@
-# My favorite npm scripts
+# Favorite npm scripts
 
 _12 jule 2015_
 
-I use npm scripts a lot to automate things. What I need to automate?
+I use [npm scripts](/npm-scripts-basics/) a lot to automate things. What I need to automate?
 
 * ES6 handling
 * Testing and coverage
