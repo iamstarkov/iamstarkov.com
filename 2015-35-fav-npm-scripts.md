@@ -12,7 +12,7 @@ I use [npm scripts](/npm-scripts-basics/) a lot to automate things. What I need 
 
     npm install --save-dev babel istanbul mocha coveralls
     # or
-    npm i -D istanbul babel istanbul mocha coveralls
+    npm i -D babel istanbul mocha coveralls
 
 ## ES6 handling
 
