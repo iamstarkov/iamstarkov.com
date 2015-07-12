@@ -1,6 +1,6 @@
 # Why immutability matters
 
-_28 june 2016_
+_28 june 2015_
 
 I’m reading Erlang book and there is a brilliant explanation
 why immutability matters.
@@ -8,7 +8,7 @@ why immutability matters.
 > Using immutable variables simplifies debugging. To understand why this is
 true, we must ask ourselves what an error is and how an error makes itself
 known.
-> 
+>
 > One rather common way that we discover that a program is incorrect is when
 we find that a variable has an unexpected value. Once we know which variable
 is incorrect, we just have to inspect the program to find the place where the
