@@ -9,7 +9,7 @@ before_script:
 - git config --global user.email "iamstarkov+tachikombie@gmail.com"
 - git config --global user.name "Tachikoma Zombie"
 - git remote rm origin
-- git remote add origin https://iamstarkov:${GH_TOKEN}@github.com/iamstarkov/iamstarkov.github.io.git
+- git remote add origin https://tachikombie:${GH_TOKEN}@github.com/iamstarkov/iamstarkov.github.io.git
 script: npm run deploy
 env:
   global:
