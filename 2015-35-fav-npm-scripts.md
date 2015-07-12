@@ -53,6 +53,10 @@ Also I need to point to ES5 version in `main` field in `package.json`:
 
     "main": "index.es5.js",
 
+Publishing process:
+
+    npm version patch && npm publish
+
 ## Summary
 
 I’m using these 8 scripts in almost every my projects for last few months. You can do it too.
