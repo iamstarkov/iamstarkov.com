@@ -35,7 +35,7 @@ Test ES6 code and introduce _tdd_ mode:
 
 Obvious `coverage` script with `coveralls` one sending coverage report to coveralls service and `precoveralls` because `coveralls` need some reports to be able to send.
 
-    "coverage": "istanbul cover _mocha -- --require babel/register",
+    "coverage": "istanbul cover _mocha index.js -- --require babel/register",
     "precoveralls": "npm run coverage",
     "coveralls": "coveralls < coverage/lcov.info",
 
@@ -69,7 +69,7 @@ Paste in pkg:
     "scripts": {
       "test": "mocha --require babel/register",
       "tdd": "npm test -- --watch",
-      "coverage": "istanbul cover _mocha -- --require babel/register",
+      "coverage": "istanbul cover _mocha index.js -- --require babel/register",
       "precoveralls": "npm run coverage",
       "coveralls": "coveralls < coverage/lcov.info",
       "transpile": "babel index.js > index.es5.js",
