@@ -101,10 +101,17 @@ h1, h2, h3, h4, h5, h6 {
 .list__item-desc {
   margin: 0;
   font-size: 0.7em;
+  overflow: hidden;
+}
+
+.list__item-desc br {
+  display: none;
 }
 
 .list__item img {
   max-height: 100px;
+  float: left;
+  margin-right: 1em;
 }
 
 .edit-link {
