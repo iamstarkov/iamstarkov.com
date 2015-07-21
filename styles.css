@@ -102,6 +102,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-size: 0.7em;
   overflow: hidden;
+  margin-left: 1.2em;
 }
 
 .list__item-desc br {
@@ -111,7 +112,7 @@ h1, h2, h3, h4, h5, h6 {
 .list__item img {
   max-height: 100px;
   float: left;
-  margin-right: 1em;
+  margin-right: 0.6em;
 }
 
 .edit-link {
