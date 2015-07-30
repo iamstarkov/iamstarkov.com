@@ -10,9 +10,9 @@ I use [npm scripts](/npm-scripts-basics/) a lot to automate things. What I need 
 
 ## Preparation
 
-    npm install --save-dev babel istanbul mocha coveralls
+    npm install --save-dev babel isparta mocha coveralls
     # or
-    npm i -D babel istanbul mocha coveralls
+    npm i -D babel isparta mocha coveralls
 
 ## ES6 handling
 
@@ -35,7 +35,7 @@ Test ES6 code and introduce _tdd_ mode:
 
 Obvious `coverage` script with `coveralls` one sending coverage report to coveralls service and `precoveralls` because `coveralls` need some reports to be able to send.
 
-    "coverage": "istanbul cover _mocha index.js -- --require babel/register",
+    "coverage": "isparta cover _mocha index.js -- --require babel/register",
     "precoveralls": "npm run coverage",
     "coveralls": "coveralls < coverage/lcov.info",
 
@@ -61,7 +61,7 @@ Publishing process:
 
 Run:
 
-    npm i -D babel mocha istanbul coveralls
+    npm i -D babel mocha isparta coveralls
 
 Paste in pkg:
 
@@ -69,7 +69,7 @@ Paste in pkg:
     "scripts": {
       "test": "mocha --require babel/register",
       "tdd": "npm test -- --watch",
-      "coverage": "istanbul cover _mocha index.js -- --require babel/register",
+      "coverage": "isparta cover _mocha index.js -- --require babel/register",
       "precoveralls": "npm run coverage",
       "coveralls": "coveralls < coverage/lcov.info",
       "transpile": "babel index.js > index.es5.js",
