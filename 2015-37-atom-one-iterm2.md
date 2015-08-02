@@ -2,7 +2,7 @@
 
 _30 july 2015_
 
-_![look and feel](http://i.imgur.com/WBa4C6o.png)  
+_![look and feel](https://i.imgur.com/WBa4C6o.png)  
 Atom One Light theme for iTerm2 look and feel_
 
 Long time ago, when I used sublime text, I switched from dark theme to light one. And it feeels good. Last year most of the time I’m using Atom editor. Atom has awesome Atom One Light theme. All my prev attempts to find light theme for my terminal were fails, because light terminal themes looks ugly or unreadable. But Atom One Light looks good, right?
