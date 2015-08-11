@@ -34,8 +34,9 @@ const addToList = (file, article) => {
     site: site,
     filename: file.relative,
     url: getBasename(file).substr('8') + '/',
-  }, extract(article)));
-  articlesList.sort((a, b) => b.sortableDate - a.sortableDate );
+  }, extract(article, 'D MMMM YYYY', 'en')));
+  articlesList = articlesList.filter(i => !!i.date);
+  articlesList.sort((a, b) => b.date.unix - a.date.unix );
 };
 
 const buildArticle = (article) =>

@@ -5,9 +5,9 @@ block title
 
 block meta
   meta(property="description" content=site.description)
-  meta(name="og:url"         content=site.site_url)
-  meta(name="og:title"       content=site.title)
-  meta(name="og:description" content=site.description)
+  meta(name="og:url"          content=site.site_url)
+  meta(name="og:title"        content=site.title)
+  meta(name="og:description"  content=site.description)
 
 block content
   h1 Vladimir Starkov
@@ -28,7 +28,7 @@ block content
     ul.list
       each article in list
         li.list__item
-          a(href=article.url)= article.titleText
-          time= article.date + " " 
-          p.list__item-desc !{article.descHtml}
+          a(href=article.url)= article.title.text
+          time= article.date.text + " " 
+          p.list__item-desc !{article.desc.html}
           

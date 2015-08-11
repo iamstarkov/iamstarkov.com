@@ -1,22 +1,22 @@
 extend page
 
 block title
-  title #{titleText}
+  title #{title.text}
 
 block meta
-  meta(property="description" content=descText)
+  meta(property="description" content=desc.text)
     
   meta(name="og:url"         content=url)
   if (image)
-    meta(name="og:image"     content=image)
-  meta(name="og:title"       content=titleText)
-  meta(name="og:description" content=descText)
+    meta(name="og:image"     content=image.src)
+  meta(name="og:title"       content=title.text)
+  meta(name="og:description" content=desc.text)
 
 block content
   - var github = "https://github.com/iamstarkov/iamstarkov.github.io/edit/premaster/"
   a(href=github + filename).edit-link edit on github
   
   article
-    h1 !{titleHtml}
-    i: time !{date}
-    | !{contentHtml}
+    h1 !{title.html}
+    i: time !{date.text}
+    | !{content.html}
