@@ -22,8 +22,10 @@ To be able to write tests, you need [babel][babel] for [es6][es6], [mocha][mocha
 
 It‘s helpful to have [script helpers](fav-npm-scripts) to simplify testing workflow. Add this lines to scripts field in package.json:
 
-    "test": "mocha --require babel/register",
-    "tdd": "npm test -- --watch",
+```json
+"test": "mocha --require babel/register",
+"tdd": "npm test -- --watch",
+```
 
 `test` is supposed to run to verify that everything is ok. `tdd` is supposed to be run while development to have instant feedback. Basically this will allow mocha to watch you index.js for modification and rerun tests on every change.
 
