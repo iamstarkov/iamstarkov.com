@@ -51,9 +51,9 @@ const getRSS = (site, list) => {
   var feed = new rss(site);
   list.forEach((article) => { feed.item({
     url: site.site_url + article.url,
-    title: article.titleText,
-    description: article.descHtml,
-    date: article.date
+    title: article.title.text,
+    description: article.desc.html,
+    date: article.date.text
   })});
   return feed.xml({ indent: true });
 }
