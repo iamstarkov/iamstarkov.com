@@ -35,8 +35,6 @@ const addToList = (file, article) => {
     filename: file.relative,
     url: getBasename(file).substr('8') + '/',
   }, extract(article, 'D MMMM YYYY', 'en')));
-  articlesList = articlesList.filter(i => !!i.date);
-  articlesList.sort((a, b) => b.date.unix - a.date.unix );
 };
 
 const buildArticle = (article) =>
@@ -49,12 +47,15 @@ const buildArticle = (article) =>
 
 const getRSS = (site, list) => {
   var feed = new rss(site);
-  list.forEach((article) => { feed.item({
-    url: site.site_url + article.url,
-    title: article.title.text,
-    description: article.desc.html,
-    date: article.date.text
-  })});
+  list
+    .filter(i => !!i.date)
+    .sort((a, b) => b.date.unix - a.date.unix )
+    .forEach((article) => { feed.item({
+      url: site.site_url + article.url,
+      title: article.title.text,
+      description: article.desc.html,
+      date: article.date.text
+    })});
   return feed.xml({ indent: true });
 }
 
@@ -70,7 +71,12 @@ gulp.task('articles-registry', () => {
 
 gulp.task('index-page', () =>
   gulp.src('layouts/index.jade')
-    .pipe(data(() => { return { site: site, list: articlesList }; }))
+    .pipe(data(() => ({
+      site,
+      list: articlesList
+              .filter(i => !!i.date)
+              .sort((a, b) => b.date.unix - a.date.unix )
+    })))
     .pipe(jade({ pretty: env === 'dev' }))
     .pipe(rename({ basename: 'index' }))
     .pipe(gulp.dest('dist'))
