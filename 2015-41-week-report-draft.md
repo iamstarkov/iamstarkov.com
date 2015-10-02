@@ -45,6 +45,7 @@ implement geo-tags on index-page on jsunderhood
 
 * Q&A with Mikeal Rogers on Node.js 4.0 http://www.infoq.com/news/2015/09/mikealrogers-nodejs
 * Streaks of Flowing Water on Mars http://www.nytimes.com/interactive/2015/09/28/science/space/mars-nasa-flowing-water.html
+* youtube explanation https://www.youtube.com/watch?v=UsaJ7ZvCjmY
 * “Preventing burnout for programmers” by @zerobrainwash https://medium.com/@karolisram/preventing-burnout-for-programmers-12b4968adbaa
 * Screencapture and animated gifs https://gist.github.com/paulirish/b6cf161009af0708315c
 * "Contributor Code of Conduct" via Electron Contributing.md http://contributor-covenant.org/version/1/2/0/
