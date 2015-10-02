@@ -40,6 +40,7 @@ learned in the office:
 ## 2 october, friday
 
 implement geo-tags on index-page on jsunderhood
+weekly report
 
 ### Links
 
