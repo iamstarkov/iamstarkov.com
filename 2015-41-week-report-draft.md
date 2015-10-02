@@ -25,6 +25,7 @@ need to be done:
 * generator-travis: update pkg, docs and requirements, publish 1.0, create pull-request to generator-nm to use generator-travis
 * main point is that you dont need to handle travis configs on your own, just `yo travis` and you to get up-to-date config.
 * found security vulnerability in http://vk.com and going to get a bounty for it
+* it is possible to create this kind of menubar with text inside https://github.com/atom/electron/issues/2938
 
 learned in the office:
 * some java and even managed to wrote tests for my code
