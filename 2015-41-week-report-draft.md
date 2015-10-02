@@ -4,7 +4,7 @@ _4 october 2015_
 
 ## Summary
 
-get-tweets 2.0, generator-travis 1.0, some java coding, minor geo tags on index page on jsunderhood.ru
+get-tweets 2.0, generator-travis 1.0, some java coding, minor geo tags on index page on jsunderhood.ru, water on mars, tesla x, menubar with text
 
 need to be done:
 * roadmap for jsunderhood
