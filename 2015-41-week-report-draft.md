@@ -44,6 +44,8 @@ weekly report
 
 ### Links
 
+* Your own Travis CI to run tests locally https://github.com/vdemedes/trevor
+* New generation CMS on top of React and Node.js https://github.com/relax/relax
 * Q&A with Mikeal Rogers on Node.js 4.0 http://www.infoq.com/news/2015/09/mikealrogers-nodejs
 * Streaks of Flowing Water on Mars http://www.nytimes.com/interactive/2015/09/28/science/space/mars-nasa-flowing-water.html
 * youtube explanation https://www.youtube.com/watch?v=UsaJ7ZvCjmY
