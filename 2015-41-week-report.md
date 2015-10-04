@@ -6,7 +6,6 @@ _4 october 2015_
 
 get-tweets 2.0, generator-travis 1.0, some java coding, minor geo tags on index page on jsunderhood.ru, water on mars, tesla x, menubar with text, roadmap for jsunderhood, kinda roadmap for generator-travis
 
-
 ## 28 september, monday
 
 * 3 commits to jsunderhood
@@ -19,8 +18,7 @@ get-tweets 2.0, generator-travis 1.0, some java coding, minor geo tags on index 
 ## 30 september, wednesday
 
 * finalized documentation to upcoming get-tweets 2.0 and publish it
-* generator-travis: update pkg, docs and requirements, publish 1.0, create pull-request to generator-nm to use generator-travis
-* main point is that you dont need to handle travis configs on your own, just `yo travis` and you to get up-to-date config.
+* generator-travis: update pkg, docs and requirements, publish 1.0, create pull-request to generator-nm to use generator-travis. main point is that you dont need to handle travis configs on your own, just `yo travis` and you will get up-to-date config.
 * found security vulnerability in http://vk.com and going to get a bounty for it
 * it is possible to create this kind of menubar with text inside https://github.com/atom/electron/issues/2938
 
@@ -32,26 +30,25 @@ learned in the office:
 
 * managed to learn how to properly compose external generators with another ones
 * create pull-request to generator-node to use generator-travis
-* tldr: bad day, few work have been done.
 
 ## 2 october, friday
 
-implement geo-tags on index-page on jsunderhood
-weekly report
+* implement geo-tags on index-page on jsunderhood
+* wrote draft for this weekly report
 
 ## 4 october, sunday
 
-finishing weekly report
-roadmap for jsunderhood
-kinda roadmap for generator-travis
+* finished weekly report
+* roadmap for [jsunderhood](https://github.com/iamstarkov/jsunderhood/blob/master/roadmap.md)
+* kinda [roadmap for generator-travis](https://github.com/yeoman/generator-node/pull/176#issuecomment-145360928)
 
 ### Links
 
-* Your own Travis CI to run tests locally https://github.com/vdemedes/trevor
-* New generation CMS on top of React and Node.js https://github.com/relax/relax
+* [trevor](https://github.com/vdemedes/trevor) - Your own Travis CI to run tests locally
+* [relax](https://github.com/relax/relax) - New generation CMS on top of React and Node.js
 * Q&A with Mikeal Rogers on Node.js 4.0 http://www.infoq.com/news/2015/09/mikealrogers-nodejs
 * Streaks of Flowing Water on Mars http://www.nytimes.com/interactive/2015/09/28/science/space/mars-nasa-flowing-water.html
-* youtube explanation https://www.youtube.com/watch?v=UsaJ7ZvCjmY
+* Mars water youtube explanation https://www.youtube.com/watch?v=UsaJ7ZvCjmY
 * “Preventing burnout for programmers” by @zerobrainwash https://medium.com/@karolisram/preventing-burnout-for-programmers-12b4968adbaa
 * Screencapture and animated gifs https://gist.github.com/paulirish/b6cf161009af0708315c
 * "Contributor Code of Conduct" via Electron Contributing.md http://contributor-covenant.org/version/1/2/0/
@@ -65,7 +62,6 @@ kinda roadmap for generator-travis
 * avoid appointments in the middle of the day
 * plan work for next day in advance
 * introspective is actually good thing, will keep doing it
-
 
 _In reporting we trust,  
 Your introspective [Vladimir Starkov](https://iamstarkov.com/)_
