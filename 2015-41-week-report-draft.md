@@ -4,11 +4,8 @@ _4 october 2015_
 
 ## Summary
 
-get-tweets 2.0, generator-travis 1.0, some java coding, minor geo tags on index page on jsunderhood.ru, water on mars, tesla x, menubar with text
+get-tweets 2.0, generator-travis 1.0, some java coding, minor geo tags on index page on jsunderhood.ru, water on mars, tesla x, menubar with text, roadmap for jsunderhood, kinda roadmap for generator-travis
 
-need to be done:
-* roadmap for jsunderhood
-* roadmap for generator-travis
 
 ## 28 september, monday
 
@@ -41,6 +38,12 @@ learned in the office:
 
 implement geo-tags on index-page on jsunderhood
 weekly report
+
+## 4 october, sunday
+
+finishing weekly report
+roadmap for jsunderhood
+kinda roadmap for generator-travis
 
 ### Links
 
