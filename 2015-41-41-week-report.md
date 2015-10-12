@@ -4,7 +4,7 @@ _11 october 2015_
 
 ## Summary
 
-Almost nothing: almost finished [generator-travis](https://github.com/iamstarkov/generator-travis), waiting [two](https://github.com/yeoman/generator-node/pull/176) [pull-requests](https://github.com/desmondmorris/node-twitter/pull/107) to be merged, good article about functional programming.
+Almost nothing: almost finished [generator-travis](https://github.com/iamstarkov/generator-travis), waiting [two](https://github.com/yeoman/generator-node/pull/176) [pull-requests](https://github.com/desmondmorris/node-twitter/pull/107) to be merged, good article about functional programming, laptop is still under repair.
 
 Generator-travis now supports extending existing config and properly sorting keys. Try it.
 
