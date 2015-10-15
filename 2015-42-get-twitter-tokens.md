@@ -15,9 +15,10 @@ And this process is very easy.
 5. At the bottom, you will find empty "Your Access Token" with "Create my access token" button,  
   go ahead and click it.  
   !["Your Access Token"](http://i.imgur.com/bwClX9c.png)
-6. You will find "**Consumer Key**" and "**Consumer Secret**" in the "Application Settings" section.  
-  And "Access Token" with "Access Token Secret" in the "Your Access Token" section.  
-  ![app tokens in one place](http://i.imgur.com/TjLHWB2.png)
+
+You will find "**Consumer Key**" and "**Consumer Secret**" in the "Application Settings" section.  
+And "**Access Token**" with "**Access Token Secret**" in the "Your Access Token" section.  
+![app tokens in one place](http://i.imgur.com/TjLHWB2.png)
 
 **Congratulations**, you have Twitter API tokens.
 
