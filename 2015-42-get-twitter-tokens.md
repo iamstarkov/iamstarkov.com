@@ -8,16 +8,16 @@ And this process is very easy.
 
 1. Go to ["Create new Twitter App"](https://apps.twitter.com/app/new) form.
 2. Fill it. Callback URL is not required.  
-  ![filled form](http://i.imgur.com/fnMGBQn.png)
+  ![filled form](https://i.imgur.com/fnMGBQn.png)
 3. Agree to "Developer Agreement", submit form.
 4. Go to "Keys and Access Tokens" tab  
-  !["Keys and Access Tokens" tab](http://i.imgur.com/C13BEpG.png)
+  !["Keys and Access Tokens" tab](https://i.imgur.com/C13BEpG.png)
 5. At the bottom, you will find empty "Your Access Token" with "Create my access token" button, go ahead and click it.  
-  !["Your Access Token"](http://i.imgur.com/bwClX9c.png)
+  !["Your Access Token"](https://i.imgur.com/bwClX9c.png)
 
 You will find "**Consumer Key**" and "**Consumer Secret**" in the "Application Settings" section.  
 And "**Access Token**" with "**Access Token Secret**" in the "Your Access Token" section.  
-![app tokens in one place](http://i.imgur.com/TjLHWB2.png)
+![app tokens in one place](https://i.imgur.com/TjLHWB2.png)
 
 **Congratulations**, you have Twitter API tokens.
 
