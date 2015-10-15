@@ -1,4 +1,4 @@
-# How to get twitter tokens
+# How to get Twitter API tokens
 
 _15 october 2015_
 
