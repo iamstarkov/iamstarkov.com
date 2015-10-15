@@ -12,8 +12,7 @@ And this process is very easy.
 3. Agree to "Developer Agreement", submit form.
 4. Go to "Keys and Access Tokens" tab  
   !["Keys and Access Tokens" tab](http://i.imgur.com/C13BEpG.png)
-5. At the bottom, you will find empty "Your Access Token" with "Create my access token" button,  
-  go ahead and click it.  
+5. At the bottom, you will find empty "Your Access Token" with "Create my access token" button, go ahead and click it.  
   !["Your Access Token"](http://i.imgur.com/bwClX9c.png)
 
 You will find "**Consumer Key**" and "**Consumer Secret**" in the "Application Settings" section.  
