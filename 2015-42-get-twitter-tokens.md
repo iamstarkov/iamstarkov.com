@@ -12,16 +12,17 @@ And this process is very easy.
 3. Agree to "Developer Agreement", submit form.
 4. Go to "Keys and Access Tokens" tab  
   !["Keys and Access Tokens" tab](https://i.imgur.com/C13BEpG.png)
-5. At the bottom, you will find empty "Your Access Token" with "Create my access token" button, go ahead and click it.  
+5. At the bottom, you will find empty "Your Access Token" with _"Create my access token"_ button, go ahead and click it.  
   !["Your Access Token"](https://i.imgur.com/bwClX9c.png)
+6. Click _"Test OAuth"_ button in the top right corner.  
+  !["Test OAuth"](http://i.imgur.com/1GXcM1D.png)
 
-You will find "**Consumer Key**" and "**Consumer Secret**" in the "Application Settings" section.  
-And "**Access Token**" with "**Access Token Secret**" in the "Your Access Token" section.  
-![app tokens in one place](https://i.imgur.com/TjLHWB2.png)
+Tokens are "**Consumer Key**", "**Consumer Secret**" and "**Access Token**" with "**Access Token Secret**":  
+![app tokens in one place](https://i.imgur.com/trkuXvm.png)
 
 **Congratulations**, you have Twitter API tokens.
 
-Be carefull with them. Pay attention to small gray warning on the page:
+Be careful with them. Pay attention to small gray warning on the page:
 
 > Keep the "Consumer Secret" a secret. This key should never be human-readable in your application.
 
