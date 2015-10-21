@@ -1,6 +1,6 @@
 # How to get Twitter API tokens
 
-_15 october 2015_
+_October 15, 2015_
 
 It maybe seems that start playing with [Twitter API][api] can be hard to start,
 but actually it’s not. First of all, you need to get tokens, to start.

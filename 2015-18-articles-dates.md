@@ -1,6 +1,6 @@
 # Every technical article must have publish date
 
-_30 april 2015_
+_April 30, 2015_
 
 ![New JS frameworks every day!](https://i.imgur.com/JrXX7wT.jpg)
 

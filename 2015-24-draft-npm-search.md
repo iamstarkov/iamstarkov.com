@@ -1,6 +1,6 @@
 # We do need better npm search
 
-_16 june 2015_
+_June 16, 2015_
 
 How many packages did you wrote mainly because you didn’t find neccessary
 package in npm? Why community are maintaining awesome lists

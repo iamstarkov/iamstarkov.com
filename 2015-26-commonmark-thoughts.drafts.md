@@ -1,6 +1,6 @@
 # Thoughts about commonmark
 
-_22 june 2015_
+_June 22, 2015_
 
 where is any support from github or stackoverflow?
 

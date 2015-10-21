@@ -1,6 +1,6 @@
 # npm scripts basics
 
-_19 june 2015_
+_June 19, 2015_
 
 package.json can have [`scripts` fields](scripts), which are basically an object similar to this one:
 

@@ -1,6 +1,6 @@
 # Speed up your development with `npm init` command
 
-_21 april 2015_
+_April 21, 2015_
 
 npm has a great command `npm init` which allows you to create `package.json`
 in a second!

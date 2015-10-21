@@ -1,6 +1,6 @@
 # 41 week report
 
-_11 october 2015_
+_October 11, 2015_
 
 ## Summary
 
@@ -8,7 +8,7 @@ Almost nothing: almost finished [generator-travis](https://github.com/iamstarkov
 
 Generator-travis now supports extending existing config and properly sorting keys. Try it.
 
-The most fucking awesome article about functional revolution in the frontend by @tcroch http://blog.reactandbethankful.com/posts/2015/09/15/understanding-the-functional-revolution/ … 
+The most fucking awesome article about functional revolution in the frontend by @tcroch http://blog.reactandbethankful.com/posts/2015/09/15/understanding-the-functional-revolution/ …
 
 21 commits, 1 pull-request, 1 issue
 
@@ -17,7 +17,7 @@ The most fucking awesome article about functional revolution in the frontend by 
 * [babel-istanbul](https://github.com/ambitioninc/babel-istanbul)
 * Ilya Birman open-sourced [Likely](https://github.com/ilyabirman/Likely)
 * :see_no_evil: [Volkswagen](https://github.com/auchenberg/volkswagen) detects when your tests are being run in a CI server, and makes them pass.
-* Functional programming in JavaScript [youtube playlist](https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84) 
+* Functional programming in JavaScript [youtube playlist](https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84)
 * [very good article about moving to fp in your js with Ramda](http://rebootjeff.github.io/blog/2015/06/14/refactoring-towards-functional-programming-in-javascript/)
 
 

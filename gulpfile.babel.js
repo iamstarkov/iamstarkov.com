@@ -34,7 +34,7 @@ const addToList = (file, article) => {
     site: site,
     filename: file.relative,
     url: getBasename(file).substr('8') + '/',
-  }, extract(article, 'D MMMM YYYY', 'en')));
+  }, extract(article, 'MMMM D, YYYY', 'en')));
 };
 
 const buildArticle = (article) =>

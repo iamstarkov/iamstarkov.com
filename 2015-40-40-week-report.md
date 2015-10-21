@@ -1,6 +1,6 @@
 # 40 week report
 
-_4 october 2015_
+_October 4, 2015_
 
 ## Summary
 
@@ -52,8 +52,8 @@ learned in the office:
 * [Screencapture and animated gifs](https://gist.github.com/paulirish/b6cf161009af0708315c)
 * ["Contributor Code of Conduct" via Electron Contributing.md](http://contributor-covenant.org/version/1/2/0/)
 * [Tesla released awesome tesla x](http://www.teslamotors.com/modelx) with falcon wings and bio-defense mode, [wired review](http://www.wired.com/2015/09/tesla-model-x-suv-reveal-specs-price/)
-* ✂ Introducing [Clipboard.js 📋](http://zenorocha.github.io/clipboard.js) Copy to clipboard without Flash. Built with ES6 + Browserify 
-* And from Clipboardjs’s author: "People asked me: 'How did the repo get 5000 stars in a few days?'" Here's the [answer](https://github.com/zenorocha/clipboard.js/issues/56). 
+* ✂ Introducing [Clipboard.js 📋](http://zenorocha.github.io/clipboard.js) Copy to clipboard without Flash. Built with ES6 + Browserify
+* And from Clipboardjs’s author: "People asked me: 'How did the repo get 5000 stars in a few days?'" Here's the [answer](https://github.com/zenorocha/clipboard.js/issues/56).
 
 ### Tips
 

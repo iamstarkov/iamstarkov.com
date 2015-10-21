@@ -1,6 +1,6 @@
 # Atom One Light theme for iTerm2
 
-_30 july 2015_
+_July 30, 2015_
 
 _![look and feel](https://i.imgur.com/WBa4C6o.png)  
 Atom One Light theme for iTerm2 look and feel_

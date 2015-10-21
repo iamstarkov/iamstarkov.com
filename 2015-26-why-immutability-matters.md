@@ -1,6 +1,6 @@
 # Why immutability matters
 
-_28 june 2015_
+_June 28, 2015_
 
 I’m reading Erlang book and there is a brilliant explanation
 why immutability matters.

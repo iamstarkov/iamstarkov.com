@@ -1,6 +1,6 @@
 # How to start with nodejs testing
 
-_21 july 2015_
+_July 21, 2015_
 
 ![yayify testing](https://i.imgur.com/Fe1uwiv.png)  
 With this 5 minute intro I’ll show how to test your code with [yayify][yayify] example, which only add 'yay' to the end of the string. If you heard about testing and tdd, but still haven’t tried then this article is definitely for you.

@@ -1,6 +1,6 @@
 # Favorite npm scripts
 
-_12 july 2015_
+_July 12, 2015_
 
 I use [npm scripts](/npm-scripts-basics/) a lot to automate things. What I need to automate?
 

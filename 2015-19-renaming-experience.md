@@ -1,6 +1,6 @@
 # Renaming experience
 
-_5 may 2015_
+_May 5, 2015_
 
 ![Squatters @ Squatters everywhere](https://i.imgur.com/q8LcWMw.jpg)
 

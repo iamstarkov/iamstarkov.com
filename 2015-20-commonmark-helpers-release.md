@@ -1,6 +1,6 @@
 # [commonmark-helpers][helpers] is out!
 
-_10 may 2015_
+_May 10, 2015_
 
 ![commonmark-helpers passing all the tests!](https://i.imgur.com/CM0V0d4.png)
 

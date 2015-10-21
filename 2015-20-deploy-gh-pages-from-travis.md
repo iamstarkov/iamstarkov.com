@@ -1,6 +1,6 @@
 # Deploy to GitHub pages from Travis CI
 
-_10 may 2015_
+_May 10, 2015_
 
 Imagine that you have open-source project, which site is hosting on github pages
 and you have "edit on github" button on this site. It’s great, because if you

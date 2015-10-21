@@ -1,6 +1,6 @@
 # Just published get-tweets package
 
-_16 may 2015_
+_May 16, 2015_
 
 Get all tweets for target username.
 

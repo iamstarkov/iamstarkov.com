@@ -1,6 +1,6 @@
 # iojs is joining the Node Foundation. What does it mean?
 
-_16 may 2015_
+_May 16, 2015_
 
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">io.js TC just voted to join the Node Foundation.</p>&mdash; Mikeal Rogers (@mikeal) <a href="https://twitter.com/mikeal/status/598595967928008705">May 13, 2015</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
