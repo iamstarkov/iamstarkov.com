@@ -15,7 +15,7 @@ And this process is very easy.
 5. At the bottom, you will find empty "Your Access Token" with _"Create my access token"_ button, go ahead and click it.  
   !["Your Access Token"](https://i.imgur.com/bwClX9c.png)
 6. Click _"Test OAuth"_ button in the top right corner.  
-  !["Test OAuth"](http://i.imgur.com/1GXcM1D.png)
+  !["Test OAuth"](https://i.imgur.com/1GXcM1D.png)
 
 Tokens are "**Consumer Key**", "**Consumer Secret**" and "**Access Token**" with "**Access Token Secret**":  
 ![app tokens in one place](https://i.imgur.com/trkuXvm.png)
