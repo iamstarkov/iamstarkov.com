@@ -4,7 +4,7 @@ branches:
   only:
   - premaster
 node_js:
-- iojs
+- 'stable'
 before_script:
 - git config --global user.email "iamstarkov+tachikombie@gmail.com"
 - git config --global user.name "Tachikoma Zombie"
