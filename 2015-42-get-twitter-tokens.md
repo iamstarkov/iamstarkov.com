@@ -18,7 +18,8 @@ And this process is very easy.
   !["Test OAuth"](https://i.imgur.com/1GXcM1D.png)
 
 Tokens are "**Consumer Key**", "**Consumer Secret**" and "**Access Token**" with "**Access Token Secret**":  
-![app tokens in one place](https://i.imgur.com/trkuXvm.png)
+![app tokens in one place](https://i.imgur.com/trkuXvm.png)  
+or `TWITTER_CONSUMER_KEY`, `TWITTER_CONSUMER_SECRET` and `TWITTER_ACCESS_TOKEN_KEY`, `TWITTER_ACCESS_TOKEN_SECRET` if you will use them as environment variables.
 
 **Congratulations**, you have Twitter API tokens.
 
