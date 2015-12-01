@@ -20,12 +20,18 @@ import extract from 'article-data';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer-core';
 import cssvariables from 'postcss-css-variables';
+import mdast from 'mdast';
+import mdastTextr from 'mdast-textr';
+import base from 'typographic-base';
 
 import moment from 'moment';
 import { site } from './package.json';
 
 const env = process.env.NODE_ENV || 'dev';
 const getBasename = (file) => path.basename(file.relative, path.extname(file.relative));
+const typograhic = input => mdast
+  .use(mdastTextr, { plugins: [ base ], options: { locale: 'en-us' } })
+  .process(input);
 
 let articlesList = [];
 
@@ -65,7 +71,8 @@ gulp.task('articles-registry', () => {
     .pipe(replace('https://iamstarkov.com/', '/'))
     .pipe(replace('https://iamstarkov.com', '/'))
     .pipe((() => through.obj((file, enc, cb) => {
-      addToList(file, file.contents.toString());
+      const contents = file.contents.toString();
+      addToList(file, typograhic(contents));
       cb(null, file);
     }))());
 });

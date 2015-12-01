@@ -53,12 +53,15 @@
     "gulp-util": "^3.0.6",
     "gulp-watch": "^4.3.4",
     "jade": "^1.11.0",
+    "mdast": "^2.3.0",
+    "mdast-textr": "^1.0.0-rc3",
     "moment": "^2.10.6",
     "object-assign": "^3.0.0",
     "postcss-css-variables": "^0.4.0",
     "ramda": "^0.17.1",
     "rss": "^1.1.1",
     "run-sequence": "^1.1.2",
-    "through2": "^2.0.0"
+    "through2": "^2.0.0",
+    "typographic-base": "^1.0.3"
   }
 }
