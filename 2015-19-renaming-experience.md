@@ -2,8 +2,6 @@
 
 _May 5, 2015_
 
-![Squatters @ Squatters everywhere](https://i.imgur.com/q8LcWMw.jpg)
-
 I used to have "@matmuchrapna" username, but now you will find me
 as [@iamstarkov][iamstarkov]. I successfully renamed myself
 on internet and want to share my experience. I’m assuming that you want to have
