@@ -2,8 +2,7 @@
 
 _April 20, 2017_
 
-!["Github: Yes, we code"](https://i.imgur.com/wqMwVMx.jpg)
-
+!["Github: Yes, we code"](https://i.imgur.com/wqMwVMx.jpg)  
 We usually spend a lot of time reading and surfing others open source project on GitHub. It turned out, this process can be much better. Here is a short list of most useful extensions you might be interested in.
 
 ## OctoLinker
@@ -14,7 +13,7 @@ We usually spend a lot of time reading and surfing others open source project on
 
 Basically jump to npm package or filename through `import/require` statements.
 
-* Website https://octolinker.github.io/
+* Website [https://octolinker.github.io/](https://octolinker.github.io/)
 * _Available for Chrome, Firefox and Opera_
 
 ## hide files
@@ -25,7 +24,7 @@ Basically jump to npm package or filename through `import/require` statements.
 
 In my personal project i do have 7 dotfiles on one actual `index.js`. And those files are usually the same, so its not very useful to see them every time.
 
-* Repository https://github.com/sindresorhus/hide-files-on-github
+* Repository [https://github.com/sindresorhus/hide-files-on-github](https://github.com/sindresorhus/hide-files-on-github)
 * _Available for Chrome and Opera_
 
 ## refined github
@@ -34,7 +33,7 @@ In my personal project i do have 7 dotfiles on one actual `index.js`. And those 
 
 It's like [reddit enhancement suite][res], but for github. Check it out.
 
-* Repository https://github.com/sindresorhus/refined-github
+* Repository [https://github.com/sindresorhus/refined-github](https://github.com/sindresorhus/refined-github)
 * _Available for Chrome and Safari_
 
 [res]: https://redditenhancementsuite.com/
@@ -45,7 +44,7 @@ Usually, when you need to investigate project's dependecies, you have to look th
 
 !["npmhub demo"](https://i.imgur.com/DtYeY3U.png)
 
-* Repository https://github.com/npmhub/npmhub
+* Repository [https://github.com/npmhub/npmhub](https://github.com/npmhub/npmhub)
 * _Available for Chrome only_
 
 ## other extensions
@@ -53,5 +52,5 @@ Usually, when you need to investigate project's dependecies, you have to look th
 Hold on. Thats not all extensions available, rather ones i found most useful. Here is curated awesome list for all other extenstions https://github.com/stefanbuck/awesome-browser-extensions-for-github
 
 
-_GitHub, place where i fork,_  
+_GitHub, place where i fork._  
 _your oss'ed [Vladimir Starkov](https://iamstarkov.com/)_
