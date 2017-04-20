@@ -20,7 +20,7 @@ Basically jump to npm package or filename through `import/require` statements.
 
 > Hide dotfiles from the file browser
 
-!["hide files demo"](http://i.imgur.com/joPgkhq.png)
+!["hide files demo"](https://i.imgur.com/joPgkhq.png)
 
 In my personal project i do have 7 dotfiles on one actual `index.js`. And those files are usually the same, so its not very useful to see them every time.
 
