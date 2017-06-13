@@ -39,7 +39,7 @@
     "buildbranch": "2.0.0",
     "commonmark": "^0.27.0",
     "commonmark-helpers": "^0.4.1",
-    "del": "^2.2.2",
+    "del": "^3.0.0",
     "each-done": "^1.0.0",
     "express": "^4.13.3",
     "fs-extra": "^2.1.2",
