@@ -49,7 +49,7 @@ Usually, when you need to investigate project's dependecies, you have to look th
 
 ## other extensions
 
-Hold on. Thats not all extensions available, rather ones i found most useful. Here is curated awesome list for all other extenstions https://github.com/stefanbuck/awesome-browser-extensions-for-github
+Hold on. Thats not all extensions available, rather ones i found most useful. Here is curated awesome list for all other extenstions [https://github.com/stefanbuck/awesome-browser-extensions-for-github](https://github.com/stefanbuck/awesome-browser-extensions-for-github)
 
 
 _GitHub, place where i fork._  
