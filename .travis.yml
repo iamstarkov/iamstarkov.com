@@ -8,4 +8,4 @@ node_js:
 script:
   - git config --global user.email "gh-pages@localhost"
   - git config --global user.name "npm gh-pages"
-  - npm run deploy:ci
+  - npm run deploy:ci -s
