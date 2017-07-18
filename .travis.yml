@@ -7,8 +7,6 @@ branches:
 node_js:
 - 'stable'
 before_script:
-- git config --global user.email "tachikombie@localhost"
-- git config --global user.name "Tachikoma Zombie"
-- git remote rm origin
-- git remote add origin https://tachikombie:${GH_TOKEN}@github.com/iamstarkov/iamstarkov.github.io.git
-script: npm run deploy
+- git config --global user.email "noreply@localhost"
+- git config --global user.name "noreply"
+- npm run deploy:ci

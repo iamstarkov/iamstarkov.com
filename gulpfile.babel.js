@@ -7,7 +7,6 @@ import jade from 'gulp-jade';
 import debug from 'gulp-debug';
 import replace from 'gulp-replace';
 import { log } from 'gulp-util';
-import buildbranch from 'buildbranch';
 import rss from 'rss';
 import del from 'del';
 import { outputFile as output } from 'fs-extra';
@@ -105,7 +104,6 @@ gulp.task('css', () =>
 
 gulp.task('clean', (done) => { del('dist', done); });
 gulp.task('cname', () => gulp.src('CNAME').pipe(gulp.dest('dist')) );
-gulp.task('gh', ['build'], (done) => { buildbranch({ branch: 'master', folder: 'dist' }, done); });
 
 gulp.task('express', () => {
   express().use(express.static('dist')).listen(4000);

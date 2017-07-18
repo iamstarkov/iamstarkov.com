@@ -11,12 +11,14 @@
   "license": "MIT",
   "scripts": {
     "start": "gulp",
-    "deploy": "NODE_ENV=prod gulp gh"
+    "predeploy": "NODE_ENV=production gulp build",
+    "deploy": " gh-pages -d dist --branch master",
+    "deploy:ci": "npm run deploy -- --repo https://$GH_TOKEN@github.com/iamstarkov/iamstarkov.github.io.git --silent"
   },
   "bugs": {
     "url": "https://github.com/iamstarkov/iamstarkov.github.io/issues"
   },
-  "homepage": "https://github.com/iamstarkov/iamstarkov.github.io",
+  "homepage": "http://iamstarkov.com",
   "site": {
     "title": "Vladimir Starkov",
     "description": "Frontend blog from Vladimir Starkov",
@@ -35,14 +37,15 @@
   "dependencies": {
     "article-data": "^0.3.1",
     "autoprefixer-core": "^6.0.1",
-    "babel": "^6.23.0",
-    "buildbranch": "2.0.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.24.1",
     "commonmark": "^0.27.0",
     "commonmark-helpers": "^0.4.1",
     "del": "^3.0.0",
     "each-done": "^1.0.0",
     "express": "^4.13.3",
     "fs-extra": "^4.0.0",
+    "gh-pages": "^1.0.0",
     "gulp": "^3.9.0",
     "gulp-data": "^1.2.0",
     "gulp-debug": "^3.1.0",
@@ -60,5 +63,6 @@
     "rss": "^1.1.1",
     "run-sequence": "^2.0.0",
     "through2": "^2.0.0"
-  }
+  },
+  "devDependencies": {}
 }
