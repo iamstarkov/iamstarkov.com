@@ -11,9 +11,11 @@
   "license": "MIT",
   "scripts": {
     "start": "gulp",
-    "predeploy": "NODE_ENV=production gulp build",
+    "build": "NODE_ENV=production gulp build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist --branch master",
-    "deploy:ci": "npm run deploy -- --repo https://$GH_TOKEN@github.com/iamstarkov/iamstarkov.github.io.git --silent"
+    "predeploy:ci": "npm run build",
+    "deploy:ci": "gh-pages -d dist --branch master --repo https://$GH_TOKEN@github.com/iamstarkov/iamstarkov.github.io.git --silent"
   },
   "bugs": {
     "url": "https://github.com/iamstarkov/iamstarkov.github.io/issues"
