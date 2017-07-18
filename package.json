@@ -12,7 +12,7 @@
   "scripts": {
     "start": "gulp",
     "predeploy": "NODE_ENV=production gulp build",
-    "deploy": " gh-pages -d dist --branch master",
+    "deploy": "gh-pages -d dist --branch master",
     "deploy:ci": "npm run deploy -- --repo https://$GH_TOKEN@github.com/iamstarkov/iamstarkov.github.io.git --silent"
   },
   "bugs": {

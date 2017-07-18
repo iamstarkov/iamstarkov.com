@@ -3,10 +3,9 @@ language: node_js
 branches:
   only:
   - premaster
-  - /^greenkeeper/.*$/
 node_js:
-- 'stable'
-before_script:
-- git config --global user.email "noreply@localhost"
-- git config --global user.name "noreply"
-- npm run deploy:ci
+  - 'stable'
+script:
+  - git config --global user.email "gh-pages@localhost"
+  - git config --global user.name "npm gh-pages"
+  - npm run deploy:ci
