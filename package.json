@@ -13,7 +13,7 @@
     "start": "gulp",
     "predeploy": "NODE_ENV=production gulp build",
     "deploy": "gh-pages -d dist --branch master",
-    "deploy:ci": "npm run deploy -- --branch master --repo https://iamstarkov:$GH_TOKEN@github.com/iamstarkov/iamstarkov.github.io.git"
+    "deploy:ci": "npm run deploy -- --branch master --repo https://iamstarkov:$GH_TOKEN@github.com/iamstarkov/iamstarkov.github.io.git --silent"
   },
   "bugs": {
     "url": "https://github.com/iamstarkov/iamstarkov.github.io/issues"
