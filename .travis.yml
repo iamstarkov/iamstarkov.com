@@ -4,7 +4,7 @@ branches:
   only:
   - premaster
 node_js:
-  - 7
+  - 6
 script:
   - git config --global user.email "gh-pages@localhost"
   - git config --global user.name "npm gh-pages"
