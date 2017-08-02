@@ -39,7 +39,7 @@
     "autoprefixer-core": "^6.0.1",
     "babel-preset-env": "^1.6.0",
     "babel-register": "^6.24.1",
-    "commonmark": "^0.27.0",
+    "commonmark": "^0.28.0",
     "commonmark-helpers": "^0.4.1",
     "del": "^3.0.0",
     "each-done": "^1.0.0",
