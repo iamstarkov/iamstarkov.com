@@ -107,7 +107,7 @@ gulp.task('rss', done => {
 });
 
 gulp.task('watch', ['express', 'build'], () => {
-  watch(['**/*{jade,md,json}', '*.css'], () => {
+  watch(['layouts/**.jade', '*.{css,md,json}'], () => {
     gulp.start('build');
   });
 });
