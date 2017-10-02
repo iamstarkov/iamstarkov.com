@@ -7,6 +7,5 @@ node_js:
   - 6
 script:
   - npm run build
-after_script:
   - now dist --static --token=$NOW_TOKEN
   - now alias --token=$NOW_TOKEN
