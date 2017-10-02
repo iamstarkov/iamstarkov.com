@@ -11,9 +11,8 @@
   "license": "MIT",
   "scripts": {
     "start": "gulp",
-    "predeploy": "NODE_ENV=production gulp build",
-    "deploy": "gh-pages -d dist --branch master",
-    "deploy:ci": "npm run deploy -- --branch master --repo https://iamstarkov:$GH_TOKEN@github.com/iamstarkov/iamstarkov.github.io.git --silent"
+    "build": "NODE_ENV=production gulp build",
+    "deploy": "now dist --static && now alias"
   },
   "bugs": {
     "url": "https://github.com/iamstarkov/iamstarkov.github.io/issues"
@@ -28,11 +27,7 @@
     "webMaster": "iamstarkov@gmail.com (Vladimir Starkov)",
     "copyright": "MIT",
     "language": "en-us",
-    "categories": [
-      "frontend",
-      "css",
-      "typography"
-    ]
+    "categories": ["frontend", "css", "typography"]
   },
   "dependencies": {
     "article-data": "^0.3.1",
@@ -45,7 +40,6 @@
     "each-done": "^1.0.0",
     "express": "^4.13.3",
     "fs-extra": "^4.0.0",
-    "gh-pages": "^1.0.0",
     "gulp": "^3.9.0",
     "gulp-data": "^1.2.0",
     "gulp-debug": "^3.1.0",

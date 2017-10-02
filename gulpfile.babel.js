@@ -24,20 +24,28 @@ import moment from 'moment';
 import { site } from './package.json';
 
 const env = process.env.NODE_ENV || 'dev';
-const getBasename = (file) => path.basename(file.relative, path.extname(file.relative));
+const getBasename = file =>
+  path.basename(file.relative, path.extname(file.relative));
 
 let articlesList = [];
 
 const addToList = (file, article) => {
-  articlesList.push(assign({}, {
-    site: site,
-    filename: file.relative,
-    url: getBasename(file).substr('8') + '/',
-  }, extract(article, 'MMMM D, YYYY', 'en')));
+  articlesList.push(
+    assign(
+      {},
+      {
+        site: site,
+        filename: file.relative,
+        url: getBasename(file).substr('8') + '/',
+      },
+      extract(article, 'MMMM D, YYYY', 'en'),
+    ),
+  );
 };
 
-const buildArticle = (article) =>
-  gulp.src('layouts/article.jade')
+const buildArticle = article =>
+  gulp
+    .src('layouts/article.jade')
     .pipe(data(() => article))
     .pipe(jade({ pretty: true }))
     .pipe(rename({ dirname: article.url }))
@@ -48,65 +56,92 @@ const getRSS = (site, list) => {
   var feed = new rss(site);
   list
     .filter(i => !!i.date)
-    .sort((a, b) => b.date.unix - a.date.unix )
-    .forEach((article) => { feed.item({
-      url: site.site_url + article.url,
-      title: article.title.text,
-      description: article.desc.html,
-      date: article.date.text
-    })});
+    .sort((a, b) => b.date.unix - a.date.unix)
+    .forEach(article => {
+      feed.item({
+        url: site.site_url + article.url,
+        title: article.title.text,
+        description: article.desc.html,
+        date: article.date.text,
+      });
+    });
   return feed.xml({ indent: true });
-}
+};
 
 gulp.task('articles-registry', () => {
   articlesList = [];
-  return gulp.src(env === 'dev' ? ['201*-*.md'] : [ '201*-*.md', '!*draft*.md' ])
+  return gulp
+    .src(env === 'dev' ? ['201*-*.md'] : ['201*-*.md', '!*draft*.md'])
     .pipe(replace('https://iamstarkov.com/', '/'))
     .pipe(replace('https://iamstarkov.com', '/'))
-    .pipe((() => through.obj((file, enc, cb) => {
-      addToList(file, file.contents.toString());
-      cb(null, file);
-    }))());
+    .pipe(
+      (() =>
+        through.obj((file, enc, cb) => {
+          addToList(file, file.contents.toString());
+          cb(null, file);
+        }))(),
+    );
 });
 
 gulp.task('index-page', () =>
-  gulp.src('layouts/index.jade')
-    .pipe(data(() => ({
-      site,
-      list: articlesList
-              .filter(i => !!i.date)
-              .sort((a, b) => b.date.unix - a.date.unix )
-    })))
+  gulp
+    .src('layouts/index.jade')
+    .pipe(
+      data(() => ({
+        site,
+        list: articlesList
+          .filter(i => !!i.date)
+          .sort((a, b) => b.date.unix - a.date.unix),
+      })),
+    )
     .pipe(jade({ pretty: env === 'dev' }))
     .pipe(rename({ basename: 'index' }))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist')),
 );
 
-gulp.task('each-article', (done) => { each(articlesList, buildArticle, done); });
-gulp.task('rss', (done) => { output('dist/rss.xml', getRSS(site, articlesList), done); });
-
-gulp.task('watch', ['express', 'build'], () => {
-  watch(['**/*{jade,md,json}', '*.css'], () => { gulp.start('build'); });
+gulp.task('each-article', done => {
+  each(articlesList, buildArticle, done);
+});
+gulp.task('rss', done => {
+  output('dist/rss.xml', getRSS(site, articlesList), done);
 });
 
-gulp.task('build', (done) => {
-  sequence('articles-registry', ['index-page', 'each-article', 'rss'], 'css', 'cname', done);
+gulp.task('watch', ['express', 'build'], () => {
+  watch(['**/*{jade,md,json}', '*.css'], () => {
+    gulp.start('build');
+  });
+});
+
+gulp.task('build', done => {
+  sequence(
+    'articles-registry',
+    ['index-page', 'each-article', 'rss'],
+    'css',
+    'cname',
+    'pkg',
+    'now-config',
+    done,
+  );
 });
 
 gulp.task('css', () =>
-  gulp.src('styles.css')
-    .pipe(postcss([
-      autoprefixer(),
-      cssvariables()
-    ]))
-    .pipe(gulp.dest('dist'))
+  gulp
+    .src('styles.css')
+    .pipe(postcss([autoprefixer(), cssvariables()]))
+    .pipe(gulp.dest('dist')),
 );
 
-gulp.task('clean', (done) => { del('dist', done); });
-gulp.task('cname', () => gulp.src('CNAME').pipe(gulp.dest('dist')) );
+gulp.task('clean', done => {
+  del('dist', done);
+});
+gulp.task('cname', () => gulp.src('CNAME').pipe(gulp.dest('dist')));
+gulp.task('pkg', () => gulp.src('package.json').pipe(gulp.dest('dist')));
+gulp.task('now-config', () => gulp.src('now.json').pipe(gulp.dest('dist')));
 
 gulp.task('express', () => {
-  express().use(express.static('dist')).listen(4000);
+  express()
+    .use(express.static('dist'))
+    .listen(4000);
   log('Server is running on http://localhost:4000');
 });
 

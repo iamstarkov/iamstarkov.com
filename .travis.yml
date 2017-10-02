@@ -2,10 +2,10 @@ sudo: false
 language: node_js
 branches:
   only:
-  - premaster
+  - master
 node_js:
   - 6
 script:
-  - git config --global user.email "gh-pages@localhost"
-  - git config --global user.name "npm gh-pages"
-  - npm run deploy:ci -s
+  - npm run build
+after_script:
+  - now alias
