@@ -27,7 +27,11 @@
     "webMaster": "iamstarkov@gmail.com (Vladimir Starkov)",
     "copyright": "MIT",
     "language": "en-us",
-    "categories": ["frontend", "css", "typography"]
+    "categories": [
+      "frontend",
+      "css",
+      "typography"
+    ]
   },
   "dependencies": {
     "article-data": "^0.3.1",
@@ -58,5 +62,7 @@
     "run-sequence": "^2.0.0",
     "through2": "^2.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "now": "^8.3.9"
+  }
 }
