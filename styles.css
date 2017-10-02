@@ -1,31 +1,34 @@
-html, body {
+html,
+body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;
   letter-spacing: 0.01rem;
   text-rendering: optimizeLegibility;
   -moz-font-feature-settings: “liga” on;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .wrap {
-    font-size: 1.4em;
-    font-family: "Times New Roman", Times, serif;
-    color: #222;
-    max-width: 30em;
-    margin: 3em auto 7em;
+  font-size: 1.4em;
+  font-family: 'Times New Roman', Times, serif;
+  color: #222;
+  max-width: 30em;
+  margin: 3em auto 7em;
 }
 
 @media (max-device-width: 480px) {
-  .wrap { font-size: 0.8em; }
-
-  @media (orientation: landscape) {
-    .wrap { font-size: 0.6em; }
+  .wrap {
+    font-size: 1.6em;
+    padding: 2% 10% 0;
   }
 }
 
-
 article img {
   max-width: 100%;
+  /*margin: 0 auto;*/
 }
 
 code {
@@ -47,12 +50,12 @@ a {
 article a {
   position: relative;
   text-decoration: none;
-  box-shadow: 0 -0.4em 0 #FFF08C inset;
+  box-shadow: 0 -0.4em 0 #fff08c inset;
   transition: all 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
 }
 
 article a:hover {
-  box-shadow: 0px -1em 0px #FFF08C inset;
+  box-shadow: 0px -1em 0px #fff08c inset;
 }
 
 article a {
@@ -63,7 +66,7 @@ article a {
 }
 
 article a::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   bottom: 0;
@@ -74,14 +77,18 @@ article a::after {
   margin: -0.4em;
 }
 
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1;
   font-weight: normal;
 }
 
-
-.list, .list__item {
+.list,
+.list__item {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -128,7 +135,7 @@ h1, h2, h3, h4, h5, h6 {
 blockquote {
   margin: 0px;
   padding-left: 1em;
-  box-shadow: 8px 0px 10px -11px #FFF08C inset;
+  box-shadow: 8px 0px 10px -11px #fff08c inset;
 }
 
 blockquote p a:last-of-type {
@@ -136,7 +143,7 @@ blockquote p a:last-of-type {
   font-size: 0.8em;
 }
 blockquote p a:last-of-type::before {
-  content: '—'
+  content: '—';
 }
 
 .article-footer {
@@ -146,12 +153,13 @@ blockquote p a:last-of-type::before {
   text-align: center;
 }
 
-
 @media (max-device-width: 480px) {
-  .article-footer { width: 70%; }
+  .article-footer {
+    width: 70%;
+  }
 }
 
 img {
-  box-shadow: 0px 0px 30px 10px #FAFAFA;
+  box-shadow: 0px 0px 30px 10px #fafafa;
   margin: 20px 0;
 }
