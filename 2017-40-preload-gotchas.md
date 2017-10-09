@@ -58,8 +58,15 @@ Lets re-iterate, why one would like to use preloaded css? The reason is to have 
 > For font loads, user agents must use the potentially CORS-enabled fetch method defined by the HTML5 specification for URL's defined within `@font-face` rules. When fetching, user agents must use "Anonymous" mode, set the referrer source to the stylesheet's URL and set the origin to the URL of the containing document.
 > [CSS Fonts Module Level 3, w3c spec](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)
 
+## Further reading
 
-## summary
+* [Preload: What Is It Good For?](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/) by Smashing Magazine
+* [Preloading content with rel="preload"](https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content) by MDN
+* [Preloading with Critical Path CSS](http://brianflove.com/2016/07/21/preloading-with-critical-path-css/) by Brian Love
+* [Preload spec](https://www.w3.org/TR/preload/#as-attribute) by w3c
+* [CSS Fonts Module Level 3 spec](https://drafts.csswg.org/css-fonts/) by w3c
+
+## Summary
 
 `preload` is awesome. Use it for JS, fonts and images. Let me know if you mastered it for CSS as well. Now, go ahead and build fast websites.
 
