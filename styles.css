@@ -1,3 +1,9 @@
+code,
+pre {
+  font-family: 'Fira Code', Menlo, monospace;
+  font-size: 80%;
+}
+
 html,
 body {
   -webkit-font-smoothing: antialiased;
@@ -87,6 +93,10 @@ h6 {
   font-weight: normal;
 }
 
+h1 {
+  font-size: 2em;
+}
+
 .list,
 .list__item {
   margin: 0;
@@ -135,7 +145,7 @@ h6 {
 blockquote {
   margin: 0px;
   padding-left: 1em;
-  box-shadow: 8px 0px 10px -11px #fff08c inset;
+  box-shadow: 18px 0px 15px -9px #fff08c inset;
 }
 
 blockquote p a:last-of-type {
