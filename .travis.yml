@@ -7,6 +7,6 @@ node_js:
   - 6
 script:
   - npm run build
-  - npm run deploy -- --token=$NOW_TOKEN
-  - npm run alias -- --token=$NOW_TOKEN
-  - npm run cleanup -- --token=$NOW_TOKEN
+  - npm run deploy -s -- --token=$NOW_TOKEN
+  - npm run alias -s -- --token=$NOW_TOKEN
+  - npm run cleanup -s -- iamstarkov.com --token=$NOW_TOKEN
