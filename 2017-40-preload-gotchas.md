@@ -4,29 +4,19 @@ _October 10, 2017_
 
 Everybody heard of preloading assets ahead of time. But handful of developers actually tried it. Even smaller number of developers actually managed to push this improvement to production environment and that said to end users or customers. Im about to participate in this healthy trend, so I'm in the process of research and development. Here are some gotchas i wish i would knew in advance.
 
+*Disclaimer: im sorry for clickbaity title, its not really gotchas, but something i didnt expect before i read specification. But i still cant believe in 4th point.*
+
 ## 1) obligatory `as` attribute
 
 > The attribute is necessary to guarantee correct prioritization, request matching, application of the correct policy, and setting of the appropriate `Accept` request header.  
 > [Preload, '"as" attribute' by w3c spec](https://www.w3.org/TR/preload/#as-attribute)
 
-Example directives to preload a resource that will be consumed by...
+Basically, if you want to preload resource `${url}` to use in tag `${tag}`, then you need to preload it like these `<link rel="preload" as="${tag}" href="${url}" />`. Some examples are:
 
-* Format: `consumer → Preload directive` and means in order for consumer to be able to use preloaded resource you need to use relevant preload directive.
-* `<audio>` → `<link rel=preload as=audio href=...>`
-* `<video>` → `<link rel=preload as=video href=...>`
-* `<track>` → `<link rel=preload as=track href=...>`
-* `<script>` and Worker's `importScripts` → `<link rel=preload as=script href=...>`
-* `<link rel=stylesheet>` and CSS `@import` → `<link rel=preload as=style href=...>`
-* CSS `@font-face` → `<link rel=preload as=font href=...>`
-* `<img>`, `<picture>`, `srcset`, `imageset` → `<link rel=preload as=image href=...>`
-* SVG's `<image>`, CSS `*-image` → `<link rel=preload as=image href=...>`
-* XHR, fetch →	`<link rel=preload as=fetch crossorigin href=...>`
-* Worker, SharedWorker → `<link rel=preload as=worker href=...>`
-* `<embed>` → `<link rel=preload as=embed href=...>`
-* `<object>` → `<link rel=preload as=object href=...>`
-* `<iframe>` and `<frame>` → `<link rel=preload as=document href=...>`
+* to preload `<script />` use `<link rel=preload as=script href=… />`
+* to preload `<style />` or `<link rel=stylesheet>` use `<link rel=preload as=style href=… />`
 
-Taken from the spec as well
+See more examples in the [specification](https://www.w3.org/TR/preload/#as-attribute)
 
 ## 2) preload is separated from execution
 
