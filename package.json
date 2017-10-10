@@ -12,7 +12,9 @@
   "scripts": {
     "start": "gulp",
     "build": "NODE_ENV=production gulp build",
-    "deploy": "now dist --static && now alias"
+    "deploy": "now dist --static",
+    "alias": "now alias",
+    "cleanup": "now rm --safe"
   },
   "bugs": {
     "url": "https://github.com/iamstarkov/iamstarkov.github.io/issues"
@@ -27,11 +29,7 @@
     "webMaster": "iamstarkov@gmail.com (Vladimir Starkov)",
     "copyright": "MIT",
     "language": "en-us",
-    "categories": [
-      "frontend",
-      "css",
-      "typography"
-    ]
+    "categories": ["frontend", "css", "typography"]
   },
   "dependencies": {
     "article-data": "^0.3.1",
