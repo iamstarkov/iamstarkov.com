@@ -1,4 +1,4 @@
-# 5 preload gotchas i wish i would knew in advance
+# 5 preload gotchas i wish i would knew in advance
 
 _October 10, 2017_
 
@@ -70,5 +70,5 @@ Lets re-iterate, why one would like to use preloaded css? The reason is to have 
 
 `preload` is awesome. Use it for JS, fonts and images. Let me know if you mastered it for CSS as well. Now, go ahead and build fast websites.
 
-_Psst… wanna some ahead of time loads?_  
+_Psst… wanna some ahead of time loading?_  
 _Your non-relativistic [Vladimir Starkov](https://iamstarkov.com/)_
