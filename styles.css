@@ -1,7 +1,7 @@
 code,
 pre {
   font-family: 'Fira Code', Menlo, monospace;
-  font-size: 80%;
+  font-size: 75%;
 }
 
 html,
@@ -22,7 +22,7 @@ body {
   font-family: 'Times New Roman', Times, serif;
   color: #222;
   max-width: 30em;
-  margin: 3em auto 7em;
+  margin: 3em auto 0;
 }
 
 @media (max-device-width: 480px) {
@@ -135,11 +135,10 @@ h1 {
 .edit-link {
   float: right;
   margin-left: 2em;
-
   font-size: 0.7em;
-  line-height: 2.2;
+  line-height: 1;
   white-space: nowrap;
-  margin-top: 3px;
+  margin-top: 1.4em;
 }
 
 blockquote {
@@ -172,4 +171,9 @@ blockquote p a:last-of-type::before {
 img {
   box-shadow: 0px 0px 30px 10px #fafafa;
   margin: 20px 0;
+}
+
+.article-menu {
+  margin: 7em auto 1em;
+  color: #222;
 }
