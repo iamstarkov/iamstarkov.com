@@ -2,8 +2,7 @@
 
 _May 10, 2015_
 
-![commonmark-helpers passing all the tests!](https://i.imgur.com/CM0V0d4.png)
-
+![commonmark-helpers passing all the tests!](https://i.imgur.com/CM0V0d4.png)  
 Basically, with commonmark-helpers you can find desire elements in markdown document
 and process them in html or plaintext format.
 
