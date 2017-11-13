@@ -17,6 +17,7 @@ import each from 'each-done';
 import path from 'path';
 import extract from 'article-data';
 import postcss from 'gulp-postcss';
+import shell from 'shelljs';
 import autoprefixer from 'autoprefixer-core';
 import cssvariables from 'postcss-css-variables';
 
@@ -106,8 +107,27 @@ gulp.task('rss', done => {
   output('dist/rss.xml', getRSS(site, articlesList), done);
 });
 
+const talks = [
+  'semantic-awesomeness'
+]
+
+gulp.task('pretalks', done => {
+  shell.exec(`mkdirp dist/talks`);
+  talks.forEach(x => {
+    shell.exec(`mkdirp dist/talks/${x}`);
+  });
+  done();
+});
+
+gulp.task('talks', ['pretalks'], done => {
+  talks.forEach(x => {
+    shell.exec(`cleaver talks/${x}.md --output dist/talks/${x}/index.html`);
+  })
+  done();
+});
+
 gulp.task('watch', ['express', 'build'], () => {
-  watch(['layouts/**.jade', '*.{css,md,json}'], () => {
+  watch(['layouts/**.jade', '*.{css,md,json}', 'talks/**/*.{md,css}'], () => {
     gulp.start('build');
   });
 });
@@ -119,6 +139,7 @@ gulp.task('build', done => {
     'css',
     'cname',
     'pkg',
+    'talks',
     'now-config',
     done,
   );
