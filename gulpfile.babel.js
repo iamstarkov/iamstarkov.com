@@ -127,7 +127,7 @@ gulp.task('talks', ['pretalks'], done => {
 });
 
 gulp.task('watch', ['express', 'build'], () => {
-  watch(['layouts/**.jade', '*.{css,md,json}', 'talks/**/*.{md,css}'], () => {
+  watch(['layouts/**.jade', '*.{css,json}', 'posts/**/*.md', 'talks/**/*.{md,css}'], () => {
     gulp.start('build');
   });
 });
