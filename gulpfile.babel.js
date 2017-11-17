@@ -36,7 +36,7 @@ const addToList = (file, article) => {
       {},
       {
         site: site,
-        filename: file.relative,
+        filename: "posts/" + file.relative,
         url: getBasename(file).substr('8') + '/',
       },
       extract(article, 'MMMM D, YYYY', 'en'),
