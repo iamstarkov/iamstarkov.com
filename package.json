@@ -59,7 +59,7 @@
     "moment": "^2.10.6",
     "object-assign": "^4.1.1",
     "postcss-css-variables": "^0.7.0",
-    "ramda": "^0.24.1",
+    "ramda": "^0.25.0",
     "rss": "^1.1.1",
     "run-sequence": "^2.0.0",
     "through2": "^2.0.0"
