@@ -4,7 +4,7 @@ branches:
   only:
   - master
 node_js:
-  - 6
+  - 8
 script:
   - npm run build -s
   - npm run deploy -s -- --token=$NOW_TOKEN
