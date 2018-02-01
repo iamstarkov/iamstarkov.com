@@ -66,7 +66,7 @@
   },
   "devDependencies": {
     "cleaver": "^0.8.2",
-    "now": "^8.3.9",
+    "now": "^9.2.7",
     "shelljs": "^0.7.8"
   }
 }
