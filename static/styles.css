@@ -1,0 +1,195 @@
+code,
+pre {
+  font-family: 'Fira Code', Menlo, monospace;
+  font-size: 75%;
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  letter-spacing: 0.01rem;
+  text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: “liga” on;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.wrap {
+  font-size: 1.4em;
+  font-family: 'Times New Roman', Times, serif;
+  color: #222;
+  max-width: 30em;
+  margin: 3em auto 0;
+}
+
+@media (max-device-width: 480px) {
+  .wrap {
+    font-size: 1.6em;
+    padding: 2% 10% 0;
+  }
+}
+
+article img {
+  max-width: 100%;
+  /*margin: 0 auto;*/
+}
+
+code {
+  font-size: 0.9em;
+  background: #fafafa;
+  box-shadow: 0 0 0.2em 0.2em #fafafa;
+}
+
+pre {
+  background: #fafafa;
+  box-shadow: 0 0 0.7em 0.7em #fafafa;
+  overflow-y: auto;
+}
+
+a {
+  color: inherit;
+}
+
+article a {
+  position: relative;
+  text-decoration: none;
+  box-shadow: 0 -0.4em 0 #fff08c inset;
+}
+
+article a,
+article a:hover {
+  transition: all 0.05s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+
+article a:hover {
+  box-shadow: 0px -1em 0px #fff08c inset;
+}
+
+article a {
+  text-decoration: none;
+  position: relative;
+  color: inherit;
+  z-index: 1;
+}
+
+article a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  margin: -0.4em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+.list,
+.list__item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list__item + .list__item {
+  margin-top: 1em;
+}
+
+.list time {
+  font-style: italic;
+  font-size: 0.7em;
+  white-space: nowrap;
+  margin-left: 0.5em;
+}
+
+.list__item-desc {
+  margin: 0;
+  font-size: 0.7em;
+  overflow: hidden;
+  margin-left: 1.2em;
+}
+
+.list__item-desc br {
+  display: none;
+}
+
+.list__item img {
+  max-height: 100px;
+  float: left;
+  margin-right: 0.6em;
+}
+
+.edit-link {
+  float: right;
+  margin-left: 2em;
+  font-size: 0.7em;
+  line-height: 1;
+  white-space: nowrap;
+  margin-top: 1.4em;
+}
+
+blockquote {
+  margin: 0px;
+  padding-left: 1em;
+  box-shadow: 18px 0px 15px -9px #fff08c inset;
+}
+
+blockquote p a:last-of-type {
+  font-style: italic;
+  font-size: 0.8em;
+}
+blockquote p a:last-of-type::before {
+  content: '—';
+}
+
+.article-footer {
+  width: 50%;
+  margin: 5em auto 0;
+  font-size: 0.6em;
+  text-align: center;
+}
+
+@media (max-device-width: 480px) {
+  .article-footer {
+    width: 70%;
+  }
+}
+
+img {
+  box-shadow: 0px 0px 30px 10px #fafafa;
+  margin: 20px 0;
+}
+
+.article-menu {
+  margin: 7em auto 1em;
+  color: #555;
+  font-size: 0.7em;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  font-display: swap;
+  src: url('https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/woff2/FiraCode-Regular.woff2')
+      format('woff2'),
+    url('https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/woff/FiraCode-Regular.woff')
+      format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
