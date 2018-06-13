@@ -16,9 +16,9 @@ export default () => <>
   </h1>
 
   <nav key="nav">
-    <a href="/mvb/">
-      MVB
-    </a>
+    <a href="/mvb"> MVB </a>
+    {", "}
+    <a href="/mvb2"> MVB 2 </a>
     {", "}
     <a href="/about/">
       About

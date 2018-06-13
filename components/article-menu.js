@@ -1,5 +1,5 @@
-export const ArticleMenu = ({ className }) => (
-  <nav className={className}>
+export const ArticleMenu = () => (
+  <nav className="article-menu">
     <a href="/">
       Home
     </a>
