@@ -1,14 +1,14 @@
-export const ArticleMenu = ({ className }) => (
-  <nav className={className}>
+export const ArticleMenu = () => (
+  <nav className="article-menu">
     <a href="/">
       Home
     </a>
     {" • "}
-    <a href="/talks/">
+    <a href="/talks">
       Talks
     </a>
     {" • "}
-    <a href="/about/">
+    <a href="/about">
       About
     </a>
     {" • "}
