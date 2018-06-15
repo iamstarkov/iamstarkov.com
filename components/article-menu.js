@@ -4,11 +4,11 @@ export const ArticleMenu = () => (
       Home
     </a>
     {" • "}
-    <a href="/talks/">
+    <a href="/talks">
       Talks
     </a>
     {" • "}
-    <a href="/about/">
+    <a href="/about">
       About
     </a>
     {" • "}

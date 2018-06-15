@@ -18,8 +18,8 @@ export default class MyDocument extends Document {
           <meta key="twitter:site" name="twitter:site" content="@iamstarkov" />
         </Head>
         <body className="wrap">
-          <Main />
           <NextScript />
+          <Main />
         </body>
         <Gauges />
       </html>

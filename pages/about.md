@@ -1,0 +1,36 @@
+import { Meta } from '../components';
+
+<Meta
+  title="About Vladimir Starkov"
+  description="I’m Vladimir Starkov; obsessed with frontend, typography and BEM and that’s why I’m one of the founders of getbem.com."
+/>
+
+# About
+
+I’m Vladimir Starkov; obsessed with frontend, typography and BEM and that’s
+why I’m one of the founders of [getbem.com](http://getbem.com/).
+
+* Follow me on technical [twitter/iamstarkov](https://twitter.com/iamstarkov)
+* Check out my [talks](/talks)
+* Check out my open-source contribution on [github/iamstarkov](https://github.com/iamstarkov)
+* Try out and star my NodeJS packages on [npm/~iamstarkov](https://npmjs.com/~iamstarkov)
+* If you are interested, I also have [LinkedIn][],
+* Write me a letter on [iamstarkov@gmail.com](mailto:iamstarkov@gmail.com)
+
+## Colophon
+
+_[iamstarkov.com](https://iamstarkov.com/)_ is built with [gulp][] build
+system, have been [open-sourced][src] and also hosted on [Now][] by [Zeit][].
+
+It’s kind of experiment on blog format and modern web, tools,
+typography and minimalism. I started with [minimum viable blog](https://iamstarkov.com/mvb/) and gradually
+transforming it in my ideal blog.
+
+_Thank you for reading this,  
+your [Vladimir Starkov](https://iamstarkov.com)_
+
+[Now]: https://zeit.co/now
+[Zeit]: https://zeit.co/
+[gulp]: http://gulpjs.com/
+[src]: https://github.com/iamstarkov/iamstarkov.com
+[LinkedIn]: https://www.linkedin.com/in/iamstarkov
