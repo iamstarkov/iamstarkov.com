@@ -1,7 +1,41 @@
-import React from 'react';
+import React from "react";
 
-// prettier-ignore
-const spectacleExports = [ "Anim", "Appear", "BlockQuote", "Cite", "CodePane", "Code", "ComponentPlayground", "Deck", "Fill", "Fit", "Heading", "Image", "GoToAction", "Layout", "Link", "ListItem", "List", "Magic", "Markdown", "MarkdownSlides", "Notes", "Quote", "S", "Slide", "SlideSet", "TableBody", "TableHeader", "TableHeaderItem", "TableItem", "TableRow", "Table", "Text", "Typeface", "themes" ];
+const spectacleExports = [
+  "Anim",
+  "Appear",
+  "BlockQuote",
+  "Cite",
+  "CodePane",
+  "Code",
+  "ComponentPlayground",
+  "Deck",
+  "Fill",
+  "Fit",
+  "Heading",
+  "Image",
+  "GoToAction",
+  "Layout",
+  "Link",
+  "ListItem",
+  "List",
+  "Magic",
+  "Markdown",
+  "MarkdownSlides",
+  "Notes",
+  "Quote",
+  "S",
+  "Slide",
+  "SlideSet",
+  "TableBody",
+  "TableHeader",
+  "TableHeaderItem",
+  "TableItem",
+  "TableRow",
+  "Table",
+  "Text",
+  "Typeface",
+  "themes"
+];
 
 const setToFalse = (state, key) => ({ ...state, [key]: false });
 const setTo = spectacle => (state, key) => ({
