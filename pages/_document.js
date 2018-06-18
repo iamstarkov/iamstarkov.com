@@ -11,7 +11,6 @@ export default class MyDocument extends Document {
           <link key="dns" rel="dns-prefetch" href="https://cdn.rawgit.com" />
           <link key="preload1" rel="preload" as="font" crossOrigin="anonymous" href="https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/woff/FiraCode-Regular.woff" />
           <link key="preload2" rel="preload" as="font" crossOrigin="anonymous" href="https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/woff2/FiraCode-Regular.woff2" />
-          <link key="stylesheet" rel="stylesheet" href="/static/styles.css" />
           <meta key="og:site_name" property="og:site_name" content="Vladimir Starkov" />
           <meta key="article:author" property="article:author" content="https://iamstarkov.com/about/" />
           <meta key="twitter:card" name="twitter:card" content="summary" />
