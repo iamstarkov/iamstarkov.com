@@ -1,7 +1,6 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { Gauges } from '../components';
 
-// <link key="stylesheet" rel="stylesheet" href="/static/styles.css" />
 export default class MyDocument extends Document {
   render() {
     return (
