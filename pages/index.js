@@ -112,11 +112,11 @@ export default () => (
     />
     <h1>Vladimir Starkov</h1>
     <nav>
-      <Link href="/about" prefetch>
+      <Link href="/about/" prefetch>
         <a>About</a>
       </Link>
       {", "}
-      <Link href="/talks" prefetch>
+      <Link href="/talks/" prefetch>
         <a>Talks</a>
       </Link>
       {" and "}
