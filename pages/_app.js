@@ -49,7 +49,7 @@ export default class MyApp extends App {
           </article>
         )}
 
-        {!isIndex && <ArticleMenu />}
+        <ArticleMenu />
       </Container>
     );
   }
