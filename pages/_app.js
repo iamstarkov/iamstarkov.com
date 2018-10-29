@@ -23,7 +23,7 @@ export default class MyApp extends App {
               content={`https://iamstarkov.com${router.route}`}
             />
           </Head>
-          <Component {...pageProps} />;
+          <Component {...pageProps} />
         </Container>
       );
     }

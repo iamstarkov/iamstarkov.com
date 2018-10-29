@@ -1,26 +1,19 @@
-import { WithSpectacle } from '../../components'
+import { WithSpectacle } from "../../components";
+import createTheme from "spectacle/lib/themes/default";
 
-export default () => (
-  <WithSpectacle render={({ Deck, MarkdownSlides }) => (
-    <Deck>
-      {MarkdownSlides`
-## Semantic Awesomeness
+const theme = createTheme(
+  {
+    primary: "#fff",
+    secondary: "#222",
+    quaternary: "#b4b4b4"
+  },
+  {
+    primary: "'Times New Roman', Times, serif"
+  }
+);
 
----
-## Headaches
-
----
-## My name is Vladimir Starkov
-
----
-## Problem
-
----
-## Semantic Versioning
-
----
-
-### 1.0.0
+const semverSlide = `
+## 1.0.0
 
 * http://semver.org/
 * MAJOR . MINOR . PATCH
@@ -31,13 +24,10 @@ or
 * MAJOR: intended
 * MINOR: that was unexpected
 * FIX: wow, who could thought of it
+`;
 
----
+const historySlide = `
 ## History
-
----
-
-### History
 
 * [_17 September, 2011:_ SemVer 1.0 was just born](https://github.com/mojombo/semver/releases/tag/v1.0.0)
 * [_17 March, 2012:_ conventional changelog by angular.js](https://github.com/angular/angular.js/commit/4557881cf84f168855fc8615e174f24d6c2dd6ce#diff-69272c75604d89b2311fcf3a9d843ea3)
@@ -46,99 +36,93 @@ or
 * [_1 August, 2014:_ grunt-release-hoodie](https://github.com/robinboehm/grunt-release-hoodie/commit/33118f3a866b06efe639a6c53737b3e86aff121d)
 * [_3 September 2014:_ grunt-semantic-release](https://github.com/boennemann/grunt-semantic-release/commit/e85cae6f932ce88150e0025260e34d11755f8ab8)
 * [_13 June 2015:_ semantic-release](https://github.com/semantic-release/semantic-release/commit/ac7037d9482a04fb97b39aaa928ca048090dd6a6)
+`;
 
----
+const semanticReleaseSlide = `
 ## Semantic release
-
----
-### Semantic release
 
 * https://github.com/semantic-release/semantic-release
 * by [Stephan Bönnemann @boennemann](https://github.com/boennemann) (Hoodie, semantic-release, greenkeer.io)
 * certain commit message format
 * Changelog is derived from commit messages
 * next version is derived from commit messages as well
+`;
 
----
-### Semantic release
-#### conventional format
+const semanticReleaseSlide2 = `
+## Conventional format
 
+<pre style="text-align: left">
     type(scope?): short message
 
     long description
 
     BREAKING CHANGES or github/jira issues mentions
+</pre>
+`;
+
+const slides = `
+
+## Prerequisites
+
+* Continuous Integration in place
+* _release-bot_ credentials:
+  * ⇥ SCM access
+  * ⇥ NPM registry
 
 ---
-## Practicalities
-
----
-### Practicalities
-#### Prerequisites
-
-1. Continuous Integration in place
-2. _release-bot_ credentials:
-  * SCM access
-  * NPM registry
-
----
-### Practicalities
-#### Tool choice
+## Tool choice
 
 * [semantic-release](https://github.com/semantic-release/semantic-release) for Travis + GitHub
 * [corp-semantic-release](https://github.com/leonardoanalista/corp-semantic-release) for everything else
 
 ---
-### Practicalities
-#### Writing commit messages
+## Writing commit messages
 
 [commitizen](https://github.com/commitizen/cz-cli) + [cz-conventional-changelog](https://github.com/commitizen/cz-conventional-changelog) config
 
-    // ./package.json
-    "scripts": {
-      "commit": "git-cz",
-      // ...
-    },
-    "config": {
-      "commitizen": {
-        "path": "cz-conventional-changelog"
-      }
-    },
+<pre style="text-align: left">
+// ./package.json
+"scripts": {
+  "commit": "git-cz",
+  // ...
+},
+"config": {
+  "commitizen": {
+    "path": "cz-conventional-changelog"
+  }
+},
+</pre>
 
 ---
-### Practicalities
-#### Writing commit messages
+## Writing commit messages
 
 ![](https://raw.githubusercontent.com/commitizen/cz-cli/master/meta/screenshots/add-commit.png)
 
 ---
-### Practicalities
-#### Validating commit messages
+## Validating commit messages
 
 [husky](https://github.com/typicode/husky) + [@commitlint/{cli,config-angular}](https://github.com/marionebl/commitlint)
 
-    // ./package.json
-    "scripts": {
-      "commitmsg": "commitlint -e $GIT_PARAMS",
-    }
+<pre style="text-align: left">
+// ./package.json
+"scripts": {
+  "commitmsg": "commitlint -e $GIT_PARAMS",
+}
 
-    // commitlint.config.js
-    module.exports = { extends: [ '@commitlint/config-angular'] }
+// commitlint.config.js
+module.exports = { extends: [ '@commitlint/config-angular'] }
+</pre>
 
 ---
 
-### Practicalities
-#### Validating commit messages
+## Validating commit messages
 
-Invalid:
 ![](https://i.imgur.com/mTjkpap.png)
-
-Valid:
+vs
 ![](https://i.imgur.com/2uVkgwz.png)
 
 ---
-### Practicalities
-#### CI Integration
+## CI Integration
 
 * run semantic-release only in master
 * ignore commit message [ci-skip]
@@ -147,68 +131,172 @@ Valid:
 
 ---
 
-### Practicalities
-#### semantic-release
+## semantic-release
+<pre style="text-align: left">
 
-    npm install --save-dev semantic-release
+npm install --save-dev semantic-release
 
-    // ./.travis.yml
-    git config user.email "release-bot@localhost"
-    git config user.name "release-bot"
-    npm run build
-    npm run semantic-release
+// ./.travis.yml
+git config user.email "release-bot@localhost"
+git config user.name "release-bot"
+npm run build
+npm run semantic-release
 
-    // ./package.json
-    "scripts": {
-      "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    }
+// ./package.json
+"scripts": {
+  "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+}
+</pre>
 
 ---
 
-### Practicalities
-#### semantic-release changelog
+## changelog
 
 ![](https://i.imgur.com/zg8T2sV.png)
 
 ---
 
-### Practicalities
-#### corp-semantic-release
+## corp-semantic-release
 
-    npm install --save-dev corp-semantic-release conventional-changelog-angular-bitbucket
+<pre style="text-align: left">
+npm install --save-dev corp-semantic-release conventional-changelog-angular-bitbucket
 
-    // ./.travis.yml
-    git config user.email "release-bot@localhost"
-    git config user.name "release-bot"
-    git checkout master
-    npm run build
-    npm run semantic-release
-    npm publish
+// ./.travis.yml
+git config user.email "release-bot@localhost"
+git config user.name "release-bot"
+git checkout master
+npm run build
+npm run semantic-release
+npm publish
 
-    // ./package.json
-    "scripts": {
-      "semantic-release": "corp-semantic-release --changelogpreset angular-bitbucket -v",
-    }
+// ./package.json
+"scripts": {
+  "semantic-release": "corp-semantic-release --changelogpreset angular-bitbucket -v",
+}
+</pre>
 
 ---
 
-### Practicalities
-#### semantic-release changelog
+## changelog
 
 ![](https://i.imgur.com/frf4HgR.png)
+`;
 
-
+const a = `
 ---
-## Summary
 
-* [Slides](/talks/semantic-awesomeness/)
+`;
 
----
-## Semantic Awesomeness
-
-Sincerely yours [Vladimir Starkov](https://iamstarkov.com)
-_@iamstarkov on [github](https://github.com/iamstarkov) and [twitter](https://twitter.com/iamstarkov)_
-      `}
-    </Deck>
-  )}/>
-)
+export default () => (
+  <WithSpectacle
+    render={({ Deck, Slide, Image, Heading, Markdown, MarkdownSlides }) => {
+      return (
+        <Deck progress="bar" theme={theme}>
+          <Slide>
+            <Image src="/static/talks/sem-awe/title.jpg" />
+            <Heading height="0" overflow="hidden">
+              Semantic Awesomeness
+            </Heading>
+            <br />
+            <small>
+              <center>
+                <i>Merge to master and have a release</i>
+                <br />
+                <br />
+                <small>
+                  by <a href="/"> Vladimir Starkov</a>
+                  <br />
+                  frontend engineer at{" "}
+                  <a href="https://www.nordnet.se/">Nordnet Bank</a>
+                </small>
+              </center>
+            </small>
+          </Slide>
+          <Slide bgImage="/static/talks/sem-awe/headaches.jpg">
+            <Heading textColor="transparent" size={2}>
+              Headaches
+            </Heading>
+          </Slide>
+          <Slide bgImage="/static/talks/sem-awe/my-name-is.jpg">
+            <Heading textColor="transparent" size={2}>
+              My name is Vladimir Starkov
+            </Heading>
+          </Slide>
+          <Slide bgImage="/static/talks/sem-awe/problem.jpg">
+            <Heading textColor="transparent" size={2}>
+              Problem
+            </Heading>
+          </Slide>
+          <Slide bgImage="/static/talks/sem-awe/semver.jpg">
+            <Heading textColor="transparent" size={2}>
+              Semantic Versioning
+            </Heading>
+          </Slide>
+          <Slide>
+            <Markdown source={semverSlide} />
+          </Slide>
+          <Slide bgImage="/static/talks/sem-awe/history.jpg">
+            <Heading textColor="transparent" size={2}>
+              History
+            </Heading>
+          </Slide>
+          <Slide>
+            <Markdown source={historySlide} />
+          </Slide>
+          <Slide bgImage="/static/talks/sem-awe/semantic-release.jpg">
+            <Heading textColor="transparent" size={2}>
+              Semantic Release
+            </Heading>
+          </Slide>
+          <Slide>
+            <Markdown source={semanticReleaseSlide} />
+          </Slide>
+          <Slide>
+            <Markdown source={semanticReleaseSlide2} />
+          </Slide>
+          <Slide bgImage="/static/talks/sem-awe/practicalities.jpg">
+            <Heading textColor="transparent" size={2}>
+              Practicalities
+            </Heading>
+          </Slide>
+          {MarkdownSlides(slides)}
+          <Slide>
+            <Image src="/static/talks/sem-awe/summary.jpg" />
+            <Heading height="0" overflow="hidden">
+              Summmary
+            </Heading>
+            <br />
+            <small>
+              <a href="/talks/semantic-awesomeness/">
+                https://iamstarkov.com/talks/semantic-awesomeness/
+              </a>
+            </small>
+          </Slide>
+          <Slide>
+            <Image src="/static/talks/sem-awe/title.jpg" />
+            <Heading height="0" overflow="hidden">
+              Semantic Awesomeness
+            </Heading>
+            <br />
+            <small>
+              <center>
+                <i>In painless releases we trust </i>
+                <br />
+                <br />
+                <small>
+                  Sincerely yours <a href="/">Vladimir Starkov</a>
+                  <br />
+                  <i>
+                    @iamstarkov at{" "}
+                    <a href="https://github.com/iamstarkov">github</a> and{" "}
+                    <a href="https://twitter.com/iamstarkov">twitter</a>
+                  </i>
+                </small>
+              </center>
+            </small>
+          </Slide>
+        </Deck>
+      );
+    }}
+  />
+);
