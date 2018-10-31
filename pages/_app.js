@@ -7,6 +7,7 @@ export default class MyApp extends App {
   render() {
     const { Component, pageProps, router } = this.props;
     const isIndex = router.route === "/";
+    const isError = router.route === "/_error";
     const isTalk = router.route.startsWith("/talks/");
     const ghUrl = "https://github.com/iamstarkov/iamstarkov.com";
     const editUrl = `${ghUrl}/edit/master/pages${
@@ -38,16 +39,17 @@ export default class MyApp extends App {
           />
           <link key="stylesheet" rel="stylesheet" href="/static/styles.css" />
         </Head>
-        {!isIndex && (
-          <a
-            className="edit-link"
-            target="_blank"
-            rel="noopener"
-            href={editUrl}
-          >
-            edit on github
-          </a>
-        )}
+        {!isIndex &&
+          !isError && (
+            <a
+              className="edit-link"
+              target="_blank"
+              rel="noopener"
+              href={editUrl}
+            >
+              edit on github
+            </a>
+          )}
         {isIndex ? (
           <Component {...pageProps} />
         ) : (
