@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "rm -rf .next out && next build && next export"
   },
   "repository": "github:iamstarkov/iamstarkov.com",
   "author": "",
