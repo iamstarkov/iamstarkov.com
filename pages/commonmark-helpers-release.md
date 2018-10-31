@@ -2,8 +2,8 @@ import { Meta } from '../components'
 
 <Meta
   title="commonmark-helpers is out!"
-  description="Basically, with commonmark-helpers you can find desire elements in markdown document
-  and process them in html or plaintext format."
+  description="Basically, with commonmark-helpers you can find desire elements in markdown document and process them in html or plaintext format."
+  image="https://i.imgur.com/CM0V0d4.png"
 />
 
 # [commonmark-helpers][helpers] is out!

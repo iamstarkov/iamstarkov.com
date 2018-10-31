@@ -7,7 +7,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "rm -rf .next out && next build && next export"
+    "export": "rm -rf .next out && next build && next export",
+    "deploy": "yarn run export && now out --static --name=iamstarkov.com-next"
   },
   "repository": "github:iamstarkov/iamstarkov.com",
   "author": "",

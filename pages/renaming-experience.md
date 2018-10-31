@@ -3,6 +3,7 @@ import { Meta } from '../components'
 <Meta
   title="Renaming experience"
   description="I used to have @matmuchrapna username, but now you will find me as @iamstarkov. I successfully renamed myself on internet and want to share my experience. I’m assuming that you want to have the same username on domain, mail, social media and messengers. If you have trademark, skip entire article."
+  image="https://i.imgur.com/q8LcWMw.jpg"
 />
 
 # Renaming experience

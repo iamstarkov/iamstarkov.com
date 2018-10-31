@@ -3,6 +3,7 @@ import { Meta } from '../components'
 <Meta
   title="Atom One Light theme for iTerm2"
   description="Long time ago, when I used sublime text, I switched from dark theme to light one. And it feeels good. Last year most of the time I’m using Atom editor. Atom has awesome Atom One Light theme. All my prev attempts to find light theme for my terminal were fails, because light terminal themes looks ugly or unreadable. But Atom One Light looks good, right?"
+  image="https://i.imgur.com/WBa4C6o.png"
 />
 
 # Atom One Light theme for iTerm2

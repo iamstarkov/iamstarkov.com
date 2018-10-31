@@ -3,6 +3,7 @@ import { Meta } from '../components'
 <Meta
   title="How to start with nodejs testing"
   description="With this 5 minute intro I’ll show how to test your code with yayify example, which only add 'yay' to the end of the string. If you heard about testing and tdd, but still haven’t tried then this article is definitely for you."
+  image="https://i.imgur.com/Fe1uwiv.png"
 />
 
 # How to start with nodejs testing

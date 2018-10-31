@@ -3,6 +3,7 @@ import { Meta } from '../components'
 <Meta
   title="Every technical article must have publish date"
   description="Everytime I read article without publish date I feel myself uncomfortable. Modern frontend world is very fast changing thing; new javascript frameworks are inventing every month, tens npm-packages are publishing everyday and useful approaches become outdated in a months."
+  image="https://i.imgur.com/JrXX7wT.jpg"
 />
 
 # Every technical article must have publish date

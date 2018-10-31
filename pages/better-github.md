@@ -3,6 +3,7 @@ import { Meta } from '../components'
 <Meta
   title="Browser extensions to make GitHub better"
   description="We usually spend a lot of time reading and surfing others open source project on GitHub. It turned out, this process can be much better. Here is a short list of most useful extensions you might be interested in."
+  image="https://i.imgur.com/wqMwVMx.jpg"
 />
 
 # Browser extensions to make GitHub better
