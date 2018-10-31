@@ -96,7 +96,7 @@ const slides = `
 ---
 ## Writing commit messages
 
-![](https://raw.githubusercontent.com/commitizen/cz-cli/master/meta/screenshots/add-commit.png)
+![](/static/talks/sem-awe/add-commit.jpg)
 
 ---
 ## Validating commit messages
@@ -117,9 +117,9 @@ module.exports = { extends: [ '@commitlint/config-angular'] }
 
 ## Validating commit messages
 
-![](https://i.imgur.com/mTjkpap.png)
+![](/static/talks/sem-awe/commit-invalid.jpg)
 vs
-![](https://i.imgur.com/2uVkgwz.png)
+![](/static/talks/sem-awe/commit-valid.jpg)
 
 ---
 ## CI Integration
@@ -152,7 +152,7 @@ npm run semantic-release
 
 ## changelog
 
-![](https://i.imgur.com/zg8T2sV.png)
+![](/static/talks/sem-awe/semrel-changelog.jpg)
 
 ---
 
@@ -179,7 +179,7 @@ npm publish
 
 ## changelog
 
-![](https://i.imgur.com/frf4HgR.png)
+![](/static/talks/sem-awe/semrel-changelog-corp.jpg)
 `;
 
 const a = `
