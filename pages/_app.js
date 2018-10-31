@@ -38,9 +38,16 @@ export default class MyApp extends App {
           />
           <link key="stylesheet" rel="stylesheet" href="/static/styles.css" />
         </Head>
-        <a className="edit-link" target="_blank" rel="noopener" href={editUrl}>
-          edit on github
-        </a>
+        {!isIndex && (
+          <a
+            className="edit-link"
+            target="_blank"
+            rel="noopener"
+            href={editUrl}
+          >
+            edit on github
+          </a>
+        )}
         {isIndex ? (
           <Component {...pageProps} />
         ) : (
