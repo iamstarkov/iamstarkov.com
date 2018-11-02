@@ -1,8 +1,9 @@
 {
-  "name": "iamstarkov.com-next",
+  "name": "iamstarkov.com",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Frontend blog by Vladimir Starkov",
+  "repository": "https://github.com/iamstarkov/iamstarkov.com",
+  "author": "Vladimir Starkov <iamstarkov@gmail.com> (https://iamstarkov.com/)",
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -10,9 +11,7 @@
     "export": "rm -rf .next out && next build && next export",
     "deploy": "yarn run export && now out --static --name=iamstarkov.com-next"
   },
-  "repository": "github:iamstarkov/iamstarkov.com",
-  "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@mdx-js/mdx": "^0.15.0",
     "@zeit/next-mdx": "^1.1.0",
