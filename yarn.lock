@@ -648,9 +648,9 @@
   dependencies:
     "@mdx-js/tag" "^0.15.0"
 
-"@mdx-js/mdx@^0.15.0":
+"@mdx-js/mdx@0.15.5":
   version "0.15.5"
-  resolved "https://registry.npmjs.org/@mdx-js/mdx/-/mdx-0.15.5.tgz#a3821a1e0e460ee993437ef3f922482fb67c31d0"
+  resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-0.15.5.tgz#a3821a1e0e460ee993437ef3f922482fb67c31d0"
   dependencies:
     change-case "^3.0.2"
     mdast-util-to-hast "^3.0.0"
@@ -801,9 +801,9 @@
   version "4.2.1"
   resolved "https://registry.npmjs.org/@xtuc/long/-/long-4.2.1.tgz#5c85d662f76fa1d34575766c5dcd6615abcd30d8"
 
-"@zeit/next-mdx@^1.1.0":
+"@zeit/next-mdx@1.2.0":
   version "1.2.0"
-  resolved "https://registry.npmjs.org/@zeit/next-mdx/-/next-mdx-1.2.0.tgz#e7c85400e210848e1d56a4229d46eec4a4ca5566"
+  resolved "https://registry.yarnpkg.com/@zeit/next-mdx/-/next-mdx-1.2.0.tgz#e7c85400e210848e1d56a4229d46eec4a4ca5566"
   dependencies:
     "@mdx-js/loader" "^0.15.0"
 
@@ -3086,9 +3086,9 @@ neo-async@^2.5.0:
   version "2.6.0"
   resolved "https://registry.npmjs.org/neo-async/-/neo-async-2.6.0.tgz#b9d15e4d71c6762908654b5183ed38b753340835"
 
-next@^7.0.0:
+next@7.0.2:
   version "7.0.2"
-  resolved "https://registry.npmjs.org/next/-/next-7.0.2.tgz#5ff6b3f0e6cf03ce539d5779a55dc1f8fb1759d7"
+  resolved "https://registry.yarnpkg.com/next/-/next-7.0.2.tgz#5ff6b3f0e6cf03ce539d5779a55dc1f8fb1759d7"
   dependencies:
     "@babel/core" "7.0.0"
     "@babel/plugin-proposal-class-properties" "7.0.0"
@@ -3659,9 +3659,9 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-dom@^16.5.2:
+react-dom@16.6.0:
   version "16.6.0"
-  resolved "https://registry.npmjs.org/react-dom/-/react-dom-16.6.0.tgz#6375b8391e019a632a89a0988bce85f0cc87a92f"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.6.0.tgz#6375b8391e019a632a89a0988bce85f0cc87a92f"
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -3725,9 +3725,9 @@ react-typography@^0.16.5:
   version "0.16.13"
   resolved "https://registry.npmjs.org/react-typography/-/react-typography-0.16.13.tgz#94bdd2a9448823bc74d8ebf7465d86c7dbe20dcf"
 
-react@^16.5.2:
+react@16.6.0:
   version "16.6.0"
-  resolved "https://registry.npmjs.org/react/-/react-16.6.0.tgz#b34761cfaf3e30f5508bc732fb4736730b7da246"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.6.0.tgz#b34761cfaf3e30f5508bc732fb4736730b7da246"
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -4199,9 +4199,9 @@ spdx-license-ids@^3.0.0:
   version "3.0.1"
   resolved "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.1.tgz#e2a303236cac54b04031fa7a5a79c7e701df852f"
 
-spectacle@^5.1.0:
+spectacle@5.2.0:
   version "5.2.0"
-  resolved "https://registry.npmjs.org/spectacle/-/spectacle-5.2.0.tgz#0923041074bfb9149f9adc15b6bd5d623a164c22"
+  resolved "https://registry.yarnpkg.com/spectacle/-/spectacle-5.2.0.tgz#0923041074bfb9149f9adc15b6bd5d623a164c22"
   dependencies:
     deep-object-diff "^1.0.4"
     emotion "^8.0.8"
