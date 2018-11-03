@@ -5,7 +5,7 @@ import { Meta } from '../components';
   description="Everybody heard of preloading assets ahead of time. But handful of developers actually tried it. Even smaller number of developers actually managed to push this improvement to production environment and that said to end users or customers. Im about to participate in this healthy trend, so I'm in the process of research and development. Here are some gotchas i wish i would knew in advance."
 />
 
-# 5 preload gotchas i wish i would knew in advance
+# 5 preload gotchas i wish i knew in advance
 
 _October 10, 2017_
 

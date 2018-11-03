@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const articlesList = [
   {
-    title: "5 preload gotchas i wish i would knew in advance",
+    title: "5 preload gotchas i wish i knew in advance",
     url: "/preload-gotchas/",
     time: "October 10, 2017"
   },
