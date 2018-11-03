@@ -1,16 +1,8 @@
-const withBundleAnalyzer = require("@zeit/next-bundle-analyzer");
 const withMDX = require("@zeit/next-mdx")({
   extension: /\.mdx?$/
 });
 
-module.exports = withBundleAnalyzer({
-  analyzeBrowser: true,
-  bundleAnalyzerConfig: {
-    browser: {
-      analyzerMode: 'static',
-      reportFilename: '../out/analyze-bundle-client.html'
-    }
-  },
+module.exports = {
   ...withMDX({
     pageExtensions: ["js", "mdx", "md"]
   }),
@@ -21,4 +13,4 @@ module.exports = withBundleAnalyzer({
       ...defaultPathMap
     };
   }
-});
+};
