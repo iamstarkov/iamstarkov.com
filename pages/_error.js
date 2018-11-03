@@ -1,1 +1,1 @@
-export default () => "Not Found";
+export default () => "Not Found =(";
