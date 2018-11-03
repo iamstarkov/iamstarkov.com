@@ -1,0 +1,8 @@
+*
+!components
+!pages
+!static
+!package.json
+!now.json
+!next.config.js
+!yarn.lock

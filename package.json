@@ -7,9 +7,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
-    "export": "rm -rf .next out && next build && next export",
-    "deploy": "yarn run export && now out --static --name=iamstarkov.com"
+    "export": "next export",
+    "deploy": "rm -rf .next out && yarn build && yarn run export && now out --static --name=iamstarkov.com"
   },
   "license": "MIT",
   "dependencies": {
