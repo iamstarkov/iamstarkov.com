@@ -1,4 +1,4 @@
-import { WithSpectacle } from "../../components";
+import { WithSpectacle } from "../../components/with-spectacle";
 import createTheme from "spectacle/lib/themes/default";
 
 const theme = createTheme(
