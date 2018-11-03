@@ -1,72 +1,24 @@
 {
   "name": "iamstarkov.com",
-  "version": "1.1.0",
-  "description": "Frontend blog from Vladimir Starkov",
-  "main": "gulpfile.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/iamstarkov/iamstarkov.github.io"
-  },
+  "version": "3.0.0",
+  "description": "Frontend blog by Vladimir Starkov",
+  "repository": "https://github.com/iamstarkov/iamstarkov.com",
   "author": "Vladimir Starkov <iamstarkov@gmail.com> (https://iamstarkov.com/)",
-  "license": "MIT",
   "scripts": {
-    "start": "gulp",
-    "build": "NODE_ENV=production gulp build",
-    "deploy": "now dist --static",
-    "alias": "now alias",
-    "cleanup": "now rm --safe"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "rm -rf .next out && next build && next export",
+    "deploy": "yarn run export && now out --static --name=iamstarkov.com-next"
   },
-  "bugs": {
-    "url": "https://github.com/iamstarkov/iamstarkov.github.io/issues"
-  },
-  "homepage": "http://iamstarkov.com",
-  "site": {
-    "title": "Vladimir Starkov",
-    "description": "Frontend blog from Vladimir Starkov",
-    "feed_url": "https://iamstarkov.com/rss.xml",
-    "site_url": "https://iamstarkov.com/",
-    "managingEditor": "iamstarkov@gmail.com (Vladimir Starkov)",
-    "webMaster": "iamstarkov@gmail.com (Vladimir Starkov)",
-    "copyright": "MIT",
-    "language": "en-us",
-    "categories": [
-      "frontend",
-      "css",
-      "typography"
-    ]
-  },
+  "license": "MIT",
   "dependencies": {
-    "article-data": "^0.3.1",
-    "autoprefixer-core": "^6.0.1",
-    "babel-preset-env": "^1.6.0",
-    "babel-register": "^6.24.1",
-    "commonmark": "^0.27.0",
-    "commonmark-helpers": "^0.4.1",
-    "del": "^3.0.0",
-    "each-done": "^1.0.0",
-    "express": "^4.13.3",
-    "fs-extra": "^4.0.0",
-    "gulp": "^3.9.0",
-    "gulp-data": "^1.2.0",
-    "gulp-debug": "^3.1.0",
-    "gulp-jade": "^1.1.0",
-    "gulp-postcss": "^6.4.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-replace": "^0.6.0",
-    "gulp-util": "^3.0.6",
-    "gulp-watch": "^4.3.4",
-    "jade": "^1.11.0",
-    "moment": "^2.10.6",
-    "object-assign": "^4.1.1",
-    "postcss-css-variables": "^0.7.0",
-    "ramda": "^0.24.1",
-    "rss": "^1.1.1",
-    "run-sequence": "^2.0.0",
-    "through2": "^2.0.0"
-  },
-  "devDependencies": {
-    "cleaver": "^0.8.2",
-    "now": "^9.2.7",
-    "shelljs": "^0.7.8"
+    "@mdx-js/mdx": "^0.15.0",
+    "@zeit/next-mdx": "^1.1.0",
+    "next": "^7.0.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "spectacle": "^5.1.0"
   }
 }
