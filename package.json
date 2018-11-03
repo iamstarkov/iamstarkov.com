@@ -12,12 +12,12 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@mdx-js/mdx": "^0.15.0",
-    "@zeit/next-mdx": "^1.1.0",
-    "next": "^7.0.0",
-    "prop-types": "^15.6.1",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "spectacle": "^5.1.0"
+    "@mdx-js/mdx": "0.15.5",
+    "@zeit/next-mdx": "1.2.0",
+    "next": "7.0.2",
+    "prop-types": "15.6.2",
+    "react": "16.6.0",
+    "react-dom": "16.6.0",
+    "spectacle": "5.2.0"
   }
 }
