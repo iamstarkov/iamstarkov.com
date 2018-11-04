@@ -45,8 +45,8 @@ export default class MyDocument extends Document {
             <Main />
           </div>
           <NextScript />
+          <Gauges />
         </body>
-        <Gauges />
       </html>
     );
   }

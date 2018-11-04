@@ -1,9 +1,20 @@
 import React from "react";
 import App, { Container } from "next/app";
 import Head from "next/head";
+import Router from "next/router";
 import { ArticleMenu } from "../components";
 
 export default class MyApp extends App {
+  componentDidMount() {
+    Router.events.on("routeChangeComplete", url => {
+      // time out is needed to let next/head to update head before we track the page
+      setTimeout(() => {
+        if (window._gauges) {
+          window._gauges.push(["track"]);
+        }
+      }, 100);
+    });
+  }
   render() {
     const { Component, pageProps, router } = this.props;
     const isIndex = router.route === "/";
