@@ -1,4 +1,6 @@
+import { Meta } from "../../components";
 import { WithSpectacle } from "../../components/with-spectacle";
+
 import createTheme from "spectacle/lib/themes/default";
 
 const theme = createTheme(
@@ -182,121 +184,123 @@ npm publish
 ![](/static/talks/sem-awe/semrel-changelog-corp.jpg)
 `;
 
-const a = `
----
-
-`;
-
 export default () => (
-  <WithSpectacle
-    render={({ Deck, Slide, Image, Heading, Markdown, MarkdownSlides }) => {
-      return (
-        <Deck progress="bar" theme={theme}>
-          <Slide>
-            <Image src="/static/talks/sem-awe/title.jpg" />
-            <Heading height="0" overflow="hidden">
-              Semantic Awesomeness
-            </Heading>
-            <br />
-            <small>
-              <center>
-                <i>Merge to master and have a release</i>
-                <br />
-                <br />
-                <small>
-                  by <a href="/"> Vladimir Starkov</a>
+  <>
+    <Meta
+      title="Semantic Awesomeness"
+      description="Merge to master and have a release"
+      image="/static/talks/sem-awe/title.jpg"
+    />
+    <WithSpectacle
+      render={({ Deck, Slide, Image, Heading, Markdown, MarkdownSlides }) => {
+        return (
+          <Deck progress="bar" theme={theme}>
+            <Slide>
+              <Image src="/static/talks/sem-awe/title.jpg" />
+              <Heading height="0" overflow="hidden">
+                Semantic Awesomeness
+              </Heading>
+              <br />
+              <small>
+                <center>
+                  <i>Merge to master and have a release</i>
                   <br />
-                  frontend engineer at{" "}
-                  <a href="https://www.nordnet.se/">Nordnet Bank</a>
-                </small>
-              </center>
-            </small>
-          </Slide>
-          <Slide bgImage="/static/talks/sem-awe/headaches.jpg">
-            <Heading textColor="transparent" size={2}>
-              Headaches
-            </Heading>
-          </Slide>
-          <Slide bgImage="/static/talks/sem-awe/my-name-is.jpg">
-            <Heading textColor="transparent" size={2}>
-              My name is Vladimir Starkov
-            </Heading>
-          </Slide>
-          <Slide bgImage="/static/talks/sem-awe/problem.jpg">
-            <Heading textColor="transparent" size={2}>
-              Problem
-            </Heading>
-          </Slide>
-          <Slide bgImage="/static/talks/sem-awe/semver.jpg">
-            <Heading textColor="transparent" size={2}>
-              Semantic Versioning
-            </Heading>
-          </Slide>
-          <Slide>
-            <Markdown source={semverSlide} />
-          </Slide>
-          <Slide bgImage="/static/talks/sem-awe/history.jpg">
-            <Heading textColor="transparent" size={2}>
-              History
-            </Heading>
-          </Slide>
-          <Slide>
-            <Markdown source={historySlide} />
-          </Slide>
-          <Slide bgImage="/static/talks/sem-awe/semantic-release.jpg">
-            <Heading textColor="transparent" size={2}>
-              Semantic Release
-            </Heading>
-          </Slide>
-          <Slide>
-            <Markdown source={semanticReleaseSlide} />
-          </Slide>
-          <Slide>
-            <Markdown source={semanticReleaseSlide2} />
-          </Slide>
-          <Slide bgImage="/static/talks/sem-awe/practicalities.jpg">
-            <Heading textColor="transparent" size={2}>
-              Practicalities
-            </Heading>
-          </Slide>
-          {MarkdownSlides(slides)}
-          <Slide>
-            <Image src="/static/talks/sem-awe/summary.jpg" />
-            <Heading height="0" overflow="hidden">
-              Summmary
-            </Heading>
-            <br />
-            <small>
-              <a href="/talks/semantic-awesomeness/">
-                https://iamstarkov.com/talks/semantic-awesomeness/
-              </a>
-            </small>
-          </Slide>
-          <Slide>
-            <Image src="/static/talks/sem-awe/title.jpg" />
-            <Heading height="0" overflow="hidden">
-              Semantic Awesomeness
-            </Heading>
-            <br />
-            <small>
-              <center>
-                <i>In painless releases we trust </i>
-                <br />
-                <br />
-                <small>
-                  Sincerely yours <a href="/">Vladimir Starkov</a>
                   <br />
-                  <i>
-                    @iamstarkov at{" "}
-                    <a href="https://github.com/iamstarkov">github</a> and{" "}
-                    <a href="https://twitter.com/iamstarkov">twitter</a>
-                  </i>
-                </small>
-              </center>
-            </small>
-          </Slide>
-        </Deck>
-      );
-    }}
-  />
+                  <small>
+                    by <a href="/"> Vladimir Starkov</a>
+                    <br />
+                    frontend engineer at{" "}
+                    <a href="https://www.nordnet.se/">Nordnet Bank</a>
+                  </small>
+                </center>
+              </small>
+            </Slide>
+            <Slide bgImage="/static/talks/sem-awe/headaches.jpg">
+              <Heading textColor="transparent" size={2}>
+                Headaches
+              </Heading>
+            </Slide>
+            <Slide bgImage="/static/talks/sem-awe/my-name-is.jpg">
+              <Heading textColor="transparent" size={2}>
+                My name is Vladimir Starkov
+              </Heading>
+            </Slide>
+            <Slide bgImage="/static/talks/sem-awe/problem.jpg">
+              <Heading textColor="transparent" size={2}>
+                Problem
+              </Heading>
+            </Slide>
+            <Slide bgImage="/static/talks/sem-awe/semver.jpg">
+              <Heading textColor="transparent" size={2}>
+                Semantic Versioning
+              </Heading>
+            </Slide>
+            <Slide>
+              <Markdown source={semverSlide} />
+            </Slide>
+            <Slide bgImage="/static/talks/sem-awe/history.jpg">
+              <Heading textColor="transparent" size={2}>
+                History
+              </Heading>
+            </Slide>
+            <Slide>
+              <Markdown source={historySlide} />
+            </Slide>
+            <Slide bgImage="/static/talks/sem-awe/semantic-release.jpg">
+              <Heading textColor="transparent" size={2}>
+                Semantic Release
+              </Heading>
+            </Slide>
+            <Slide>
+              <Markdown source={semanticReleaseSlide} />
+            </Slide>
+            <Slide>
+              <Markdown source={semanticReleaseSlide2} />
+            </Slide>
+            <Slide bgImage="/static/talks/sem-awe/practicalities.jpg">
+              <Heading textColor="transparent" size={2}>
+                Practicalities
+              </Heading>
+            </Slide>
+            {MarkdownSlides(slides)}
+            <Slide>
+              <Image src="/static/talks/sem-awe/summary.jpg" />
+              <Heading height="0" overflow="hidden">
+                Summmary
+              </Heading>
+              <br />
+              <small>
+                <a href="/talks/semantic-awesomeness/">
+                  https://iamstarkov.com/talks/semantic-awesomeness/
+                </a>
+              </small>
+            </Slide>
+            <Slide>
+              <Image src="/static/talks/sem-awe/title.jpg" />
+              <Heading height="0" overflow="hidden">
+                Semantic Awesomeness
+              </Heading>
+              <br />
+              <small>
+                <center>
+                  <i>In painless releases we trust </i>
+                  <br />
+                  <br />
+                  <small>
+                    Sincerely yours <a href="/">Vladimir Starkov</a>
+                    <br />
+                    <i>
+                      @iamstarkov at{" "}
+                      <a href="https://github.com/iamstarkov">github</a> and{" "}
+                      <a href="https://twitter.com/iamstarkov">twitter</a>
+                    </i>
+                  </small>
+                </center>
+              </small>
+            </Slide>
+          </Deck>
+        );
+      }}
+    />
+  </>
 );
