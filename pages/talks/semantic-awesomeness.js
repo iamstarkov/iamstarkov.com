@@ -189,7 +189,7 @@ export default () => (
     <Meta
       title="Semantic Awesomeness"
       description="Merge to master and have a release"
-      image="/static/talks/sem-awe/title.jpg"
+      image="https://iamstarkov.com/static/talks/sem-awe/title.jpg"
     />
     <WithSpectacle
       render={({ Deck, Slide, Image, Heading, Markdown, MarkdownSlides }) => {
