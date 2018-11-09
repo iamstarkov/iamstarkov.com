@@ -1,5 +1,7 @@
 {
+  "version": 2,
   "name": "iamstarkov.com",
   "alias": "iamstarkov.com",
-  "type": "static"
+  "regions": ["all"],
+  "builds": [{ "src": "./package.json", "use": "@now/static-build" }]
 }
