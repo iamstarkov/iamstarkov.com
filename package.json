@@ -6,9 +6,7 @@
   "author": "Vladimir Starkov <iamstarkov@gmail.com> (https://iamstarkov.com/)",
   "scripts": {
     "dev": "next",
-    "build": "next build",
-    "export": "next export",
-    "deploy": "rm -rf .next out && yarn build && yarn run export && now out --static --name=iamstarkov.com"
+    "now-build": "next build && next export -o dist"
   },
   "license": "MIT",
   "dependencies": {
