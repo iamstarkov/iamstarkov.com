@@ -25,10 +25,11 @@ body {
   margin: 3em auto 0;
 }
 
-@media (max-device-width: 480px) {
+@media (max-width: 480px) {
   .wrap {
-    font-size: 1.6em;
-    padding: 2% 10% 0;
+    /* background: red; */
+    font-size: 0.8em;
+    padding: 2% 2% 0;
   }
 }
 
@@ -167,12 +168,6 @@ blockquote p a:last-of-type::before {
   margin: 5em auto 0;
   font-size: 0.6em;
   text-align: center;
-}
-
-@media (max-device-width: 480px) {
-  .article-footer {
-    width: 70%;
-  }
 }
 
 img {
