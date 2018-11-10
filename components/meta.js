@@ -1,21 +1,16 @@
 import Head from "next/head";
 
-export const Meta = props => (
+const coerceUrl = x =>
+  x.startsWith("http") ? x : `https://iamstarkov.com${x}`;
+
+export const Meta = ({ title, description, image }) => (
   <Head>
-    <title key="title">{props.title}</title>
-    <meta key="og:title" name="og:title" content={props.title} />
-    <meta
-      key="description"
-      property="description"
-      content={props.description}
-    />
-    <meta
-      key="og:description"
-      name="og:description"
-      content={props.description}
-    />
-    {!!props.image && (
-      <meta key="og:image" name="og:image" content={props.image} />
+    <title key="title">{title}</title>
+    <meta key="og:title" name="og:title" content={title} />
+    <meta key="description" property="description" content={description} />
+    <meta key="og:description" name="og:description" content={description} />
+    {!!image && (
+      <meta key="og:image" name="og:image" content={coerceUrl(image)} />
     )}
   </Head>
 );
