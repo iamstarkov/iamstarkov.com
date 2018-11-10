@@ -10,7 +10,7 @@ import { Meta } from '../components'
 
 > Not only pin, but share
 
-_November 9, 2018_
+_November 10, 2018_
 
 **Free MIT UX course, disenchantment, react-testing-library and more.**
 

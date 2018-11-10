@@ -6,7 +6,7 @@ const articlesList = [
     title:
       "Pinned tabs #1: Free MIT UX course, disenchantment, react-testing-library and more.",
     url: "/pinned-tabs-1/",
-    time: "November 9, 2018"
+    time: "November 10, 2018"
   },
   {
     title: "5 preload gotchas i wish i knew in advance",
