@@ -149,9 +149,9 @@ export default () => (
     <br />
     <article>
       <ul className="list">
-        {articlesList.map(x => (
+        {articlesList.map((x, i) => (
           <li key={x.url} className="list__item">
-            <Link href={x.url}>
+            <Link href={x.url} prefetch={i <= 2}>
               <a>{x.title}</a>
             </Link>
             <time>{x.time}</time>
