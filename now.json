@@ -2,6 +2,6 @@
   "version": 2,
   "name": "iamstarkov.com",
   "alias": "iamstarkov.com",
-  "regions": ["all"],
+  "regions": ["bru1"],
   "builds": [{ "src": "./package.json", "use": "@now/static-build" }]
 }
