@@ -27,8 +27,7 @@ body {
 
 @media (max-width: 480px) {
   .wrap {
-    /* background: red; */
-    font-size: 0.8em;
+    font-size: 1em;
     padding: 2% 2% 0;
   }
 }
