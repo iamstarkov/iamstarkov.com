@@ -3,6 +3,11 @@ import Link from "next/link";
 
 const articlesList = [
   {
+    title: "Keeping up with two git identities",
+    url: "/conditional-includes/",
+    time: "November 14, 2018"
+  },
+  {
     title:
       "Pinned tabs #1: Free MIT UX course, disenchantment, react-testing-library and more.",
     url: "/pinned-tabs-1/",
