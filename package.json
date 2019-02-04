@@ -16,6 +16,6 @@
     "prop-types": "15.6.2",
     "react": "16.7.0",
     "react-dom": "16.7.0",
-    "spectacle": "5.2.2"
+    "spectacle": "5.4.0"
   }
 }
