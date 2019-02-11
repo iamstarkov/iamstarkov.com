@@ -685,9 +685,9 @@
   dependencies:
     "@mdx-js/tag" "^0.15.0"
 
-"@mdx-js/mdx@0.16.8":
-  version "0.16.8"
-  resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-0.16.8.tgz#9a38de822583f2d33f10c65bbe6e9282005dbee5"
+"@mdx-js/mdx@0.17.0":
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-0.17.0.tgz#0106c0be49ab8dbcacfff046e9a4c74833f2511d"
   dependencies:
     change-case "^3.0.2"
     detab "^2.0.0"

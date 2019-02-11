@@ -10,7 +10,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@mdx-js/mdx": "0.16.8",
+    "@mdx-js/mdx": "0.17.0",
     "@zeit/next-mdx": "1.2.0",
     "next": "8.0.0",
     "prop-types": "15.7.1",
