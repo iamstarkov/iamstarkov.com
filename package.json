@@ -13,7 +13,7 @@
     "@mdx-js/mdx": "0.17.0",
     "@zeit/next-mdx": "1.2.0",
     "next": "8.0.1",
-    "prop-types": "15.7.1",
+    "prop-types": "15.7.2",
     "react": "16.8.2",
     "react-dom": "16.8.2",
     "spectacle": "5.4.0"
