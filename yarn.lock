@@ -704,9 +704,9 @@
   dependencies:
     "@mdx-js/tag" "^0.15.0"
 
-"@mdx-js/mdx@0.17.5":
-  version "0.17.5"
-  resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-0.17.5.tgz#0c760562e9ad66458c40c78c09cdeea768d5e073"
+"@mdx-js/mdx@0.18.0":
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-0.18.0.tgz#d80cdde7355680856cd112086d71a9c93ab87c4c"
   dependencies:
     "@babel/plugin-proposal-object-rest-spread" "^7.3.2"
     "@babel/plugin-syntax-jsx" "^7.2.0"
