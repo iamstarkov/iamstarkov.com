@@ -6,6 +6,7 @@ module.exports = {
   ...withMDX({
     pageExtensions: ["js", "mdx", "md"]
   }),
+  exportTrailingSlash: true,
   exportPathMap: async defaultPathMap => {
     delete defaultPathMap["/404"];
     return {
