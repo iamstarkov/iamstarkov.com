@@ -10,8 +10,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@mdx-js/loader": "1.0.21",
-    "@mdx-js/mdx": "1.0.21",
+    "@mdx-js/loader": "1.1.0",
+    "@mdx-js/mdx": "1.1.0",
     "@next/mdx": "9.0.2",
     "next": "9.0.2",
     "prop-types": "15.7.2",
