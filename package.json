@@ -20,6 +20,6 @@
     "spectacle": "5.5.0"
   },
   "devDependencies": {
-    "@babel/core": "7.4.5"
+    "@babel/core": "7.5.4"
   }
 }
