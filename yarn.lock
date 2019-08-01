@@ -3216,7 +3216,7 @@ lodash.uniq@4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.0:
+lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.15, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.0:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
@@ -3977,17 +3977,18 @@ posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://registry.npmjs.org/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
 
-prismjs@1.15.0:
-  version "1.15.0"
-  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.15.0.tgz#8801d332e472091ba8def94976c8877ad60398d9"
-  optionalDependencies:
-    clipboard "^2.0.0"
-
 prismjs@1.6:
   version "1.6.0"
   resolved "https://registry.npmjs.org/prismjs/-/prismjs-1.6.0.tgz#118d95fb7a66dba2272e343b345f5236659db365"
   optionalDependencies:
     clipboard "^1.5.5"
+
+prismjs@^1.17.1:
+  version "1.17.1"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.17.1.tgz#e669fcbd4cdd873c35102881c33b14d0d68519be"
+  integrity sha512-PrEDJAFdUGbOP6xK/UsfkC5ghJsPJviKgnQOoxaDbBjwc8op68Quupwt1DeAFoG8GImPhiKXAvvsH7wDSLsu1Q==
+  optionalDependencies:
+    clipboard "^2.0.0"
 
 private@^0.1.6:
   version "0.1.8"
@@ -4722,18 +4723,19 @@ spdx-license-ids@^3.0.0:
   version "3.0.1"
   resolved "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.1.tgz#e2a303236cac54b04031fa7a5a79c7e701df852f"
 
-spectacle@5.5.0:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/spectacle/-/spectacle-5.5.0.tgz#3e18963cf15f8fa6c5e151b56120108af3c2b99c"
+spectacle@5.7.0:
+  version "5.7.0"
+  resolved "https://registry.yarnpkg.com/spectacle/-/spectacle-5.7.0.tgz#87fdf6e74a6b289589c84617adda815e3cee20dc"
+  integrity sha512-nXyKxwgmpQqDGpxA/9iIw6gJMhdXOAUdHQnsIDvFcxvEDoElQePwNEuuDPLuOLqtSqSHvhWJjW7govt8aWOt6w==
   dependencies:
     csstype "^2.6.0"
     deep-object-diff "^1.1.0"
     emotion "^8.0.8"
     history "^4.7.2"
-    lodash "^4.17.11"
+    lodash "^4.17.15"
     marksy "^6.1.0"
     normalize.css "^8.0.1"
-    prismjs "1.15.0"
+    prismjs "^1.17.1"
     react-emotion "^8.0.8"
     react-live "^1.6"
     react-redux "^5.1.1"
