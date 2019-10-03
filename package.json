@@ -15,8 +15,8 @@
     "@next/mdx": "9.0.7",
     "next": "9.0.7",
     "prop-types": "15.7.2",
-    "react": "16.9.0",
-    "react-dom": "16.9.0",
+    "react": "16.10.2",
+    "react-dom": "16.10.2",
     "spectacle": "5.7.0"
   },
   "devDependencies": {}
