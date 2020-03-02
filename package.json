@@ -12,8 +12,8 @@
   "dependencies": {
     "@mdx-js/loader": "1.5.5",
     "@mdx-js/mdx": "1.5.5",
-    "@next/mdx": "9.2.1",
-    "next": "9.2.1",
+    "@next/mdx": "9.2.2",
+    "next": "9.2.2",
     "prop-types": "15.7.2",
     "react": "16.13.0",
     "react-dom": "16.13.0",
