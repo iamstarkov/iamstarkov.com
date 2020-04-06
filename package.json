@@ -17,7 +17,7 @@
     "prop-types": "15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "spectacle": "5.8.0"
+    "spectacle": "6.0.1"
   },
   "devDependencies": {}
 }
