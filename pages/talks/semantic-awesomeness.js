@@ -1,7 +1,7 @@
 import { Meta } from "../../components";
 import { WithSpectacle } from "../../components/with-spectacle";
 
-import createTheme from "spectacle/lib/themes/default";
+import createTheme from "spectacle/lib/theme/default-theme";
 
 const theme = createTheme(
   {
