@@ -5,7 +5,7 @@ import { Meta } from '../components';
   description="My name is Vladimir Starkov and I am an experienced Frontend Engineer."
 />
 
-# About
+# About me
 
 Hi 👏
 
