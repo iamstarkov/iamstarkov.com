@@ -21,7 +21,7 @@ We usually spend a lot of time reading and surfing others open source project on
 
 Basically jump to npm package or filename through `import/require` statements.
 
-- Website [https://octolinker.github.io/](https://octolinker.github.io/)
+- Website [https://octolinker.now.sh/](https://octolinker.now.sh/)
 - _Available for Chrome, Firefox and Opera_
 
 ## hide files
@@ -57,7 +57,7 @@ Usually, when you need to investigate project's dependecies, you have to look th
 
 ## other extensions
 
-Hold on. Thats not all extensions available, rather ones i found most useful. Here is curated awesome list for all other extenstions [https://github.com/stefanbuck/awesome-browser-extensions-for-github](https://github.com/stefanbuck/awesome-browser-extensions-for-github)
+Hold on. Thats not all extensions available, rather ones i found most useful. Here is curated awesome list for all other extenstions [https://stefanbuck.com/awesome-browser-extensions-for-github](https://stefanbuck.com/awesome-browser-extensions-for-github)
 
 _GitHub, place where i fork._  
 _your oss'ed [Vladimir Starkov](https://iamstarkov.com/)_
